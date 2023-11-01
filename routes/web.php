@@ -16,3 +16,15 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('frontend.landingpage');
 });
+
+Route::get('/tentang-kami', function () {
+    return view('frontend.tentang');
+});
+
+Route::get('/sejarah-kami', function () {
+    return view('frontend.sejarah');
+});
+
+Route::get('/voting', function () {
+    return view('frontend.voting');
+});

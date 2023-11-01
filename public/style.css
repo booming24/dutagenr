@@ -76,6 +76,158 @@ body {
     background-color: #8c7d26;
 }
 
+#landingpage .votenow-button {
+  background-color: transparent;
+  border: 2px solid #FFD600;
+  padding: 8px;
+  border-radius: 16px; 
+  width: 134px; 
+  height: 35px; 
+  cursor: pointer;
+  font-family: 'Poppins';
+  font-weight: 700;
+  text-decoration: none;
+  color: #FFD600;
+  margin-top: 20px;
+}
+
+#landingpage .votenow-button:hover {
+  background-color: #8c7d26;
+  border: 2px solid #8c7d26;
+}
+
+#landingpage .buy-button {
+  background-color: transparent;
+  border: 2px solid #FFD600;
+  padding: 8px;
+  border-radius: 16px; 
+  width: 134px; 
+  height: 35px; 
+  cursor: pointer;
+  font-family: 'Poppins';
+  font-weight: 700;
+  text-decoration: none;
+  color: #FFD600;
+  margin-top: 20px;
+}
+
+#landingpage .buy-button:hover {
+  background-color: #8c7d26;
+  border: 2px solid #8c7d26;
+}
+
+#landingpage .more-button {
+  background-color: #FFD600;
+  border: none;
+  padding: 8px;
+  border-radius: 16px; 
+  width: 134px; 
+  height: 35px; 
+  cursor: pointer;
+  font-family: 'Poppins';
+  font-weight: 400;
+  text-decoration: none;
+  color: #191919;
+}
+
+#landingpage .more-button:hover {
+  background-color: #8c7d26;
+}
+
+#landingpage .kegiatan img{
+  width: 843px;
+  height: 843px;
+  margin-top: 72px;
+  display: block; 
+  margin-left: auto; 
+  margin-right: auto; 
+}
+
+#landingpage .kotak {
+  position: absolute;
+  width: 100%; 
+  display: flex;
+  flex-direction: column;
+  justify-content: center; 
+  align-items: center;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 0; 
+  margin-top: 150px;
+  margin-left: -20px;
+  height: 318px;
+  margin-bottom: 30px;
+}
+
+#landingpage .kotak p {
+  color: white;
+  font-family: 'Poppins';
+  font-weight: 700;
+  font-size: 42px;
+  margin: 0;
+}
+
+#landingpage .kotak .votenoww-button,
+#landingpage .kotak .buyy-button {
+  display: block;
+  background-color: transparent;
+  border: 2px solid #FFD600;
+  padding: 8px;
+  border-radius: 16px;
+  width: 134px;
+  height: 40px;
+  cursor: pointer;
+  font-family: 'Poppins';
+  font-weight: 700;
+  text-decoration: none;
+  color: #FFD600;
+}
+
+
+#landingpage .kotak .votenoww-button:hover {
+  background-color: #8c7d26;
+  border: 2px solid #8c7d26;
+}
+
+#landingpage .kotak .buyy-button:hover {
+  background-color: #8c7d26;
+  border: 2px solid #8c7d26;
+}
+
+
+#landingpage .kotak .gabung{
+  display: flex;
+  gap: 20px;
+}
+
+#landingpage .sejarah{
+  margin-top: 550px;
+  margin-left: 133px;
+  margin-right: 133px;
+}
+
+.sejarah p {
+  font-size: 16px;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+  text-align: justify;
+}
+
+#landingpage .timelinee {
+  margin-left: 133px;
+  margin-right: 133px;
+} 
+
+#landingpage .timelinee h3{
+  text-align: end;
+  margin-top: 150px;
+} 
+
+#landingpage .timelinee h4{
+  text-align: end;
+} 
+
+
 .fluid {
     width: 100%;
     height: calc(100vh - 88px);
@@ -165,10 +317,507 @@ body {
     margin-left: 134px;
 }
 
-.intro {
-  background: #f45b69;
-  padding: 100px 0;
+#tentang .intro{
+  margin-top: 350px;
 }
+#tentang .intro img{
+  width: 100%;
+  height: 287px;
+}
+
+#tentang .latarbelakang {
+  margin-left: 133px;
+  margin-right: 133px;
+}
+
+#tentang .latarbelakang img{
+  width: 1171px;
+  height: 454px;
+  margin-top: 182px;
+  border-radius: 10px;
+  display: block; 
+}
+
+#tentang .latarbelakang b{
+  font-family: 'Poppins';
+    font-weight: 700; 
+    font-size: 38px;
+    line-height: 100px;
+}
+
+#tentang .latarbelakang p{
+  font-family: 'Poppins';
+    font-weight: 400;
+    text-align: justify; 
+    font-size: 16px;
+}
+
+#tentang .filosofi b{
+  line-height: 100px;
+  font-size: 38px;
+  font-family: 'Poppins';
+  font-weight: 700; 
+  margin-left: 83px;
+}
+
+#tentang .card{
+  width: 1337px;
+  height: auto;
+gap: 40px;
+padding-bottom: 20px;
+}
+
+#tentang .filosofi{
+  margin-left: 51px;
+  margin-right: 51px;
+}
+
+#tentang .bkkbn img{
+  width: 468px;
+  height: 195px;
+  margin-top: 70px;
+  margin-left: 100px;
+}
+
+#tentang .gabung img{
+  width: 311px;
+  height: 152px;
+  /* margin-top: 70px; */
+  margin-left: 156px;
+}
+
+#tentang .penjelasan b{
+  margin-left: 15px;
+}
+
+#tentang .penjelasan p{
+  font-family: 'Poppins';
+  font-weight: 400; 
+}
+
+#tentang .penjelasan strong{
+  font-family: 'Poppins';
+  font-weight: 700; 
+}
+
+#tentang .card .genre img{
+  margin-left: 100px;
+  width: 468px;
+  height: 511px;
+}
+
+#tentang .card .penjelasan li p{
+  text-align: justify;
+}
+
+#tentang .duta img{
+  width: 545px;
+  height: 364px;
+  margin-left: 83px;
+  margin-top: 320px;
+}
+
+#tentang .kotak {
+  position: absolute;
+  width: 100%; 
+  display: flex;
+  flex-direction: column;
+  justify-content: center; 
+  align-items: center;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 0; 
+  margin-top: 150px;
+  margin-left: -51px;
+  height: 318px;
+  margin-bottom: 30px;
+}
+
+#tentang .kotak p {
+  color: white;
+  font-family: 'Poppins';
+  font-weight: 700;
+  font-size: 42px;
+  margin: 0;
+}
+
+#tentang .kotak .votenoww-button,
+#tentang .kotak .buyy-button {
+  display: block;
+  background-color: transparent;
+  border: 2px solid #FFD600;
+  padding: 8px;
+  border-radius: 16px;
+  width: 134px;
+  height: 40px;
+  cursor: pointer;
+  font-family: 'Poppins';
+  font-weight: 700;
+  text-decoration: none;
+  color: #FFD600;
+}
+
+
+#tentang .kotak .votenoww-button:hover {
+  background-color: #8c7d26;
+  border: 2px solid #8c7d26;
+}
+
+#tentang .kotak .buyy-button:hover {
+  background-color: #8c7d26;
+  border: 2px solid #8c7d26;
+}
+
+
+#tentang .kotak .gabung{
+  display: flex;
+  gap: 20px;
+}
+
+#sejarah .intro img{
+  width: 100%;
+  height: 287px;
+}
+
+#sejarah .konten{
+  margin-left: 133px;
+  margin-right: 133px;
+  margin-top: 320px;
+}
+
+#sejarah .konten b{
+  font-family: 'Poppins';
+  font-weight: 700;
+  font-size: 38px;
+  /* margin-top: 50px; */
+}
+
+#sejarah .konten img{
+  width: 865px;
+  height: 488px;
+  border-radius: 20px;
+  margin-left:13%;
+  margin-top: 20px;
+}
+
+.carousel-container {
+  position: relative;
+  overflow: hidden;
+}
+
+.carousel {
+  display: flex;
+  transition: transform 0.5s ease;
+  margin: 0 -10px; 
+}
+
+.carousel-card {
+  flex: 0 0 calc(33.33% - 20px); /* Mengatur lebar masing-masing card dan menghitung margin */
+  margin: 0 10px; /* Memberikan margin agar ada ruang di antara gambar */
+}
+
+.carousel-card img {
+  width: 100%;
+  height: auto;
+}
+
+.carousel-controls {
+  /* position: absolute; */
+  /* top: 50%; */
+  transform: translateY(-350%);
+  display: flex;
+  justify-content: space-between;
+}
+
+#sejarah .konten .carousel-card img {
+  width: 433px;
+  height: 289px;
+}
+
+.carousel-control {
+  cursor: pointer;
+  background: rgba(0, 0, 0, 0.5);
+  color: rgb(194, 53, 53);
+  padding: 10px;
+}
+
+/* .carousel-control-right {
+  cursor: pointer;
+  background: rgba(0, 0, 0, 0.5);
+  color: rgb(194, 53, 53);
+  padding: 10px;
+  margin-left: 80px;
+} */
+
+#sejarah .konten p{
+  text-align: justify;
+  line-height: 24px;
+}
+
+#sejarah .kotak {
+  position: absolute;
+  width: 100%; 
+  display: flex;
+  flex-direction: column;
+  justify-content: center; 
+  align-items: center;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 0; 
+  margin-top: 150px;
+  margin-left: 0px;
+  height: 318px;
+  margin-bottom: 30px;
+}
+
+#sejarah .kotak p {
+  color: white;
+  font-family: 'Poppins';
+  font-weight: 700;
+  font-size: 42px;
+  margin: 0;
+}
+
+#sejarah .kotak .votenoww-button,
+#sejarah .kotak .buyy-button {
+  display: block;
+  background-color: transparent;
+  border: 2px solid #FFD600;
+  padding: 8px;
+  border-radius: 16px;
+  width: 134px;
+  height: 40px;
+  cursor: pointer;
+  font-family: 'Poppins';
+  font-weight: 700;
+  text-decoration: none;
+  color: #FFD600;
+}
+
+
+#sejarah .kotak .votenoww-button:hover {
+  background-color: #8c7d26;
+  border: 2px solid #8c7d26;
+}
+
+#sejarah .kotak .buyy-button:hover {
+  background-color: #8c7d26;
+  border: 2px solid #8c7d26;
+}
+
+
+#sejarah .kotak .gabung{
+  display: flex;
+  gap: 20px;
+}
+
+#voting .statistik .corinthia-text {
+  font-family: 'Corinthia';
+  font-weight: 700;
+  font-size: 100px;
+  font-weight: bold;
+  text-align: center;
+  color: #AA8D6B;
+  margin: 0;
+  /* line-height: 120px; */
+}
+
+#voting .statistik p{
+  font-size: 32px;
+  font-family: 'Poppins';
+  font-weight: 400;
+  margin-top: -30px;
+  text-align: center;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 1112px;
+  height: 607px;
+  background-color: #FFFFFF; 
+  border: 2px solid black; 
+  border-radius: 10px;
+  justify-content: space-between;
+  padding: 20px;
+  margin-left: 11%;
+}
+
+.circles {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.circle, .small-circle {
+  width: 144px;
+  height: 144px;
+  border: 1px solid black;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.small-circles {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+#voting .cardd {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 1112px;
+  height: 607px;
+  background-color: #FFFFFF; 
+  border: 1px solid black; 
+  border-radius: 10px;
+  justify-content: space-between;
+  padding: 20px;
+  margin-left: 11%;
+  margin-top: 50px;
+}
+
+#voting .carddd {
+  background-color: #f4f4f4;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  margin: 20px;
+  border: 1px solid black; 
+  width: 437px;
+  height: 607px;
+  margin-left: 18%;
+}
+
+#voting .carousel-container {
+  overflow: hidden;
+  position: relative;
+  width: 357px;
+  /* height: 447px; */
+  margin: 20px;
+}
+
+#voting .carousel {
+  display: flex;
+  overflow-x: hidden;
+  transition: transform 0.5s;
+}
+
+#voting .carousel-card {
+  flex: 0 0 357px;
+  text-align: center;
+  padding: 20px;
+  border: 1px solid black; 
+  height:517px;
+}
+
+#voting .carousel-control {
+  position: absolute;
+  top: 50%;
+  width: 30px;
+  height: 30px;
+  background-color: #FFD600;
+  border: none;
+  color: #191919;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+#voting .left {
+  left: 10px;
+}
+
+#voting .right {
+  right: 10px;
+}
+
+#voting .see-all {
+  display: block;
+  text-align: center;
+  margin-top: 20px;
+  text-decoration: none;
+  color: #FFD600;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.modal-content {
+  background-color: #000;
+  margin: 100px auto;
+  padding: 20px;
+  border: 1px solid #888;
+  border-radius: 10px;
+  width: 300px;
+}
+
+.close {
+  color: #fff;
+  float: right;
+  font-size: 30px;
+  cursor: pointer;
+}
+
+.modal-header {
+  color: #fff;
+  text-align: center;
+  font-weight: bold;
+}
+
+.modal-body {
+  text-align: center;
+}
+
+.modal-body img {
+  width: 245px;
+  height: 307px;
+}
+
+.participant-info {
+  color: #fff;
+  text-align: center;
+}
+
+.modal-footer {
+  text-align: center;
+}
+
+#voucherCode {
+  width: 100%;
+  padding: 5px;
+  margin: 5px 0;
+}
+
+.vote-button {
+  width: 100%;
+}
+
+#closeButton {
+  width: 100%;
+}
+
+#voting .cardddd{
+  width: 245px;
+  height: 307px;
+  border: 1px solid black;
+}
+
+
 
 .container {
   width: 90%;
@@ -181,9 +830,6 @@ h1 {
   font-size: 2.5rem;
 }
 
-
-/* TIMELINE
-–––––––––––––––––––––––––––––––––––––––––––––––––– */
 
 .timeline ul {
   background: #456990;
@@ -256,10 +902,6 @@ time {
   margin-bottom: 8px;
 }
 
-
-/* EFFECTS
-–––––––––––––––––––––––––––––––––––––––––––––––––– */
-
 .timeline ul li::after {
   transition: background 0.5s ease-in-out;
 }
@@ -288,9 +930,6 @@ time {
   opacity: 1;
 }
 
-
-/* GENERAL MEDIA QUERIES
-–––––––––––––––––––––––––––––––––––––––––––––––––– */
 
 @media screen and (max-width: 900px) {
   .timeline ul li div {
