@@ -78,7 +78,9 @@
                             <img src="images/forum.png" alt="Slide 1">
                             <div class="card-info">
                                 <p>002 - Lorem ipsum dolor</p>
-                                <button class="vote-button">Vote</button>
+                                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modal">
+                                    vote
+                                </button>
                                 <a href="#" class="see-all">See All</a>
                             </div>
                         </div>
@@ -86,7 +88,7 @@
                             <img src="images/dugen.png" alt="Slide 2">
                             <div class="card-info">
                                 <p>003 - Lorem ipsum dolor</p>
-                                <button class="vote-button">Vote</button>
+                                <button class="vote-button" type="button" data-bs-toggle="modal" data-bs-target="#modal">Vote</button>
                                 <a href="#" class="see-all">See All</a>
                             </div>
                         </div>
