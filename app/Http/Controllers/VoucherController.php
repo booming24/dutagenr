@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Peserta;
 use App\Models\Voucher;
 use Illuminate\Http\Request;
 
@@ -58,6 +59,52 @@ class VoucherController extends Controller
         }
 
         redirect("backend.laporanpenjualan");
+    }
+
+
+
+    /**
+     * Use voucher for vote.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @return \Illuminate\Http\Response
+     */
+    public function useVoucher(Request $request)
+    {
+        $kode_voucher = $request->kode_voucher;
+        $used_to = $request->used_to;
+        $voucher = Voucher::where('kode_voucher', $kode_voucher)->exists();
+        $periode = $voucher->periode;
+        $nominal = $voucher->nominal;
+        $point = 0;
+        switch ($nominal) {
+            case 10000:
+                $point = 10;
+                break;
+            case 20000:
+                $point = 20;
+                break;
+            case 50000:
+                $point = 50;
+                break;
+            case 100000:
+                $point = 100;
+                break;
+        }
+        if (!$voucher) {
+            $voucher->is_used = true;
+            $voucher->used_to = $used_to;
+            $peserta = Peserta::find($used_to);
+            if ($periode == "semifinal") {
+                $peserta->point_semifinal = $point;
+            } else if ($periode == "final") {
+                $peserta->point_final = $point;
+            }
+            $peserta->update();
+            $voucher->update();
+        }
+
+        redirect("frontend.landingpage");
     }
 
     /**
