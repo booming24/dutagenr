@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\PesertaController;
+use App\Http\Controllers\VoucherController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
@@ -13,6 +15,21 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
+
+Route::prefix('backend')->group(function () {
+    Route::controller(PesertaController::class)->group(function () {
+        Route::get('/peserta/landing_page', 'landingPage')->name("peserta_landing");
+        Route::get('/peserta/admin', 'adminPanel')->name("peserta_admin");
+        Route::post('/peserta', 'store')->name("create_peserta");
+        Route::delete('/peserta/{$id}', 'destroy')->name("delete_peserta");
+    });
+    Route::controller(VoucherController::class)->group(function () {
+        Route::get('/voucher', 'index')->name("voucher");
+        Route::post('/voucher', 'store')->name("create_voucher");
+        Route::delete('/voucher/{$id}', 'destroy')->name("delete_voucher");
+    });
+});
+
 Auth::routes();
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Route::get('/', function () {
