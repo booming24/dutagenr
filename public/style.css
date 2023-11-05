@@ -19,6 +19,18 @@ body {
     margin-left: 50px;
 }
 
+.navbar-left .logo{
+  width: 40.21px;
+  height: 51px; 
+  margin-right: 10px;
+}
+
+.navbar-left .logo2 {
+  width: 72px;
+  height: 58px; 
+  margin-right: 10px; 
+}
+
 .navbar {
     background-color: #191919;
     height: 88px;
@@ -912,6 +924,21 @@ padding-bottom: 20px;
   padding: 5px 10px;
 }
 
+#dashboard .cardd {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 995px;
+  height: 607px;
+  background-color: #FFFFFF; 
+  border: 1px solid black; 
+  border-radius: 10px;
+  justify-content: space-between;
+  padding: 20px;
+  /* margin-left: 11%; */
+  margin-top: 50px;
+}
+
 .container {
   width: 90%;
   max-width: 1200px;
@@ -925,7 +952,8 @@ h1 {
 
 
 .timeline ul {
-  background: #456990;
+  background: linear-gradient(to bottom, #DCC4AA 0%, #DCC4AA 50%, #FFFFFF 100%);
+
   padding: 50px 0;
 }
 
@@ -954,9 +982,9 @@ h1 {
 .timeline ul li div {
   position: relative;
   bottom: 0;
-  width: 400px;
+  width: 490px;
   padding: 15px;
-  background: #f45b69;
+  background: #fff;
 }
 
 .timeline ul li div::before {
@@ -975,15 +1003,15 @@ h1 {
 .timeline ul li:nth-child(odd) div::before {
   left: -15px;
   border-width: 8px 16px 8px 0;
-  border-color: transparent #f45b69 transparent transparent;
+  border-color: transparent #fff transparent transparent;
 }
 
 .timeline ul li:nth-child(even) div {
-  left: -439px;
+  left: -539px;
 }
 
 .timeline ul li:nth-child(even) div::before {
-  right: -15px;
+  right: -10px;
   border-width: 8px 0 8px 16px;
   border-color: transparent transparent transparent #f45b69;
 }

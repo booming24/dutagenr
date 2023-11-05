@@ -68,65 +68,73 @@
             <section class="timeline">
                 <ul>
                     <li>
-                        <div>
-                            <time>1934</time> At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium
+                    <div>
+                            <time>2011</time> <!-- Tahun disini -->
+                            <img src="images/2011.png" alt="Gambar Anda" style="width: 485px; height: 274px;"> <!-- Gambar disini -->
                         </div>
                     </li>
                     <li>
-                        <div>
-                            <time>1937</time> Proin quam velit, efficitur vel neque vitae, rhoncus commodo mi. Suspendisse finibus mauris et bibendum molestie. Aenean ex augue, varius et pulvinar in, pretium non nisi.
+                    <div>
+                            <time>2012</time> <!-- Tahun disini -->
+                            <img src="images/2012.png" alt="Gambar Anda" style="width: 485px; height: 274px;"> <!-- Gambar disini -->
                         </div>
                     </li>
                     <li>
-                        <div>
-                            <time>1940</time> Proin iaculis, nibh eget efficitur varius, libero tellus porta dolor, at pulvinar tortor ex eget ligula. Integer eu dapibus arcu, sit amet sollicitudin eros.
+                    <div>
+                            <time>2013</time> <!-- Tahun disini -->
+                            <img src="images/2013.png" alt="Gambar Anda" style="width: 485px; height: 274px;"> <!-- Gambar disini -->
                         </div>
                     </li>
                     <li>
-                        <div>
-                            <time>1943</time> In mattis elit vitae odio posuere, nec maximus massa varius. Suspendisse varius volutpat mattis. Vestibulum id magna est.
+                    <div>
+                            <time>2014</time> <!-- Tahun disini -->
+                            <img src="images/2014.png" alt="Gambar Anda" style="width: 485px; height: 274px;"> <!-- Gambar disini -->
                         </div>
                     </li>
                     <li>
-                        <div>
-                            <time>1946</time> In mattis elit vitae odio posuere, nec maximus massa varius. Suspendisse varius volutpat mattis. Vestibulum id magna est.
+                    <div>
+                            <time>2015</time> <!-- Tahun disini -->
+                            <img src="images/2015.png" alt="Gambar Anda" style="width: 485px; height: 274px;"> <!-- Gambar disini -->
                         </div>
                     </li>
                     <li>
-                        <div>
-                            <time>1956</time> In mattis elit vitae odio posuere, nec maximus massa varius. Suspendisse varius volutpat mattis. Vestibulum id magna est.
+                    <div>
+                            <time>2016</time> <!-- Tahun disini -->
+                            <img src="images/2016.png" alt="Gambar Anda" style="width: 485px; height: 274px;"> <!-- Gambar disini -->
                         </div>
                     </li>
                     <li>
-                        <div>
-                            <time>1957</time> In mattis elit vitae odio posuere, nec maximus massa varius. Suspendisse varius volutpat mattis. Vestibulum id magna est.
+                    <div>
+                            <time>2017</time> <!-- Tahun disini -->
+                            <img src="images/2017.png" alt="Gambar Anda" style="width: 485px; height: 274px;"> <!-- Gambar disini -->
                         </div>
                     </li>
                     <li>
-                        <div>
-                            <time>1967</time> Aenean condimentum odio a bibendum rhoncus. Ut mauris felis, volutpat eget porta faucibus, euismod quis ante.
+                    <div>
+                            <time>2018</time> <!-- Tahun disini -->
+                            <img src="images/2018.png" alt="Gambar Anda" style="width: 485px; height: 274px;"> <!-- Gambar disini -->
                         </div>
                     </li>
                     <li>
-                        <div>
-                            <time>1977</time> Vestibulum porttitor lorem sed pharetra dignissim. Nulla maximus, dui a tristique iaculis, quam dolor convallis enim, non dignissim ligula ipsum a turpis.
+                    <div>
+                            <time>2019</time> <!-- Tahun disini -->
+                            <img src="images/2019.png" alt="Gambar Anda" style="width: 485px; height: 274px;"> <!-- Gambar disini -->
                         </div>
                     </li>
                     <li>
-                        <div>
-                            <time>1985</time> In mattis elit vitae odio posuere, nec maximus massa varius. Suspendisse varius volutpat mattis. Vestibulum id magna est.
+                    <div>
+                            <time>2020</time> <!-- Tahun disini -->
+                            <img src="images/2020.png" alt="Gambar Anda" style="width: 485px; height: 274px;"> <!-- Gambar disini -->
                         </div>
                     </li>
+                   
                     <li>
-                        <div>
-                            <time>2000</time> In mattis elit vitae odio posuere, nec maximus massa varius. Suspendisse varius volutpat mattis. Vestibulum id magna est.
+                    <div>
+                            <time>2022</time> <!-- Tahun disini -->
+                            <img src="images/2022.png" alt="Gambar Anda" style="width: 485px; height: 274px;"> <!-- Gambar disini -->
                         </div>
                     </li>
-                    <li>
-                        <div>
-                            <time>2005</time> In mattis elit vitae odio posuere, nec maximus massa varius. Suspendisse varius volutpat mattis. Vestibulum id magna est.
-                        </div>
-                    </li>
+                   
                 </ul>
             </section>
         </div>
