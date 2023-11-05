@@ -21,23 +21,7 @@
 
 <body>
     <div id="dashboard">
-        <div class="header">
-            <img src="images/logoevoting.png" alt="Logo">
-            @include('layouts.app')
-            <div class="notification-bell">
-
-                <i class="bi bi-bell-fill" id="notification-icon"></i>
-                <span class="badge" id="notification-count">0</span>
-            </div>
-            <div class="user-info">
-                <div class="circle">
-                    <img src="{{asset('images/logoduta.png')}}" alt="User">
-                </div>
-                <div class="name-level">
-                    John Doe <br>Admin
-                </div>
-            </div>
-        </div>
+    @include('layouts.navbar')
         <div class="content" style="margin-left: 400px;">
             <p>Home / Dashboard</p>
             <div class="row" style="margin-left: -170px;">
@@ -67,15 +51,15 @@
                 <p>e-Voting Duta GenRe Sumatera Selatan 2023</p>
             </div>
             <div class="cardd">
-        <p>Grafik Voting</p>
-        <b>Putera</b>
-        <canvas id="barChart" width="200" height="90"></canvas>
-    </div>
-    <div class="cardd">
-        <p>Grafik Voting</p>
-        <b>Puteri</b>
-        <canvas id="barChart2" width="200" height="90"></canvas>
-    </div>
+                <p>Grafik Voting</p>
+                <b>Putera</b>
+                <canvas id="barChart" width="200" height="90"></canvas>
+            </div>
+            <div class="cardd">
+                <p>Grafik Voting</p>
+                <b>Puteri</b>
+                <canvas id="barChart2" width="200" height="90"></canvas>
+            </div>
         </div>
 
 

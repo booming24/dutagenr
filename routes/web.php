@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\PesertaController;
+use App\Http\Controllers\VoucherController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
@@ -13,6 +15,25 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
+
+Route::prefix('backend')->group(function () {
+    Route::controller(PesertaController::class)->group(function () {
+        Route::get('/peserta/landing_page', 'landingPage')->name("peserta_landing");
+        Route::get('/peserta/admin', 'adminPanel')->name("peserta_admin");
+        Route::get('/laporan-kandidat', 'laporanpeserta')->name("laporanpeserta_admin");
+        Route::get('/peserta/create', function () {
+            return view('backend.master.peserta.create');
+        });
+        Route::post('/peserta', 'store')->name("create_peserta");
+        Route::get('/peserta/admin/{$id}', 'destroy')->name("delete_peserta");
+    });
+    Route::controller(VoucherController::class)->group(function () {
+        Route::get('/voucher', 'index')->name("voucher");
+        Route::post('/voucher', 'store')->name("create_voucher");
+        Route::get('/voucher/{$id}', 'destroy')->name("delete_voucher");
+    });
+});
+
 Auth::routes();
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Route::get('/', function () {
@@ -43,3 +64,10 @@ Route::get('/dashboard', function () {
 Route::get('/sidebar', function () {
     return view('backend.sidebar');
 });
+
+Route::get('/admin', function () {
+    return view('backend.dashboard');
+});
+
+Route::post('/logout', [App\Http\Controllers\HomeController::class, 'logout'])->name('logout');
+Route::post('/postlogin', [App\Http\Controllers\LoginController::class, 'postlogin'])->name('postlogin');

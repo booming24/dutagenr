@@ -31,10 +31,10 @@
         </div>
         <div class="navbar-right">
             <ul>
-                <li><a href="#">Beranda</a></li>
-                <li><a href="#">Tentang</a></li>
-                <li><a href="#">Sejarah</a></li>
-                <a href="halaman-tujuan.html" class="vote-button">Vote Sekarang</a>
+                <li><a href="/">Beranda</a></li>
+                <li><a href="/tentang-kami">Tentang</a></li>
+                <li><a href="sejarah-kami">Sejarah</a></li>
+                <a href="/voting" class="vote-button">Vote Sekarang</a>
             </ul>
            
         </div>

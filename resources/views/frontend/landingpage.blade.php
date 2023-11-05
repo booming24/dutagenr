@@ -30,7 +30,7 @@
                     <li>Menjadi tempat konseling teman sebaya atau remaja agar dapat memberikan solusi bagi permasalahan remaja yang ada dengan memasukkan nilai-nilai GenRe di dalamnya.</li>
                     <li>Menjadi role model yang memiliki masa depan terencana bagi remaja masa kini agar memiliki kualitas hidup yang tinggi. Menjadi remaja dan mahasiswa yang berperilaku sehat dan berakhlak mulia.</li>
                 </ul>
-                <a href="#" class="more-button">Selengkapnya</a>
+                <a href="/tentang-kami" class="more-button">Selengkapnya</a>
             </div>
         </div>
         <div class="kegiatan">
@@ -40,7 +40,7 @@
             <div class="kotak">
                 <p>Berikan Dukungan Kepada Peserta Pemilihan Duta GenRe Sumatera Selatan 2023</p>
                 <div class="gabung">
-                    <a href="#" class="votenoww-button">Vote</a>
+                    <a href="/voting" class="votenoww-button">Vote</a>
                     <a href="#" class="buyy-button">Beli Voucher</a>
                 </div>
 
@@ -59,7 +59,7 @@
                 Melalui program GenRe, BKKBN membuat Pusat Informasi Konseling Remaja dan Mahasiswa (PIK R/M) dan bekerja sama dengan para mahasiswa dengan mengadakan Pemilihan Duta Mahasiswa GenRe. <br><br>
 
                 BKKBN Perwakilan Sumatera Selatan selaku pendukung jalannya program BKKBN pusat juga melaksanakan semua program kerja termasuk mengadakan Pemilihan Duta Mahasiswa GenRe di wilayah provinsi Sumatera Selatan.</p>
-            <a href="#" class="more-button">Selengkapnya</a>
+            <a href="sejarah-kami" class="more-button">Selengkapnya</a>
         </div>
         <div class="timelinee">
             <h3 class="corinthia-text">Dari Masa ke Masa</h3>
