@@ -60,3 +60,7 @@ Route::get('/dashboard', function () {
 Route::get('/sidebar', function () {
     return view('backend.sidebar');
 });
+
+Route::get('/admin', function () {
+    return view('backend.dashboard');
+});

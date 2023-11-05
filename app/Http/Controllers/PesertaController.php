@@ -18,6 +18,7 @@ class PesertaController extends Controller
     public function landingPage()
     {
         $peserta = Peserta::all();
+        dd($peserta);
         return view("frontend.voting", compact('peserta'));
     }
 
@@ -29,7 +30,13 @@ class PesertaController extends Controller
     public function adminPanel()
     {
         $user = Auth::user();
-        $peserta = Peserta::all();
+        if ($user->role == "alpha") {
+            $peserta = Peserta::all();
+        } else if ($user->role == "admin") {
+            $peserta = Peserta::all();
+        } else {
+            redirect("frontend.landingpage");
+        }
         return view("backend.kandidat.masterkandidat", compact('peserta'));
     }
 
