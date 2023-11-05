@@ -29,15 +29,16 @@ class PesertaController extends Controller
      */
     public function adminPanel()
     {
-        $user = Auth::user();
-        if ($user->role == "alpha") {
-            $peserta = Peserta::all();
-        } else if ($user->role == "admin") {
-            $peserta = Peserta::all();
-        } else {
-            redirect("frontend.landingpage");
-        }
-        return view("backend.kandidat.masterkandidat", compact('peserta'));
+        // $user = Auth::user();
+        // if ($user->role == "alpha") {
+        $peserta = Peserta::all();
+        // } else if ($user->role == "admin") {
+        //     $peserta = Peserta::all();
+        // } else {
+        //     redirect("frontend.landingpage");
+        // }
+        // dd($peserta);
+        return view("backend.master.peserta.index", compact('peserta'));
     }
 
     /**
@@ -54,7 +55,7 @@ class PesertaController extends Controller
 
         $imageName = time() . '.' . $request->foto->extension();
 
-        $request->foto->move(public_path('images/peserta'), $imageName);
+        $request->foto->move(public_path('peserta'), $imageName);
         $peserta = new Peserta();
 
         $peserta->no_peserta = $request->no_peserta;
@@ -66,7 +67,7 @@ class PesertaController extends Controller
 
         $peserta->save();
 
-        redirect("backend.kandidat.masterkandidat");
+        return redirect(route('peserta_admin'));
     }
 
     /**

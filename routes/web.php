@@ -20,6 +20,9 @@ Route::prefix('backend')->group(function () {
     Route::controller(PesertaController::class)->group(function () {
         Route::get('/peserta/landing_page', 'landingPage')->name("peserta_landing");
         Route::get('/peserta/admin', 'adminPanel')->name("peserta_admin");
+        Route::get('/peserta/create', function () {
+            return view('backend.master.peserta.create');
+        });
         Route::post('/peserta', 'store')->name("create_peserta");
         Route::delete('/peserta/{$id}', 'destroy')->name("delete_peserta");
     });

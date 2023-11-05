@@ -18,12 +18,12 @@ class CreatePesertasTable extends Migration
             $table->string("no_peserta");
             $table->string("nama_peserta");
             $table->string("foto");
-            $table->enum("kategori", ["putra", "putri"]);
+            $table->enum("kategori", ["PUTRA", "PUTRI"]);
             $table->string("asal_instansi");
-            $table->integer("point_semifinal");
-            $table->integer("point_final");
-            $table->enum("status", ["peserta", "semifinalis", "finalis"]);
-            $table->boolean("isActive");
+            $table->integer("point_semifinal")->nullable();
+            $table->integer("point_final")->nullable();
+            $table->enum("status", ["PESERTA", "SEMIFINALIS", "FINALIS"]);
+            $table->boolean("isActive")->default(true);
             $table->timestamps();
         });
     }
