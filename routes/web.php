@@ -60,6 +60,9 @@ Route::get('/login', function () {
 Route::get('/dashboard', function () {
     return view('backend.dashboardadmindugen');
 });
+Route::get('/peserta', function () {
+    return view('frontend.peserta');
+});
 
 Route::get('/sidebar', function () {
     return view('backend.sidebar');
