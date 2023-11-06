@@ -30,7 +30,7 @@
                     <li>Menjadi tempat konseling teman sebaya atau remaja agar dapat memberikan solusi bagi permasalahan remaja yang ada dengan memasukkan nilai-nilai GenRe di dalamnya.</li>
                     <li>Menjadi role model yang memiliki masa depan terencana bagi remaja masa kini agar memiliki kualitas hidup yang tinggi. Menjadi remaja dan mahasiswa yang berperilaku sehat dan berakhlak mulia.</li>
                 </ul>
-                <a href="#" class="more-button">Selengkapnya</a>
+                <a href="/tentang-kami" class="more-button">Selengkapnya</a>
             </div>
         </div>
         <div class="kegiatan">
@@ -40,8 +40,57 @@
             <div class="kotak">
                 <p>Berikan Dukungan Kepada Peserta Pemilihan Duta GenRe Sumatera Selatan 2023</p>
                 <div class="gabung">
-                    <a href="#" class="votenoww-button">Vote</a>
-                    <a href="#" class="buyy-button">Beli Voucher</a>
+                    <a href="/voting" class="votenoww-button">Vote</a>
+
+                    <button type="button" class="buyy-button" data-bs-toggle="modal" data-bs-target="#modal">
+                        Beli Voucher
+                    </button>
+                    <!-- Modal -->
+                    <div class="modal fade" id="modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered" style="width: 1971px !important; height: 472px;">
+                            <div class="modal-content">
+                                <div class="modal-header bg-dark text-white" style="border-radius: 0;">
+                                    <h1 class="modal-title fs-5">Beli Voucher</h1>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body" style="display: flex; align-items: center;">
+                                    <div class="cardddd">
+                                        <img src="images/qris.png" alt="Participant Image" width="105" height="287">
+                                    </div>
+                                    <div class="voucher-info ml-3">
+                                        <b>Cara Pembelian Voucher :</b>
+                                        <ol style="text-align: justify;">
+                                            <li>Membeli voucher dengan nominal 10k, 20k, 50k dan 100k melalui scan QRIS di samping atau dapat melalui: </li>
+                                            <ol type='a'>
+                                                <li>OVO - 081271701998 a.n Cindy Octavina </li>
+                                                <li>Gopay - 081271701998 a.n Cindy Octavina </li>
+                                                <li>Shopeepay - 081271701998 a.n Cindy Octavina;</li>
+                                            </ol>
+                                            <li>
+                                                Melakukan konfirmasi ke WA GenRe Sumsel (081271701998) dengan mengirimkan bukti pembayaran;
+                                            </li>
+                                            <li>Setelah melakukan konfirmasi kamu akan menerima kode voucher sesuai dengan nominal voucher yang telah dibeli.</li>
+                                        </ol>
+                                        <div class="tombol d-flex g-2" style="margin-left: -90px;">
+                                        <button style="background-color: transparent; border: 2px solid #FF7B3D; border-radius: 10px; color: #FF7B3D; padding: 10px;">10.000</button>
+                                        <button style="background-color: transparent; border: 2px solid #84A6D0; border-radius: 10px; color: #84A6D0; padding: 10px;">20.000</button>
+                                        <button style="background-color: transparent; border: 2px solid #418897; border-radius: 10px; color: #418897; padding: 10px;">50.000</button>
+                                        <button style="background-color: transparent; border: 2px solid #FFDD2B; border-radius: 10px; color: #FFDD2B; padding: 10px;">100.000</button>
+                                      </div>
+                                      <p style="font-size: 10px; color: black; text-align: justify; margin-left: -100px; margin-top: 10px">Klik tombol di bawah ini untuk konfirmasi pembelian voucher (kirim bukti pembayaran).</p>
+                                    </div>
+                                   
+                                </div>
+                                
+                                <div class="modal-footer">
+                                    
+                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                    <input type="submit" class="btn btn-primary" value="Konfirmasi" >
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
 
             </div>
@@ -59,7 +108,7 @@
                 Melalui program GenRe, BKKBN membuat Pusat Informasi Konseling Remaja dan Mahasiswa (PIK R/M) dan bekerja sama dengan para mahasiswa dengan mengadakan Pemilihan Duta Mahasiswa GenRe. <br><br>
 
                 BKKBN Perwakilan Sumatera Selatan selaku pendukung jalannya program BKKBN pusat juga melaksanakan semua program kerja termasuk mengadakan Pemilihan Duta Mahasiswa GenRe di wilayah provinsi Sumatera Selatan.</p>
-            <a href="#" class="more-button">Selengkapnya</a>
+            <a href="sejarah-kami" class="more-button">Selengkapnya</a>
         </div>
         <div class="timelinee">
             <h3 class="corinthia-text">Dari Masa ke Masa</h3>
@@ -69,101 +118,109 @@
                 <ul>
                     <li>
                         <div>
-                            <time>1934</time> At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium
+                            <time>2011</time> <!-- Tahun disini -->
+                            <img src="images/2011.png" alt="Gambar Anda" style="width: 485px; height: 274px;"> <!-- Gambar disini -->
                         </div>
                     </li>
                     <li>
                         <div>
-                            <time>1937</time> Proin quam velit, efficitur vel neque vitae, rhoncus commodo mi. Suspendisse finibus mauris et bibendum molestie. Aenean ex augue, varius et pulvinar in, pretium non nisi.
+                            <time>2012</time> <!-- Tahun disini -->
+                            <img src="images/2012.png" alt="Gambar Anda" style="width: 485px; height: 274px;"> <!-- Gambar disini -->
                         </div>
                     </li>
                     <li>
                         <div>
-                            <time>1940</time> Proin iaculis, nibh eget efficitur varius, libero tellus porta dolor, at pulvinar tortor ex eget ligula. Integer eu dapibus arcu, sit amet sollicitudin eros.
+                            <time>2013</time> <!-- Tahun disini -->
+                            <img src="images/2013.png" alt="Gambar Anda" style="width: 485px; height: 274px;"> <!-- Gambar disini -->
                         </div>
                     </li>
                     <li>
                         <div>
-                            <time>1943</time> In mattis elit vitae odio posuere, nec maximus massa varius. Suspendisse varius volutpat mattis. Vestibulum id magna est.
+                            <time>2014</time> <!-- Tahun disini -->
+                            <img src="images/2014.png" alt="Gambar Anda" style="width: 485px; height: 274px;"> <!-- Gambar disini -->
                         </div>
                     </li>
                     <li>
                         <div>
-                            <time>1946</time> In mattis elit vitae odio posuere, nec maximus massa varius. Suspendisse varius volutpat mattis. Vestibulum id magna est.
+                            <time>2015</time> <!-- Tahun disini -->
+                            <img src="images/2015.png" alt="Gambar Anda" style="width: 485px; height: 274px;"> <!-- Gambar disini -->
                         </div>
                     </li>
                     <li>
                         <div>
-                            <time>1956</time> In mattis elit vitae odio posuere, nec maximus massa varius. Suspendisse varius volutpat mattis. Vestibulum id magna est.
+                            <time>2016</time> <!-- Tahun disini -->
+                            <img src="images/2016.png" alt="Gambar Anda" style="width: 485px; height: 274px;"> <!-- Gambar disini -->
                         </div>
                     </li>
                     <li>
                         <div>
-                            <time>1957</time> In mattis elit vitae odio posuere, nec maximus massa varius. Suspendisse varius volutpat mattis. Vestibulum id magna est.
+                            <time>2017</time> <!-- Tahun disini -->
+                            <img src="images/2017.png" alt="Gambar Anda" style="width: 485px; height: 274px;"> <!-- Gambar disini -->
                         </div>
                     </li>
                     <li>
                         <div>
-                            <time>1967</time> Aenean condimentum odio a bibendum rhoncus. Ut mauris felis, volutpat eget porta faucibus, euismod quis ante.
+                            <time>2018</time> <!-- Tahun disini -->
+                            <img src="images/2018.png" alt="Gambar Anda" style="width: 485px; height: 274px;"> <!-- Gambar disini -->
                         </div>
                     </li>
                     <li>
                         <div>
-                            <time>1977</time> Vestibulum porttitor lorem sed pharetra dignissim. Nulla maximus, dui a tristique iaculis, quam dolor convallis enim, non dignissim ligula ipsum a turpis.
+                            <time>2019</time> <!-- Tahun disini -->
+                            <img src="images/2019.png" alt="Gambar Anda" style="width: 485px; height: 274px;"> <!-- Gambar disini -->
                         </div>
                     </li>
                     <li>
                         <div>
-                            <time>1985</time> In mattis elit vitae odio posuere, nec maximus massa varius. Suspendisse varius volutpat mattis. Vestibulum id magna est.
+                            <time>2020</time> <!-- Tahun disini -->
+                            <img src="images/2020.png" alt="Gambar Anda" style="width: 485px; height: 274px;"> <!-- Gambar disini -->
                         </div>
                     </li>
+
                     <li>
                         <div>
-                            <time>2000</time> In mattis elit vitae odio posuere, nec maximus massa varius. Suspendisse varius volutpat mattis. Vestibulum id magna est.
+                            <time>2022</time> <!-- Tahun disini -->
+                            <img src="images/2022.png" alt="Gambar Anda" style="width: 485px; height: 274px;"> <!-- Gambar disini -->
                         </div>
                     </li>
-                    <li>
-                        <div>
-                            <time>2005</time> In mattis elit vitae odio posuere, nec maximus massa varius. Suspendisse varius volutpat mattis. Vestibulum id magna est.
-                        </div>
-                    </li>
+
                 </ul>
             </section>
         </div>
     </div>
 </div>
 <script>
-    (function () {
-  "use strict";
+    (function() {
+        "use strict";
 
-  // define variables
-  var items = document.querySelectorAll(".timeline li");
+        // define variables
+        var items = document.querySelectorAll(".timeline li");
 
-  // check if an element is in viewport
-  // http://stackoverflow.com/questions/123999/how-to-tell-if-a-dom-element-is-visible-in-the-current-viewport
-  function isElementInViewport(el) {
-    var rect = el.getBoundingClientRect();
-    return (
-      rect.top >= 0 &&
-      rect.left >= 0 &&
-      rect.bottom <=
-        (window.innerHeight || document.documentElement.clientHeight) &&
-      rect.right <= (window.innerWidth || document.documentElement.clientWidth)
-    );
-  }
+        // check if an element is in viewport
+        // http://stackoverflow.com/questions/123999/how-to-tell-if-a-dom-element-is-visible-in-the-current-viewport
+        function isElementInViewport(el) {
+            var rect = el.getBoundingClientRect();
+            return (
+                rect.top >= 0 &&
+                rect.left >= 0 &&
+                rect.bottom <=
+                (window.innerHeight || document.documentElement.clientHeight) &&
+                rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+            );
+        }
 
-  function callbackFunc() {
-    for (var i = 0; i < items.length; i++) {
-      if (isElementInViewport(items[i])) {
-        items[i].classList.add("in-view");
-      }
-    }
-  }
+        function callbackFunc() {
+            for (var i = 0; i < items.length; i++) {
+                if (isElementInViewport(items[i])) {
+                    items[i].classList.add("in-view");
+                }
+            }
+        }
 
-  // listen for events
-  window.addEventListener("load", callbackFunc);
-  window.addEventListener("resize", callbackFunc);
-  window.addEventListener("scroll", callbackFunc);
-})();
+        // listen for events
+        window.addEventListener("load", callbackFunc);
+        window.addEventListener("resize", callbackFunc);
+        window.addEventListener("scroll", callbackFunc);
+    })();
 </script>
 @endsection

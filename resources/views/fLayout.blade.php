@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Duta Genre</title>
     <link rel="stylesheet" href="{{ asset('style.css') }}">
+    <link rel="stylesheet" href="{{ asset('mobile.css') }}">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Corinthia:700|Poppins:300&display=swap|Poppins:600&display=swap">
@@ -25,15 +26,15 @@
     <div id="navBar">
     <nav class="navbar">
         <div class="navbar-left">
-            <img src="{{ asset('images/logodinas.png') }}" class="logo" style="width: 40.21px; heigth: 51px" alt="Logo 1">
-            <img src="{{ asset('images/logoduta.png') }}" class="logo2" style="width: 72px; heigth: 58px" alt="Logo 2">
+            <img src="{{ asset('images/logodinas.png') }}" class="logo" alt="Logo 1">
+            <img src="{{ asset('images/logoduta.png') }}" class="logo2"  alt="Logo 2">
         </div>
         <div class="navbar-right">
             <ul>
-                <li><a href="#">Beranda</a></li>
-                <li><a href="#">Tentang</a></li>
-                <li><a href="#">Sejarah</a></li>
-                <a href="halaman-tujuan.html" class="vote-button">Vote Sekarang</a>
+                <li><a href="/">Beranda</a></li>
+                <li><a href="/tentang-kami">Tentang</a></li>
+                <li><a href="sejarah-kami">Sejarah</a></li>
+                <a href="/voting" class="vote-button">Vote Sekarang</a>
             </ul>
            
         </div>

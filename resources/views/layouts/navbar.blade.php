@@ -20,47 +20,25 @@
 </head>
 
 <body>
-    <div id="dashboard">
-    @include('layouts.navbar')
-        <div class="content" style="margin-left: 400px;">
-            <p>Home / Dashboard</p>
-            <div class="row" style="margin-left: -170px;">
-                <div class="col-lg-6">
-                    <div class="card" style="width: 485px; height: 210px">
-                        <div class="card-header" style="background-color: #418897; width: 485px; height: 37px; margin-top: -20px;">
-                            Voucher Tersedia
-                        </div>
-                        <div class="card-body">
-                            <h5 class="card-title">Rp. XXXX</h5>
-                        </div>
-                    </div>
+
+        <div class="header">
+            <img src="{{asset('images/logoevoting.png')}}" alt="Logo">
+            @include('layouts.app')
+            <div class="notification-bell">
+
+                <i class="bi bi-bell-fill" id="notification-icon"></i>
+                <span class="badge" id="notification-count">0</span>
+            </div>
+            <div class="user-info">
+                <div class="circle">
+                    <img src="{{asset('images/logoduta.png')}}" alt="User">
                 </div>
-                <div class="col-lg-6">
-                    <div class="card" style="width: 485px; height: 210px">
-                        <div class="card-header" style="background-color: #FF7B3D; width: 485px; height: 37px; margin-top: -20px;">
-                            Voucher Terjual
-                        </div>
-                        <div class="card-body">
-                            <h5 class="card-title">Rp. XXXX</h5>
-                        </div>
-                    </div>
+                <div class="name-level">
+                    John Doe <br>Admin
                 </div>
             </div>
-            <div class="statistik" style="margin-left: 250px;">
-                <h1 class="corinthia-text">Statistik</h1>
-                <p>e-Voting Duta GenRe Sumatera Selatan 2023</p>
-            </div>
-            <div class="cardd">
-                <p>Grafik Voting</p>
-                <b>Putera</b>
-                <canvas id="barChart" width="200" height="90"></canvas>
-            </div>
-            <div class="cardd">
-                <p>Grafik Voting</p>
-                <b>Puteri</b>
-                <canvas id="barChart2" width="200" height="90"></canvas>
-            </div>
-        </div>
+
+   
 
 
 

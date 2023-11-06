@@ -20,16 +20,17 @@ Route::prefix('backend')->group(function () {
     Route::controller(PesertaController::class)->group(function () {
         Route::get('/peserta/landing_page', 'landingPage')->name("peserta_landing");
         Route::get('/peserta/admin', 'adminPanel')->name("peserta_admin");
+        Route::get('/laporan-kandidat', 'laporanpeserta')->name("laporanpeserta_admin");
         Route::get('/peserta/create', function () {
             return view('backend.master.peserta.create');
         });
         Route::post('/peserta', 'store')->name("create_peserta");
-        Route::delete('/peserta/{$id}', 'destroy')->name("delete_peserta");
+        Route::get('/peserta/admin/{$id}', 'destroy')->name("delete_peserta");
     });
     Route::controller(VoucherController::class)->group(function () {
         Route::get('/voucher', 'index')->name("voucher");
         Route::post('/voucher', 'store')->name("create_voucher");
-        Route::delete('/voucher/{$id}', 'destroy')->name("delete_voucher");
+        Route::get('/voucher/{$id}', 'destroy')->name("delete_voucher");
     });
 });
 
@@ -47,6 +48,11 @@ Route::get('/sejarah-kami', function () {
     return view('frontend.sejarah');
 });
 
+Route::get('/peserta', function () {
+    return view('frontend.peserta');
+});
+
+
 Route::get('/voting', function () {
     return view('frontend.voting');
 });
@@ -55,6 +61,7 @@ Route::get('/voting', function () {
 Route::get('/login', function () {
     return view('auth.login');
 });
+
 
 Route::get('/dashboard', function () {
     return view('backend.dashboardadmindugen');
@@ -67,3 +74,6 @@ Route::get('/sidebar', function () {
 Route::get('/admin', function () {
     return view('backend.dashboard');
 });
+
+Route::post('/logout', [App\Http\Controllers\HomeController::class, 'logout'])->name('logout');
+Route::post('/postlogin', [App\Http\Controllers\LoginController::class, 'postlogin'])->name('postlogin');

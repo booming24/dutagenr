@@ -16,7 +16,7 @@ class VoucherController extends Controller
     public function index()
     {
         $voucher = Voucher::all();
-        return view("frontend.voting", compact('voucher'));
+        return view("backend.master.voucher.index", compact('voucher'));
     }
 
     /**

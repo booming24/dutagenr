@@ -79,24 +79,25 @@
             <img src="{{asset('images/logoduta.png')}}" alt="Logo">
         </div>
         <div class="menu">
+            @if (auth()->user()->level == "adminalpha")
             <ul>
                 <li><a href="/">Home</a></li>
                 <ul>
-                    <li><a href="" style="margin-left: 40px;">Dashboard</a></li>
+                    <li><a href="#" style="margin-left: 40px;">Dashboard</a></li>
                 </ul>
             </ul>
             <ul>
-                <li><a href="/">Master</a></li>
+                <li><a href="#">Master</a></li>
                 <ul>
-                    <li><a href="" style="margin-left: 80px;">Master Kandidat</a></li>
-                    <li><a href="" style="margin-left: 78px;">Master Voucher</a></li>
+                    <li><a href="/backend/peserta/admin" style="margin-left: 80px;">Master Kandidat</a></li>
+                    <li><a href="/backend/voucher" style="margin-left: 78px;">Master Voucher</a></li>
                 </ul>
             </ul>
             <ul>
-                <li><a href="/">Laporan</a></li>
+                <li><a href="#">Laporan</a></li>
                 <ul>
-                    <li><a href="" style="margin-left: 89px;">Laporan Penjualan</a></li>
-                    <li><a href="" style="margin-left: 82px;">Laporan Kandidat</a></li>
+                    <li><a href="/laporan-penjualan" style="margin-left: 89px;">Laporan Penjualan</a></li>
+                    <li><a href="/laporan-kandidat" style="margin-left: 82px;">Laporan Kandidat </a></li>
                 </ul>
             </ul>
             <ul>
@@ -106,11 +107,42 @@
                 </ul>
             </ul>
             <ul>
-                <li><a href="/" style="margin-left: -20px;">Akun</a></li>
+                <li><a href="#" style="margin-left: -20px;">Akun</a></li>
                 <ul>
-                    <li><a href="" style="margin-left: 0px;">logout</a></li>
+                    <li>
+                        <form action="{{ route('logout') }}" method="POST">
+                            @csrf
+                            <button class="btn btn-danger" style="margin-left: 70px; margin-top: 20px;">Logout</button>
+                        </form>
+                    </li>
                 </ul>
             </ul>
+            @elseif (auth()->user()->level == "admingenre")
+            <ul>
+                <li><a href="/">Home</a></li>
+                <ul>
+                    <li><a href="#" style="margin-left: 40px;">Dashboard</a></li>
+                </ul>
+            </ul>
+            <ul>
+                <li><a href="#">Laporan</a></li>
+                <ul>
+                    <li><a href="/laporan-penjualan" style="margin-left: 89px;">Laporan Penjualan</a></li>
+                    <li><a href="/laporan-kandidat" style="margin-left: 82px;">Laporan Kandidat </a></li>
+                </ul>
+            </ul>
+            <ul>
+                <li><a href="#" style="margin-left: -20px;">Akun</a></li>
+                <ul>
+                    <li>
+                        <form action="{{ route('logout') }}" method="POST">
+                            @csrf
+                            <button class="btn btn-danger" style="margin-left: 70px; margin-top: 20px;">Logout</button>
+                        </form>
+                    </li>
+                </ul>
+            </ul>
+            @endif
         </div>
     </div>
     @yield('content')

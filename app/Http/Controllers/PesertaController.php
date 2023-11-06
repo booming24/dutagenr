@@ -41,6 +41,20 @@ class PesertaController extends Controller
         return view("backend.master.peserta.index", compact('peserta'));
     }
 
+    public function laporanpeserta()
+    {
+        // $user = Auth::user();
+        // if ($user->role == "alpha") {
+        $peserta = Peserta::all();
+        // } else if ($user->role == "admin") {
+        //     $peserta = Peserta::all();
+        // } else {
+        //     redirect("frontend.landingpage");
+        // }
+        // dd($peserta);
+        return view("backend.laporan.laporankandidat", compact('peserta'));
+    }
+
     /**
      * Store a newly created resource in storage.
      *
@@ -88,20 +102,22 @@ class PesertaController extends Controller
      */
     public function destroy($id)
     {
-        // hapus file
-        $peserta = Peserta::where('id', $id)->first();
-        $filePath = public_path("images/peserta") . "/" . $peserta->foto;
+        // // hapus file
+        // $peserta = Peserta::where('id', $id)->first();
+        // $filePath = public_path("images/peserta") . "/" . $peserta->foto;
 
-        if (Storage::exists($filePath)) {
-            Storage::delete($filePath);
-            return "Foto berhasil dihapus.";
-        } else {
-            return "Foto tidak ditemukan.";
-        }
+        // if (Storage::exists($filePath)) {
+        //     Storage::delete($filePath);
+        //     return "Foto berhasil dihapus.";
+        // } else {
+        //     return "Foto tidak ditemukan.";
+        // }
 
-        // hapus data
-        Peserta::where('id', $id)->delete();
+        // // hapus data
+        // Peserta::where('id', $id)->delete();
 
-        return redirect()->back();
+        // return redirect()->back();
+        Peserta::find($id)->delete();
+        return redirect('/peserta');
     }
 }
