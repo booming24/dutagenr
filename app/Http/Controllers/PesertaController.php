@@ -17,9 +17,10 @@ class PesertaController extends Controller
      */
     public function landingPage()
     {
-        $peserta = Peserta::all();
-        dd($peserta);
-        return view("frontend.voting", compact('peserta'));
+        $putra = Peserta::all()->where('kategori', 'PUTRA');
+        $putri = Peserta::all()->where('kategori', 'PUTRI');
+        // dd($peserta);
+        return view("frontend.voting", compact('putra', 'putri'));
     }
 
     /**

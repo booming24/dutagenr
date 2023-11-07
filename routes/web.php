@@ -18,7 +18,6 @@ use Illuminate\Support\Facades\Route;
 
 Route::prefix('backend')->group(function () {
     Route::controller(PesertaController::class)->group(function () {
-        Route::get('/peserta/landing_page', 'landingPage')->name("peserta_landing");
         Route::get('/peserta/admin', 'adminPanel')->name("peserta_admin");
         Route::get('/laporan-kandidat', 'laporanpeserta')->name("laporanpeserta_admin");
         Route::get('/peserta/create', function () {
@@ -53,9 +52,9 @@ Route::get('/peserta', function () {
 });
 
 
-Route::get('/voting', function () {
-    return view('frontend.voting');
-});
+// Route::get('/voting', function () {
+//     return view('frontend.voting');
+// });
 
 
 Route::get('/login', function () {
