@@ -72,7 +72,7 @@ class VoucherController extends Controller
     public function useVoucher(Request $request)
     {
         $kode_voucher = $request->kode_voucher;
-        $used_to = $request->used_to;
+        $id_peserta = $request->id_peserta;
         $voucher = Voucher::where('kode_voucher', $kode_voucher)->exists();
         $periode = $voucher->periode;
         $nominal = $voucher->nominal;
@@ -93,8 +93,8 @@ class VoucherController extends Controller
         }
         if (!$voucher) {
             $voucher->is_used = true;
-            $voucher->used_to = $used_to;
-            $peserta = Peserta::find($used_to);
+            $voucher->used_to = $id_peserta;
+            $peserta = Peserta::find($id_peserta);
             if ($periode == "semifinal") {
                 $peserta->point_semifinal = $point;
             } else if ($periode == "final") {
