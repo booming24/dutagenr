@@ -17,10 +17,10 @@ class PesertaController extends Controller
      */
     public function landingPage()
     {
-        $putra = Peserta::all()->where('kategori', 'PUTRA');
+        $putra = Peserta::all()->where('periode', 'FINALIS');
         $putri = Peserta::all()->where('kategori', 'PUTRI');
         // dd($peserta);
-        return view("frontend.voting", compact('putra', 'putri'));
+        return view("landingpage.voting", compact('putra', 'putri'));
     }
 
     /**
@@ -28,32 +28,20 @@ class PesertaController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function adminPanel()
+    public function index()
     {
-        // $user = Auth::user();
-        // if ($user->role == "alpha") {
         $peserta = Peserta::all();
-        // } else if ($user->role == "admin") {
-        //     $peserta = Peserta::all();
-        // } else {
-        //     redirect("frontend.landingpage");
-        // }
-        // dd($peserta);
-        return view("backend.master.peserta.index", compact('peserta'));
+        return view("admin.master.peserta.index", compact('peserta'));
     }
+    /**
+     * Display a listing of the resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
 
-    public function laporanpeserta()
+    public function create()
     {
-        // $user = Auth::user();
-        // if ($user->role == "alpha") {
-        $peserta = Peserta::all();
-        // } else if ($user->role == "admin") {
-        //     $peserta = Peserta::all();
-        // } else {
-        //     redirect("frontend.landingpage");
-        // }
-        // dd($peserta);
-        return view("backend.laporan.laporankandidat", compact('peserta'));
+        return view("admin.master.peserta.create");
     }
 
     /**
@@ -82,18 +70,7 @@ class PesertaController extends Controller
 
         $peserta->save();
 
-        return redirect(route('peserta_admin'));
-    }
-
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request)
-    {
-        //
+        return redirect(route('peserta'));
     }
 
     /**
@@ -118,7 +95,5 @@ class PesertaController extends Controller
         // Peserta::where('id', $id)->delete();
 
         // return redirect()->back();
-        Peserta::find($id)->delete();
-        return redirect('/peserta');
     }
 }

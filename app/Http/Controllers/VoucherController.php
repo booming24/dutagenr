@@ -16,7 +16,7 @@ class VoucherController extends Controller
     public function index()
     {
         $voucher = Voucher::all();
-        return view("backend.master.voucher.index", compact('voucher'));
+        return view("admin.master.voucher.index", compact('voucher'));
     }
 
     /**
@@ -58,7 +58,7 @@ class VoucherController extends Controller
             } while ($randomStringExists && $j < 100);
         }
 
-        redirect("backend.laporanpenjualan");
+        redirect(route('voucher'));
     }
 
 
@@ -73,7 +73,7 @@ class VoucherController extends Controller
     {
         $kode_voucher = $request->kode_voucher;
         $id_peserta = $request->id_peserta;
-        $voucher = Voucher::where('kode_voucher', $kode_voucher)->exists();
+        $voucher = Voucher::all()->where('kode_voucher', $kode_voucher)->first();
         $periode = $voucher->periode;
         $nominal = $voucher->nominal;
         $point = 0;
@@ -91,14 +91,14 @@ class VoucherController extends Controller
                 $point = 100;
                 break;
         }
-        if (!$voucher) {
+        if ($voucher) {
             $voucher->is_used = true;
             $voucher->used_to = $id_peserta;
             $peserta = Peserta::find($id_peserta);
-            if ($periode == "semifinal") {
-                $peserta->point_semifinal = $point;
-            } else if ($periode == "final") {
-                $peserta->point_final = $point;
+            if ($periode == "SEMIFINAL") {
+                $peserta->point_semifinal = $point + $peserta->point_semifinal;
+            } else if ($periode == "FINAL") {
+                $peserta->point_final = $point + $peserta->point_final;
             }
             $peserta->update();
             $voucher->update();

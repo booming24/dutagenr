@@ -23,26 +23,26 @@
         </div>
 
         @if (session('success'))
-        <script>
-            Swal.fire('Berhasil Login', '', 'success');
-        </script>
+            <script>
+                Swal.fire('Berhasil Login', '', 'success');
+            </script>
         @endif
 
         @if (session('error'))
-        <script>
-            Swal.fire('Email/Password Salah', 'Silahkan Login Kembali', 'error');
-        </script>
+            <script>
+                Swal.fire('Email/Password Salah', 'Silahkan Login Kembali', 'error');
+            </script>
         @endif
 
         <div class="login-card">
             <img src="images/evoting.png" alt="Logo">
             <h2>Login</h2>
-            <form action="{{route('postlogin')}}" method="POST">
-    @csrf
-    <input type="email" name="email" placeholder="Email"> <!-- Tambahkan name="email" -->
-    <input type="password" name="password" placeholder="Password"> <!-- Tambahkan name="password" -->
-    <button class="login-button">Masuk</button>
-</form>
+            <form action="{{ route('postlogin') }}" method="POST">
+                @csrf
+                <input type="email" name="email" placeholder="Email"> <!-- Tambahkan name="email" -->
+                <input type="password" name="password" placeholder="Password"> <!-- Tambahkan name="password" -->
+                <button class="login-button">Masuk</button>
+            </form>
 
         </div>
     </div>

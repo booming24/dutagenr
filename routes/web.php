@@ -1,7 +1,5 @@
 <?php
 
-use App\Http\Controllers\PesertaController;
-use App\Http\Controllers\VoucherController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
@@ -16,63 +14,63 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::prefix('backend')->group(function () {
-    Route::controller(PesertaController::class)->group(function () {
-        Route::get('/peserta/admin', 'adminPanel')->name("peserta_admin");
-        Route::get('/laporan-kandidat', 'laporanpeserta')->name("laporanpeserta_admin");
-        Route::get('/peserta/create', function () {
-            return view('backend.master.peserta.create');
-        });
-        Route::post('/peserta', 'store')->name("create_peserta");
-        Route::get('/peserta/admin/{$id}', 'destroy')->name("delete_peserta");
-    });
-    Route::controller(VoucherController::class)->group(function () {
-        Route::get('/voucher', 'index')->name("voucher");
-        Route::post('/voucher', 'store')->name("create_voucher");
-        Route::get('/voucher/{$id}', 'destroy')->name("delete_voucher");
-    });
-});
-
 Auth::routes();
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-Route::get('/', function () {
-    return view('frontend.landingpage');
+
+Route::prefix('admin')->group(function () {
+    Route::get('/', function () {
+        return view('admin.dashboard');
+    });
+    Route::get('/dashboard', function () {
+        return view('admin.dashboard');
+    });
+    Route::prefix('voucher')->group(function () {
+        // user
+        Route::get('/', [App\Http\Controllers\VoucherController::class, 'index'])->name('voucher');
+        Route::post('/store', [App\Http\Controllers\VoucherController::class, 'store'])->name('voucher-store');
+        Route::get('/delete/{id}', [App\Http\Controllers\VoucherController::class, 'destroy'])->name('voucher-delete');
+    });
+
+    Route::prefix('peserta')->group(function () {
+        // user
+        Route::get('/', [App\Http\Controllers\PesertaController::class, 'index'])->name('peserta');
+        Route::get('/add', [App\Http\Controllers\PesertaController::class, 'create'])->name('peserta-add');
+        Route::post('/store', [App\Http\Controllers\PesertaController::class, 'store'])->name('peserta-store');
+        Route::get('/delete/{id}', [App\Http\Controllers\PesertaController::class, 'destroy'])->name('peserta-delete');
+    });
+
+    Route::prefix('user')->group(function () {
+        // user
+        Route::get('/', [App\Http\Controllers\UserController::class, 'users'])->name('user');
+        Route::get('/add', [App\Http\Controllers\UserController::class, 'create'])->name('user-add');
+        Route::post('/store', [App\Http\Controllers\UserController::class, 'store'])->name('user-store');
+        Route::get('/edit/{id}', [App\Http\Controllers\UserController::class, 'edit'])->name('user-edit');
+        Route::post('/update', [App\Http\Controllers\UserController::class, 'update'])->name('user-update');
+        Route::get('/delete/{id}', [App\Http\Controllers\UserController::class, 'delete'])->name('user-delete');
+    });
 });
 
-Route::get('/tentang-kami', function () {
-    return view('frontend.tentang');
+Route::prefix('/')->group(function () {
+    Route::get('/', function () {
+        return view('landingpage.index');
+    });
+    Route::get('/tentang-kami', function () {
+        return view('landingpage.tentang');
+    });
+    Route::get('/sejarah-kami', function () {
+        return view('landingpage.sejarah');
+    });
+    Route::get('/all-peserta', function () {
+        return view('landingpage.peserta');
+    });
+    Route::post('/use-voucher', [App\Http\Controllers\VoucherController::class, 'useVoucher'])->name('voucher-use');
+    Route::get('/voting', [App\Http\Controllers\PesertaController::class, 'landingPage']);
 });
-
-Route::get('/sejarah-kami', function () {
-    return view('frontend.sejarah');
-});
-
-Route::get('/peserta', function () {
-    return view('frontend.peserta');
-});
-
-
-// Route::get('/voting', function () {
-//     return view('frontend.voting');
-// });
-
 
 Route::get('/login', function () {
     return view('auth.login');
 });
-
-
-Route::get('/dashboard', function () {
-    return view('backend.dashboardadmindugen');
-});
-
-Route::get('/sidebar', function () {
-    return view('backend.sidebar');
-});
-
-Route::get('/admin', function () {
-    return view('backend.dashboard');
-});
-
+Route::get('/sdadasd', function () {
+    return view('landingpage.peserta');
+})->name('laporan-penjualan');
 Route::post('/logout', [App\Http\Controllers\HomeController::class, 'logout'])->name('logout');
 Route::post('/postlogin', [App\Http\Controllers\LoginController::class, 'postlogin'])->name('postlogin');

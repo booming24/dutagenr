@@ -7,6 +7,7 @@ use App\Providers\RouteServiceProvider;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
+
 class LoginController extends Controller
 {
     /*
@@ -44,10 +45,10 @@ class LoginController extends Controller
         // dd($request->all());
         if (Auth::attempt($request->only('username', 'password'))) {
             switch (Auth::user()['level']) {
-                case 'admin':
+                case 'adminalpha':
                     return redirect('/welcome');
                     break;
-                case 'kepaladinas':
+                case 'admingenre':
                     return redirect('/kepaladinas/dashboard');
                     break;
             }

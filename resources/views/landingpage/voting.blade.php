@@ -47,14 +47,19 @@
                         <div class="carousel" id="carousel1">
                             @foreach ($putra as $item)
                                 <div class="carousel-card">
-                                    <img src="/peserta/{{ $item->foto }}" alt="Slide 1">
+                                    <img src="/peserta/{{ $item->foto }}" alt="Slide 1"
+                                        style="height: 370px; width: 250px;">
                                     <div class="card-info">
                                         <p>{{ $item->no_peserta }} - {{ $item->nama_peserta }}</p>
-                                        <button type="button" class="btn btn-primary" data-id="{{ $item->nama_peserta }}"
-                                            data-bs-toggle="modal" data-bs-target="#modal">
-                                            vote
+                                        <button type="button" class="btn btn-primary"
+                                            data-no-peserta="{{ $item->no_peserta }}"
+                                            data-nama-peserta="{{ $item->nama_peserta }}"
+                                            data-id-peserta="{{ $item->id }}" data-bs-toggle="modal"
+                                            data-bs-target="#modal">
+                                            VOTE
                                         </button>
-                                        <a href="#" class="see-all">See All</a>
+
+                                        <a href="/all-peserta" class="see-all">See All</a>
                                     </div>
                                 </div>
                             @endforeach
@@ -71,14 +76,18 @@
                         <div class="carousel" id="carousel1">
                             @foreach ($putri as $item)
                                 <div class="carousel-card">
-                                    <img src="/peserta/{{ $item->foto }}" alt="Slide 1">
+                                    <img src="/peserta/{{ $item->foto }}" alt="Slide 1"
+                                        style="height: 370px; width: 250px;">
                                     <div class="card-info">
                                         <p>{{ $item->no_peserta }} - {{ $item->nama_peserta }}</p>
-                                        <button type="button" class="btn btn-primary" data-id="{{ $item->nama_peserta }}"
-                                            data-bs-toggle="modal" data-bs-target="#modal">
-                                            vote
+                                        <button type="button" class="btn btn-primary"
+                                            data-no-peserta="{{ $item->no_peserta }}"
+                                            data-nama-peserta="{{ $item->nama_peserta }}" data-bs-toggle="modal"
+                                            data-bs-target="#modal">
+                                            VOTE
                                         </button>
-                                        <a href="#" class="see-all">See All</a>
+
+                                        <a href="/all-peserta" class="see-all">See All</a>
                                     </div>
                                 </div>
                             @endforeach
@@ -99,54 +108,71 @@
                         <h1 class="modal-title fs-5">Participant Info</h1>
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
-                    <div class="modal-body" style="display: flex; align-items: center;">
-                        <div class="cardddd">
-                            <img src="images/dugen.png" alt="Participant Image" width="245" height="307">
+                    <form action="{{ route('voucher-use') }}" enctype="multipart/form-data" method="post">
+                        <div class="modal-body" style="display: flex; align-items: center;">
+                            <div class="cardddd">
+                                <img id="modalImage" src="" alt="Participant Image" width="205"
+                                    height="307">
+                            </div>
+                            <div class="voucher-info ml-5" style="margin-left: 50px;">
+                                <p style="text-align: left;" id="modalNoPeserta"></p>
+                                <p style="text-align: left;" id="modalNamaPeserta"></p>
+                                <p style="text-align: left;">Kode Voucher</p>
+                                @csrf
+                                <input type="text" class="form-control" name="kode_voucher" id="voucherCode">
+                                <input type="text" class="form-control" hidden name="id_peserta" id="modalIdPeserta"
+                                    value="">
+                            </div>
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Tutup</button>
+                            <button type="submit" class="btn btn-primary">Vote</button>
                         </div>
-                        <div class="voucher-info ml-3">
-                            <p>000</p>
-                            <p>Lorem ipsum dolor</p>
-                            <p>Kode Voucher</p>
-                            <input type="text" class="form-control" id="voucherCode">
-                        </div>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                        <input type="submit" class="btn btn-primary" id="myModalVoteInput" value="Vote">
-
-                    </div>
+                    </form>
                 </div>
             </div>
         </div>
+
+        <script>
+            document.querySelectorAll('.btn-primary').forEach(function(button) {
+                button.addEventListener('click', function() {
+                    var noPeserta = this.getAttribute('data-no-peserta');
+                    var namaPeserta = this.getAttribute('data-nama-peserta');
+                    var idPeserta = this.getAttribute('data-id-peserta');
+                    var imageUrl = this.parentElement.parentElement.querySelector('img').getAttribute('src');
+
+                    // Mengisi data modal dengan informasi yang sesuai
+                    document.querySelector('#modalNoPeserta').textContent = noPeserta;
+                    document.querySelector('#modalNamaPeserta').textContent = namaPeserta;
+                    document.querySelector('#modalImage').setAttribute('src', imageUrl);
+                    document.querySelector('#modalIdPeserta').setAttribute('value', idPeserta);
+
+                    // Menampilkan modal
+                    var myModal = new bootstrap.Modal(document.getElementById('modal'));
+                    myModal.show();
+                });
+            });
+        </script>
+
 
 
 
         <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
         <script>
-            $(document).ready(function() {
-                $("#myModalVoteInput").click(function() {
-                    Swal.fire({
-                        title: 'Apakah Anda yakin Vote Peserta',
-                        text: 'Vote Peserta\n000 - Lorem ipsum dolor',
-                        icon: 'question',
-                        showCancelButton: true,
-                        confirmButtonText: 'Ya',
-                        cancelButtonText: 'Tidak',
-                    }).then((result) => {
-                        if (result.isConfirmed) {
-                            Swal.fire('Vote Berhasil!', '', 'success');
-                        }
-                    });
-                });
-
-
-                // Menutup modal saat tombol "Tutup" atau ikon "X" ditekan
-                $("#closeButton, #modal .close").click(function() {
-                    $("#modal").modal("hide");
+            // Tambahkan event click handler untuk tombol "Vote" dalam modal
+            $("#myModalVoteInput").click(function() {
+                Swal.fire({
+                    title: 'Apakah Anda yakin Vote Peserta',
+                    text: $("#modalNoPeserta").text() + ' - ' + $("#modalNamaPeserta").text(),
+                    icon: 'question',
+                    showCancelButton: true,
+                    confirmButtonText: 'Ya',
+                    cancelButtonText: 'Tidak',
+                }).then((result) => {
+                    if (result.isConfirmed) {
+                        Swal.fire('Vote Berhasil!', '', 'success');
+                    }
                 });
             });
         </script>
-
 
 
         <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
