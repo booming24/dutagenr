@@ -13,6 +13,8 @@
         integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
     <style>
+       
+
         .table {
             margin-left: 320px;
             margin-top: 20px;
@@ -55,7 +57,7 @@
 <body>
     <div id="peserta">
         @include('layouts.navbar')
-    </div>
+
     <button type="button" class="btn btn-primary mb-2 mt-4" style="width: 120px; margin-left: 320px;"
         data-bs-toggle="modal" data-bs-target="#modal">
         <i class="bi bi-plus"></i> Peserta
@@ -72,9 +74,9 @@
                 </div>
                 <div class="modal-body">
                     <!-- Formulir di sini -->
-                    <form action="{{ route('peserta-store') }}" enctype="multipart/form-data" method="post">
+                    <form action="{{ route('peserta-store') }}" enctype="multipart/form-data" method="post" class="text-start">
                         @csrf
-                        <div class="row mb-2">
+                        <div class="row mb-2 ">
                             <div class="col-md-6">
                                 <label for="no_peserta" class="form-label">Nomor Peserta</label>
                             </div>
@@ -179,6 +181,13 @@
 
 
     </table>
+    
+    <div id="Footer" style="display: flex; flex-direction: column; width: 100%; margin-top: 190px;">
+        <div class="konten2" style="background-color: #418897; color: white; padding: 10px; width: 100%; margin-left: 0px;">
+            <p style="margin-top: auto; text-align: center;">Hak Cipta © 2023 Alpha E-Voting by Alpha Project Palembang</p>
+        </div>
+    </div>
+    </div>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
         integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous">
     </script>

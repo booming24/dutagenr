@@ -1,7 +1,7 @@
 @extends('fLayout')
 
 @section('content')
-<div id="tentang">
+<div id="tentang" style="padding-bottom: 0 !important;">
     <div class="intro">
         <img src="images/frame5.png" alt="21" class="fluid" />
     </div>
@@ -137,6 +137,40 @@
                     <a href="#" class="buyy-button">Beli Voucher</a>
                 </div>
 
+            </div>
+        </div>
+        <div id="Footer" style="display: flex; flex-direction: column;  width: 109%; margin-left: -60px; margin-top: 500px;">
+            <div class="konten" style="background-color: #3F3F3F; padding: 10px; flex: 1; width: 100%;">
+                <div class="row">
+                    <div class="col-lg-3">
+                        <img src="{{ asset('images/logoduta.png') }}" alt="">
+                    </div>
+                    <div class="col-lg-6" style="color: white;">
+                        <b style="font-size: 32px;">Duta GenRe Sumatera Selatan</b>
+                        <div class="row">
+                            <div class="col-lg-4">
+                                <b style="font-size: 18px;">Sosial Media</b> <br>
+                                <div class="iclass" style="margin-left: 80px; margin-top: -40px;">
+                                <i class="bi bi-instagram"></i> Bkkbn Official <br>
+                                <i class="bi bi-instagram"></i> Bkkbn Sumsel <br>
+                                <i class="bi bi-instagram"></i> GenRe Sumsel <br>
+                                <i class="bi bi-instagram"></i> Dugen Sumsel
+                                </div>
+                               
+                            </div>
+                            <div class="col-lg-5">
+                                <b style="font-size: 18px;">Narahubung</b>
+                                <div class="iclass" style="margin-left: 80px; margin-top: -40px !important;">
+                                <i class="bi bi-whatsapp" ></i> +62 852 6923 2867
+                                </div>
+                              
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="konten2" style="background-color: #191919; color: white; padding: 10px; width: 100%;">
+                <p style="margin-top: auto; text-align: center;">Hak Cipta © 2023 Alpha E-Voting by Alpha Project Palembang</p>
             </div>
         </div>
     </div>

@@ -146,6 +146,11 @@
 
 
     </table>
+    <div id="Footer" style="display: flex; flex-direction: column; width: 100%; margin-top: 290px;">
+        <div class="konten2" style="background-color: #418897; color: white; padding: 10px; width: 100%; margin-left: 0px;">
+            <p style="margin-top: auto; text-align: center;">Hak Cipta © 2023 Alpha E-Voting by Alpha Project Palembang</p>
+        </div>
+    </div>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
         integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous">
     </script>

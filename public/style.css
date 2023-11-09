@@ -11,7 +11,7 @@ body {
 
     color: #fff;
     overflow-x: hidden;
-    padding-bottom: 50px;
+    padding-bottom: 0px;
 }
 
 #navBar .logo {
@@ -110,7 +110,7 @@ body {
 #landingpage .buy-button {
     background-color: transparent;
     border: 2px solid #ffd600;
-    padding: 8px;
+    padding: 10px;
     border-radius: 16px;
     width: 134px;
     height: 35px;
@@ -119,7 +119,8 @@ body {
     font-weight: 700;
     text-decoration: none;
     color: #ffd600;
-    margin-top: 20px;
+    margin-top: 25px;
+    margin-left: 20px;
 }
 
 #landingpage .buy-button:hover {
@@ -277,8 +278,10 @@ body {
         255,
         255,
         0.8
-    ); /* Latar belakang elemen "tentang" dengan transparansi */
-    padding: 20px;
+    );
+    padding-top: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
     box-sizing: border-box;
     transition: top 0.5s;
     top: 100%;
@@ -523,13 +526,16 @@ body {
 }
 
 .carousel-card {
-    flex: 0 0 calc(33.33% - 20px); /* Mengatur lebar masing-masing card dan menghitung margin */
-    margin: 0 10px; /* Memberikan margin agar ada ruang di antara gambar */
+    flex: 0 0 calc(33.33% - 20px); 
+    margin: 0 10px;
+    border: none;
 }
 
 .carousel-card img {
     width: 100%;
     height: auto;
+  border: none; 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .carousel-controls {
@@ -750,9 +756,9 @@ body {
 #voting .see-all {
     display: block;
     text-align: center;
-    margin-top: 20px;
+    margin-top: 10px;
     text-decoration: none;
-    color: #ffd600;
+    color: #0A4DA1;
 }
 
 .modal {
@@ -790,7 +796,7 @@ body {
 }
 
 .modal-body {
-    text-align: center;
+    text-align: left;
 }
 
 .modal-body img {
@@ -829,9 +835,12 @@ body {
 #voting .cardddd {
     width: 205px;
     height: 307px;
-    border: 1px solid black;
+    border: none;
     margin-left: -30px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0.1, 0.1);
 }
+
+
 
 .header {
     width: 100%;
@@ -856,9 +865,10 @@ body {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 .login-card img {
-    width: 100px;
+    width: 150px;
     display: block;
     margin: 0 auto;
+    margin-top: 70px;
 }
 .login-card input {
     width: 100%;
@@ -868,7 +878,7 @@ body {
     border-radius: 3px;
 }
 .login-button {
-    width: 100%;
+    width: 30%;
     background-color: #ffd600;
     color: #000;
     padding: 10px;
@@ -876,8 +886,43 @@ body {
     border-radius: 3px;
     cursor: pointer;
 }
-.login-card h2 {
+.login-card img {
+    width: 180px;
+    display: block;
+    margin: 0 auto;
+    margin-top: 60px;
+}
+
+.login-card h2{
     text-align: center;
+}
+.center-input {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.center-input input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+.center-button {
+    display: flex;
+    justify-content: center;
+}
+
+.login-button {
+    width: 30%;
+    background-color: #ffd600;
+    color: #000;
+    padding: 10px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
 }
 
 .header img {
@@ -1089,7 +1134,7 @@ h1 {
 .timeline ul li:nth-child(even) div::before {
     right: -10px;
     border-width: 8px 0 8px 16px;
-    border-color: transparent transparent transparent #f45b69;
+    border-color: transparent transparent transparent #fff;
 }
 
 time {
