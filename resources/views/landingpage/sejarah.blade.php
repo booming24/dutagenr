@@ -136,11 +136,100 @@
         <div class="kotak">
             <p>Berikan Dukungan Kepada Peserta Pemilihan Duta GenRe Sumatera Selatan 2023</p>
             <div class="gabung">
-                <a href="#" class="votenoww-button">Vote</a>
-                <a href="#" class="buyy-button">Beli Voucher</a>
+            <a href="/voting" class="votenoww-button">Vote</a>
+
+<button type="button" class="buyy-button" data-bs-toggle="modal" data-bs-target="#modal">
+    Beli Voucher
+</button>
+<!-- Modal -->
+<div class="modal modal-lg fade" id="modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" style="width: 1971px !important; height: 472px;">
+        <div class="modal-content">
+            <div class="modal-header bg-dark text-white" style="border-radius: 10px;">
+                <h1 class="modal-title fs-5">Beli Voucher</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body" style="display: flex; align-items: center; margin-left: -0px;">
+                <div class="cardddd">
+                    <img src="images/qris.png" alt="Participant Image" style="width: 215px; height: 287px;" >
+                </div>
+                <div class="voucher-info ml-3">
+                    <b>Cara Pembelian Voucher :</b>
+                    <ol style="text-align: justify;">
+                        <li>Membeli voucher dengan nominal 10k, 20k, 50k dan 100k melalui scan QRIS
+                            di samping atau dapat melalui: </li>
+                        <ol type='a'>
+                            <li>OVO - 081271701998 a.n Cindy Octavina </li>
+                            <li>Gopay - 081271701998 a.n Cindy Octavina </li>
+                            <li>Shopeepay - 081271701998 a.n Cindy Octavina;</li>
+                        </ol>
+                        <li>
+                            Melakukan konfirmasi ke WA GenRe Sumsel (081271701998) dengan
+                            mengirimkan bukti pembayaran;
+                        </li>
+                        <li>Setelah melakukan konfirmasi kamu akan menerima kode voucher sesuai
+                            dengan nominal voucher yang telah dibeli.</li>
+                    </ol>
+                    <div class="tombol pl-1 d-flex g-2" style="margin-left:20px; gap: 20px;">
+                        <button style="background-color: transparent; border: 2px solid #FF7B3D; border-radius: 10px; color: #FF7B3D; padding: 10px;">10.000</button>
+                        <button style="background-color: transparent; border: 2px solid #84A6D0; border-radius: 10px; color: #84A6D0; padding: 10px;">20.000</button>
+                        <button style="background-color: transparent; border: 2px solid #418897; border-radius: 10px; color: #418897; padding: 10px;">50.000</button>
+                        <button style="background-color: transparent; border: 2px solid #FFDD2B; border-radius: 10px; color: #FFDD2B; padding: 10px;">100.000</button>
+                    </div>
+                    <p style="font-size: 10px; color: black; text-align: justify; margin-left: 20px; margin-top: 10px">
+                        Klik tombol di bawah ini untuk konfirmasi pembelian voucher (kirim bukti
+                        pembayaran).</p>
+                </div>
+
+            </div>
+
+            <div class="modal-footer">
+
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <input type="submit" class="btn btn-primary" value="Konfirmasi">
+
             </div>
         </div>
     </div>
+</div>
+            </div>
+        </div>
+    </div>
+    <div class="footer" id="footer">
+        <div class="konten" style="background-color: #3F3F3F; padding: 10px; flex: 1; width: 100%;">
+            <div class="row">
+                <div class="col-lg-3">
+                    <img src="{{ asset('images/logoduta.png') }}" style="width: 282px; height: 232px;" alt="">
+                </div>
+                <div class="col-lg-6" style="color: white;">
+                    <b style="font-size: 32px;">Duta GenRe Sumatera Selatan</b>
+                    <div class="row">
+                        <div class="col-lg-4">
+                            <b style="font-size: 18px;">Sosial Media</b> <br>
+                            <div class="iclass">
+                                <i class="bi bi-instagram"></i> Bkkbn Official <br>
+                                <i class="bi bi-instagram"></i> Bkkbn Sumsel <br>
+                                <i class="bi bi-instagram"></i> GenRe Sumsel <br>
+                                <i class="bi bi-instagram"></i> Dugen Sumsel
+                            </div>
+
+                        </div>
+                        <div class="col-lg-5">
+                            <b style="font-size: 18px;">Narahubung</b>
+                            <div class="iclass">
+                                <i class="bi bi-whatsapp"></i> +62 852 6923 2867
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="konten2"
+            style="background-color: #191919; color: white; padding: 10px; width: 100%; margin-left: 0px;">
+            <p style="margin-top: auto; text-align: center;">Hak Cipta © 2023 Alpha E-Voting by Alpha Project
+                Palembang</p>
+        </div>
 @endsection
 @section('script')
     <script>

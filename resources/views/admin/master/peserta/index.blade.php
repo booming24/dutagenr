@@ -68,7 +68,7 @@
         <div class="modal-dialog modal-dialog">
             <div class="modal-content">
                 <div class="modal-header bg-dark text-white"
-                    style="border-radius: 0; background-color: #418897 !important;">
+                    style="border-radius: 10px; background-color: #418897 !important;">
                     <h5 class="modal-title">Tambah Peserta</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>

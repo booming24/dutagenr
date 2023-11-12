@@ -31,7 +31,7 @@
     <div id="dashboard">
         @include('layouts.navbar')
         <div class="content" style="margin-left: 400px;">
-            <div class="row" style="margin-left: -170px;">
+            <div class="row mt-5" style="margin-left: -60px; ">
                 <div class="col-lg-6">
                     <div class="card" style="width: 485px; height: 210px">
                         <div class="card-header"

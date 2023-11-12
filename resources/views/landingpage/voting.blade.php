@@ -62,7 +62,7 @@
                                         <h1
                                             style="
                                         margin-left: -146px;"class="text-left">
-                                            Puteri</h1>
+                                            Putera</h1>
                                         <div class="d-flex justify-content-center">
                                             <div style="height: 370px; width: 250px;"
                                                 class="border-0 shadow-card-vote rounded">
@@ -144,7 +144,7 @@
         <div class="modal fade" id="myModal1" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered" style="width: 971px; height: 472px;">
                 <div class="modal-content">
-                    <div class="modal-header bg-dark text-white" style="border-radius: 0;">
+                    <div class="modal-header bg-dark text-white" style="border-radius: 10px;">
                         <h1 class="modal-title fs-5">Participant Info</h1>
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
@@ -154,7 +154,8 @@
                         <div class="modal-body" style="display: flex; align-items: center;">
                             <div class="cardddd">
                                 <img id="modalImage" src="" alt="Participant Image" width="205"
-                                    height="307" style="border: none; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
+                                    height="307" style="border: none;  box-shadow: 0px 9px 10px 0px rgba(0, 0, 0, 0.25),
+        9px 0px 10px 0px rgba(0, 0, 0, 0.25);">
                             </div>
                             <div class="voucher-info ml-5" style="margin-left: 50px;">
                                 <p style="text-align: left;" id="modalNoPeserta"></p>
@@ -174,6 +175,41 @@
             </div>
         </div>
     </div>
+    <div class="footer" id="votingfooter">
+        <div class="konten" style="background-color: #3F3F3F; padding: 10px; flex: 1; width: 100%;">
+            <div class="row">
+                <div class="col-lg-3">
+                    <img src="{{ asset('images/logoduta.png') }}" style="width: 282px; height: 232px;" alt="">
+                </div>
+                <div class="col-lg-6" style="color: white;">
+                    <b style="font-size: 32px;">Duta GenRe Sumatera Selatan</b>
+                    <div class="row">
+                        <div class="col-lg-4">
+                            <b style="font-size: 18px;">Sosial Media</b> <br>
+                            <div class="iclass">
+                                <i class="bi bi-instagram"></i> Bkkbn Official <br>
+                                <i class="bi bi-instagram"></i> Bkkbn Sumsel <br>
+                                <i class="bi bi-instagram"></i> GenRe Sumsel <br>
+                                <i class="bi bi-instagram"></i> Dugen Sumsel
+                            </div>
+
+                        </div>
+                        <div class="col-lg-5">
+                            <b style="font-size: 18px;">Narahubung</b>
+                            <div class="iclass">
+                                <i class="bi bi-whatsapp"></i> +62 852 6923 2867
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="konten2"
+            style="background-color: #191919; color: white; padding: 10px; width: 100%; margin-left: 0px;">
+            <p style="margin-top: auto; text-align: center;">Hak Cipta © 2023 Alpha E-Voting by Alpha Project
+                Palembang</p>
+        </div>
 @endsection
 @section('script')
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>

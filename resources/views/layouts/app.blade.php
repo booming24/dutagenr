@@ -87,20 +87,20 @@
                 <ul>
                     <li style="color: black">Home</li>
                     <ul>
-                        <li><a href="#" style="margin-left: 40px;">Dashboard</a></li>
+                        <li><a href="/admin" style="margin-left: 40px;">Dashboard</a></li>
                     </ul>
                 </ul>
                 <ul>
                     <li style="color: black">Master</li>
                     <ul>
-                        <li><a href="{{ route('peserta') }}" style="margin-left: 80px;">Master Peserta</a></li>
+                        <li><a href="{{ route('peserta') }}" style="margin-left: 74px;">Master Peserta</a></li>
                         <li><a href="{{ route('voucher') }}" style="margin-left: 78px;">Master Voucher</a></li>
                     </ul>
                 </ul>
                 <ul>
                     <li style="color: black">Laporan</li>
                     <ul>
-                        <li><a href="{{ route('laporan-penjualan') }}" style="margin-left: 89px;">Laporan Penjualan</a>
+                        <li><a href="{{ route('laporan-penjualan') }}" style="margin-left: 96px;">Laporan Penjualan</a>
                         </li>
                         <li><a href="{{ route('laporan-penjualan') }}" style="margin-left: 82px;">Laporan Peserta </a>
                         </li>

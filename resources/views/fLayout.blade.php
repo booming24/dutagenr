@@ -24,6 +24,29 @@
         integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <link rel="stylesheet" href="{{ asset('../assets/dataTables/datatables.min.css') }}">
     <link href="https://cdn.datatables.net/v/dt/dt-1.13.4/datatables.min.css" rel="stylesheet" />
+    <style>
+    body {
+        display: flex;
+        flex-direction: column;
+        /* min-height: 100vh; */
+        margin: 0;
+    }
+
+    #navBar {
+        /* Gaya navbar Anda */
+    }
+
+    .container {
+        /* Gaya konten Anda */
+        flex: 1;
+    }
+
+    .footer {
+        /* Gaya footer Anda */
+        margin-top: auto;
+    }
+</style>
+
 </head>
 
 <body>
@@ -48,41 +71,7 @@
     </div>
     @yield('content')
     <!-- Footer -->
-    <div class="footer" id="footer">
-        <div class="konten" style="background-color: #3F3F3F; padding: 10px; flex: 1; width: 100%;">
-            <div class="row">
-                <div class="col-lg-3">
-                    <img src="{{ asset('images/logoduta.png') }}" style="width: 282px; height: 232px;" alt="">
-                </div>
-                <div class="col-lg-6" style="color: white;">
-                    <b style="font-size: 32px;">Duta GenRe Sumatera Selatan</b>
-                    <div class="row">
-                        <div class="col-lg-4">
-                            <b style="font-size: 18px;">Sosial Media</b> <br>
-                            <div class="iclass">
-                                <i class="bi bi-instagram"></i> Bkkbn Official <br>
-                                <i class="bi bi-instagram"></i> Bkkbn Sumsel <br>
-                                <i class="bi bi-instagram"></i> GenRe Sumsel <br>
-                                <i class="bi bi-instagram"></i> Dugen Sumsel
-                            </div>
-
-                        </div>
-                        <div class="col-lg-5">
-                            <b style="font-size: 18px;">Narahubung</b>
-                            <div class="iclass">
-                                <i class="bi bi-whatsapp"></i> +62 852 6923 2867
-                            </div>
-
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="konten2"
-            style="background-color: #191919; color: white; padding: 10px; width: 100%; margin-left: 0px;">
-            <p style="margin-top: auto; text-align: center;">Hak Cipta © 2023 Alpha E-Voting by Alpha Project
-                Palembang</p>
-        </div>
+   
     </div>
 
 
