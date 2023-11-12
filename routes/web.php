@@ -14,8 +14,14 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Auth::routes();
+Route::get('/login', function () {
+    return view('auth.login');
+});
 
+Route::post('/logout', [App\Http\Controllers\HomeController::class, 'logout'])->name('logout');
+Route::post('/postlogin', [App\Http\Controllers\LoginController::class, 'postlogin'])->name('postlogin');
+Auth::routes();
+Route::group(['middleware' => 'auth'], function () {
 Route::prefix('admin')->group(function () {
     Route::get('/', function () {
         return view('admin.dashboard');
@@ -25,17 +31,17 @@ Route::prefix('admin')->group(function () {
     });
     Route::prefix('voucher')->group(function () {
         // user
-        Route::get('/', [App\Http\Controllers\VoucherController::class, 'index'])->name('voucher');
-        Route::post('/store', [App\Http\Controllers\VoucherController::class, 'store'])->name('voucher-store');
-        Route::get('/delete/{id}', [App\Http\Controllers\VoucherController::class, 'destroy'])->name('voucher-delete');
+        Route::get('/', [App\Http\Controllers\VoucherController::class, 'index'])->name('voucher')->middleware('adminalpha');
+        Route::post('/store', [App\Http\Controllers\VoucherController::class, 'store'])->name('voucher-store')->middleware('adminalpha');
+        Route::get('/delete/{id}', [App\Http\Controllers\VoucherController::class, 'destroy'])->name('voucher-delete')->middleware('adminalpha');
     });
 
     Route::prefix('peserta')->group(function () {
         // user
-        Route::get('/', [App\Http\Controllers\PesertaController::class, 'index'])->name('peserta');
-        Route::get('/add', [App\Http\Controllers\PesertaController::class, 'create'])->name('peserta-add');
-        Route::post('/store', [App\Http\Controllers\PesertaController::class, 'store'])->name('peserta-store');
-        Route::get('/delete/{id}', [App\Http\Controllers\PesertaController::class, 'destroy'])->name('peserta-delete');
+        Route::get('/', [App\Http\Controllers\PesertaController::class, 'index'])->name('peserta')->middleware('adminalpha');
+        Route::get('/add', [App\Http\Controllers\PesertaController::class, 'create'])->name('peserta-add')->middleware('adminalpha');
+        Route::post('/store', [App\Http\Controllers\PesertaController::class, 'store'])->name('peserta-store')->middleware('adminalpha');
+        Route::get('/delete/{id}', [App\Http\Controllers\PesertaController::class, 'destroy'])->name('peserta-delete')->middleware('adminalpha');
     });
 
     Route::prefix('user')->group(function () {
@@ -65,12 +71,8 @@ Route::prefix('/')->group(function () {
     Route::post('/use-voucher', [App\Http\Controllers\VoucherController::class, 'useVoucher'])->name('voucher-use');
     Route::get('/voting', [App\Http\Controllers\PesertaController::class, 'landingPage'])->name('voting');
 });
-
-Route::get('/login', function () {
-    return view('auth.login');
-});
 Route::get('/sdadasd', function () {
     return view('landingpage.peserta');
 })->name('laporan-penjualan');
-Route::post('/logout', [App\Http\Controllers\HomeController::class, 'logout'])->name('logout');
-Route::post('/postlogin', [App\Http\Controllers\LoginController::class, 'postlogin'])->name('postlogin');
+
+});
