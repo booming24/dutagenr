@@ -63,7 +63,7 @@ Route::prefix('/')->group(function () {
         return view('landingpage.peserta');
     });
     Route::post('/use-voucher', [App\Http\Controllers\VoucherController::class, 'useVoucher'])->name('voucher-use');
-    Route::get('/voting', [App\Http\Controllers\PesertaController::class, 'landingPage']);
+    Route::get('/voting', [App\Http\Controllers\PesertaController::class, 'landingPage'])->name('voting');
 });
 
 Route::get('/login', function () {

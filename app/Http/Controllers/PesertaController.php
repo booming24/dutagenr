@@ -17,9 +17,8 @@ class PesertaController extends Controller
      */
     public function landingPage()
     {
-        $putra = Peserta::all()->where('periode', 'FINALIS');
+        $putra = Peserta::all()->where('kategori', 'PUTRA');
         $putri = Peserta::all()->where('kategori', 'PUTRI');
-        // dd($peserta);
         return view("landingpage.voting", compact('putra', 'putri'));
     }
 

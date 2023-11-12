@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Peserta;
 use App\Models\Voucher;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class VoucherController extends Controller
 {
@@ -58,7 +59,7 @@ class VoucherController extends Controller
             } while ($randomStringExists && $j < 100);
         }
 
-        redirect(route('voucher'));
+        return redirect()->route('voucher');
     }
 
 
@@ -71,41 +72,91 @@ class VoucherController extends Controller
      */
     public function useVoucher(Request $request)
     {
-        $kode_voucher = $request->kode_voucher;
-        $id_peserta = $request->id_peserta;
-        $voucher = Voucher::all()->where('kode_voucher', $kode_voucher)->first();
-        $periode = $voucher->periode;
-        $nominal = $voucher->nominal;
-        $point = 0;
-        switch ($nominal) {
-            case 10000:
-                $point = 10;
-                break;
-            case 20000:
-                $point = 20;
-                break;
-            case 50000:
-                $point = 50;
-                break;
-            case 100000:
-                $point = 100;
-                break;
-        }
-        if ($voucher) {
+        try {
+            $request->validate([
+                'kode_voucher' => 'required',
+                'id_peserta' => 'required|numeric',
+            ]);
+
+            $kode_voucher = $request->kode_voucher;
+            $id_peserta = $request->id_peserta;
+            $voucher = Voucher::where('kode_voucher', $kode_voucher)->first();
+
+            if (!$voucher) {
+                throw new \Exception('Voucher not found.');
+            }
+
+            $periode = $voucher->periode;
+            $nominal = $voucher->nominal;
+            $point = 0;
+
+            $pointMapping = [
+                10000 => 10,
+                20000 => 20,
+                50000 => 50,
+                100000 => 100,
+            ];
+
+            $point = $pointMapping[$nominal] ?? 0;
+
             $voucher->is_used = true;
             $voucher->used_to = $id_peserta;
+
             $peserta = Peserta::find($id_peserta);
+
             if ($periode == "SEMIFINAL") {
                 $peserta->point_semifinal = $point + $peserta->point_semifinal;
             } else if ($periode == "FINAL") {
                 $peserta->point_final = $point + $peserta->point_final;
             }
-            $peserta->update();
-            $voucher->update();
-        }
 
-        redirect("frontend.landingpage");
+            DB::transaction(function () use ($voucher, $peserta) {
+                $peserta->update();
+                $voucher->update();
+            });
+
+            return redirect()->route('voting')->with('success', 'Voucher used successfully.');
+        } catch (\Exception $e) {
+            return redirect()->route('voting')->with('error', $e->getMessage());
+        }
     }
+
+    // public function useVoucher(Request $request)
+    // {
+    //     $kode_voucher = $request->kode_voucher;
+    //     $id_peserta = $request->id_peserta;
+    //     $voucher = Voucher::all()->where('kode_voucher', $kode_voucher)->first();
+    //     if (!$voucher) {
+    //         // Handle the case when the voucher is not found.
+    //         return redirect()->route('voting')->with('error', 'Voucher not found.');
+    //     }
+
+    //     $periode = $voucher->periode;
+    //     $nominal = $voucher->nominal;
+    //     $pointMapping = [
+    //         10000 => 10,
+    //         20000 => 20,
+    //         50000 => 50,
+    //         100000 => 100,
+    //     ];
+
+    //     $point = $pointMapping[$nominal] ?? 0;
+
+    //     if ($voucher) {
+    //         $voucher->is_used = true;
+    //         $voucher->used_to = $id_peserta;
+    //         $peserta = Peserta::find($id_peserta);
+    //         if ($periode == "SEMIFINAL") {
+    //             $peserta->point_semifinal = $point + $peserta->point_semifinal;
+    //         } else if ($periode == "FINAL") {
+    //             $peserta->point_final = $point + $peserta->point_final;
+    //         }
+    //         $peserta->update();
+    //         $voucher->update();
+    //     }
+
+    //     return redirect()->route('voting');
+    // }
 
     /**
      * Update the specified resource in storage.
