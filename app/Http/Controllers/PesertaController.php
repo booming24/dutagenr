@@ -5,8 +5,6 @@ namespace App\Http\Controllers;
 use File;
 use App\Models\Peserta;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Auth;
-use Illuminate\Support\Facades\Storage;
 
 class PesertaController extends Controller
 {
@@ -17,9 +15,31 @@ class PesertaController extends Controller
      */
     public function landingPage()
     {
-        $putra = Peserta::all()->where('kategori', 'PUTRA');
-        $putri = Peserta::all()->where('kategori', 'PUTRI');
-        return view("landingpage.voting", compact('putra', 'putri'));
+        $putra = Peserta::where('kategori', 'PUTRA')->orderBy('no_peserta', 'asc')->get();
+        $putri = Peserta::where('kategori', 'PUTRI')->orderBy('no_peserta', 'asc')->get();
+        $point_putra = Peserta::where('kategori', '=', 'PUTRA')
+            ->orderBy('point_semifinal', 'desc')
+            ->pluck('point_semifinal')
+            ->toArray();
+        $point_putri = Peserta::where('kategori', '=', 'PUTRI')
+            ->orderBy('point_semifinal', 'desc')
+            ->pluck('point_semifinal')
+            ->toArray();
+        $label_putra = Peserta::where('kategori', '=', 'PUTRA')
+            ->orderBy('point_semifinal', 'desc')
+            ->pluck('nama_peserta')
+            ->toArray();
+        $label_putri = Peserta::where('kategori', '=', 'PUTRI')
+            ->orderBy('point_semifinal', 'desc')
+            ->pluck('nama_peserta')
+            ->toArray();
+        $top_three_putra = Peserta::where('kategori', 'PUTRA')->orderBy('point_semifinal', 'desc')
+            ->limit(3) // Mengambil 10 record pertama
+            ->get();
+        $top_three_putri = Peserta::where('kategori', 'PUTRI')->orderBy('point_semifinal', 'desc')
+            ->limit(3) // Mengambil 10 record pertama
+            ->get();
+        return view("landingpage.voting", compact('putra', 'putri', 'point_putri', 'point_putra', 'label_putri', 'label_putra', 'top_three_putra', 'top_three_putri'));
     }
 
     /**

@@ -135,7 +135,7 @@
                                 <path fill-rule="evenodd"
                                     d="M1 13.5A1.5 1.5 0 0 0 2.5 15h11a1.5 1.5 0 0 0 1.5-1.5v-6a.5.5 0 0 0-1 0v6a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-11a.5.5 0 0 1 .5-.5H9a.5.5 0 0 0 0-1H2.5A1.5 1.5 0 0 0 1 2.5v11z" />
                             </svg></a>
-                        <a href="{{ route('voucher-store', $item->id) }}"
+                        <a href="{{ route('voucher-delete', $item->id) }}"
                             onclick="return confirm('Yakin hapus data ini?')" class="btn btn-sm btn-danger"><i
                                 class="bi bi-trash-fill"></i></a>
                     </td>
@@ -147,8 +147,10 @@
 
     </table>
     <div id="Footer" style="display: flex; flex-direction: column; width: 100%; margin-top: 290px;">
-        <div class="konten2" style="background-color: #418897; color: white; padding: 10px; width: 100%; margin-left: 0px;">
-            <p style="margin-top: auto; text-align: center;">Hak Cipta © 2023 Alpha E-Voting by Alpha Project Palembang</p>
+        <div class="konten2"
+            style="background-color: #418897; color: white; padding: 10px; width: 100%; margin-left: 0px;">
+            <p style="margin-top: auto; text-align: center;">Hak Cipta © 2023 Alpha E-Voting by Alpha Project Palembang
+            </p>
         </div>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"

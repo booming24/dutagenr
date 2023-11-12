@@ -80,7 +80,7 @@ class VoucherController extends Controller
 
             $kode_voucher = $request->kode_voucher;
             $id_peserta = $request->id_peserta;
-            $voucher = Voucher::where('kode_voucher', $kode_voucher)->first();
+            $voucher = Voucher::all()->where('kode_voucher', '=', $kode_voucher)->where('is_used', '=', 0)->first();
 
             if (!$voucher) {
                 throw new \Exception('Voucher not found.');
@@ -119,55 +119,6 @@ class VoucherController extends Controller
         } catch (\Exception $e) {
             return redirect()->route('voting')->with('error', $e->getMessage());
         }
-    }
-
-    // public function useVoucher(Request $request)
-    // {
-    //     $kode_voucher = $request->kode_voucher;
-    //     $id_peserta = $request->id_peserta;
-    //     $voucher = Voucher::all()->where('kode_voucher', $kode_voucher)->first();
-    //     if (!$voucher) {
-    //         // Handle the case when the voucher is not found.
-    //         return redirect()->route('voting')->with('error', 'Voucher not found.');
-    //     }
-
-    //     $periode = $voucher->periode;
-    //     $nominal = $voucher->nominal;
-    //     $pointMapping = [
-    //         10000 => 10,
-    //         20000 => 20,
-    //         50000 => 50,
-    //         100000 => 100,
-    //     ];
-
-    //     $point = $pointMapping[$nominal] ?? 0;
-
-    //     if ($voucher) {
-    //         $voucher->is_used = true;
-    //         $voucher->used_to = $id_peserta;
-    //         $peserta = Peserta::find($id_peserta);
-    //         if ($periode == "SEMIFINAL") {
-    //             $peserta->point_semifinal = $point + $peserta->point_semifinal;
-    //         } else if ($periode == "FINAL") {
-    //             $peserta->point_final = $point + $peserta->point_final;
-    //         }
-    //         $peserta->update();
-    //         $voucher->update();
-    //     }
-
-    //     return redirect()->route('voting');
-    // }
-
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Voucher  $voucher
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request, Voucher $voucher)
-    {
-        //
     }
 
     /**
