@@ -88,7 +88,10 @@
                                 <label for="periode" class="form-label">Periode</label>
                             </div>
                             <div class="col-md-6">
-                                <input type="text" name="periode" id="periode" class="form-control">
+                                <select class="form-control" name="periode" id="periode">
+                                    <option value="SEMIFINAL">Semifinal</option>
+                                    <option value="FINAL">Final</option>
+                                </select>
                             </div>
                         </div>
                         <div class="row mb-2">
