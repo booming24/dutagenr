@@ -310,6 +310,7 @@
         font-weight: 700;
         font-size: 50px;
         font-weight: bold;
+        margin-top: 50px !important;
     }
 
     .poppins-text {
@@ -1127,7 +1128,7 @@
 
     #footer{
         margin-top: 470px;
-        margin-bottom: 155px;
+        margin-bottom: 0px;
     }
 
     #footer .konten img{
@@ -1136,11 +1137,11 @@
         margin-left: 50px;
     }
     #landingfooter{
-        margin-top: -2000px !important;
-        margin-bottom: 155px;
+        margin-top: -1850px !important;
+        margin-bottom: 0px;
      }
     #votingfooter{
         margin-top: -100px !important;
-        margin-bottom: 155px;
+        margin-bottom: 0px;
      }
 }
