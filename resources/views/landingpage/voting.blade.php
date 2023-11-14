@@ -2,7 +2,7 @@
 
 @section('content')
     <div id="voting">
-        <div class="statistik">
+        <div class="statistik mt-5">
             <h1 class="corinthia-text">Statistik</h1>
             <p>e-Voting Duta GenRe Sumatera Selatan 2023</p>
         </div>
@@ -31,22 +31,87 @@
                     </div>
                 </div>
             </div>
-            <div>
-                <p>Grafik Voting</p>
-                <b>Putera</b>
+            <div class="chartputra mt-5 text-center">
+                <p class="text-center">Grafik Voting</p>
+                <b class="text-center">Putera</b>
                 <div class="wrapper">
                     <canvas id="barChart" width="200" height="90"></canvas>
                 </div>
             </div>
-            <div>
+            <div class="chartputri mt-5 text-center">
                 <p>Grafik Voting</p>
                 <b>Puteri</b>
                 <div class="wrapper">
                     <canvas id="barChart2" width="200" height="90"></canvas>
                 </div>
             </div>
-            <div class="row">
-                <div class="col-lg-6">
+
+            <div class="kotak">
+        <p>Belum Memiliki Voucher?</p>
+        <div class="gabung">
+            <button type="button" class="buyy-button" data-bs-toggle="modal" data-bs-target="#modalll" style="margin-left: 0px;">
+                Beli Sekarang
+            </button>
+            <!-- Modal -->
+            <div class="modal modal-lg fade" id="modalll" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered" style="width: 1971px !important; height: 472px;">
+                    <div class="modal-content">
+                        <div class="modal-header bg-dark text-white" style="border-radius: 10px;">
+                            <h1 class="modal-title fs-5">Beli Voucher</h1>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body" style="display: flex; align-items: center; margin-left: -0px;">
+                            
+                            <div class="voucher-info ml-3">
+                                <b>Cara Pembelian Voucher :</b>
+                                <ol style="text-align: justify;">
+                                    <li>Membeli voucher dengan nominal 10k, 20k, 50k dan 100k melalui scan QRIS
+                                        di samping atau dapat melalui: </li>
+                                    <ol type='a'>
+                                        <li>OVO - 081271701998 a.n Cindy Octavina </li>
+                                        <li>Gopay - 081271701998 a.n Cindy Octavina </li>
+                                        <li>Shopeepay - 081271701998 a.n Cindy Octavina;</li>
+                                    </ol>
+                                    <li>
+                                        Melakukan konfirmasi ke WA GenRe Sumsel (081271701998) dengan
+                                        mengirimkan bukti pembayaran;
+                                    </li>
+                                    <li>Setelah melakukan konfirmasi kamu akan menerima kode voucher sesuai
+                                        dengan nominal voucher yang telah dibeli.</li>
+                                </ol>
+                                <div class="tombol pl-1 d-flex g-2" style="margin-left:20px; gap: 20px;">
+                                    <button style="background-color: transparent; border: 2px solid #FF7B3D; border-radius: 10px; color: #FF7B3D; padding: 10px;">10.000</button>
+                                    <button style="background-color: transparent; border: 2px solid #84A6D0; border-radius: 10px; color: #84A6D0; padding: 10px;">20.000</button>
+                                    <button style="background-color: transparent; border: 2px solid #418897; border-radius: 10px; color: #418897; padding: 10px;">50.000</button>
+                                    <button style="background-color: transparent; border: 2px solid #FFDD2B; border-radius: 10px; color: #FFDD2B; padding: 10px;">100.000</button>
+                                </div>
+                                <p style="font-size: 10px; color: black; text-align: justify; margin-left: 20px; margin-top: 10px">
+                                    Klik tombol di bawah ini untuk konfirmasi pembelian voucher (kirim bukti
+                                    pembayaran).</p>
+                            </div>
+
+                        </div>
+
+                        <div class="modal-footer">
+
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                            <input type="submit" class="btn btn-primary" value="Konfirmasi">
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="text-center">
+            <h1 class="corinthia-text" style="color: #AA8D6B;">E-Voting</h1>
+            <h2 class="poppins-text">Duta GenRe Sumatera Selatan 2023</h2>
+
+        </div>
+
+            <div class="row mt-5" style="display: flex;justify-content: center;align-items: center;margin-left: 80px; margin-top: 20px;">
+                <div class="col-lg-6" style=" width: 50%;">
                     <div>
                         <div class="carousel-container">
                             <div class="carousel" id="carousel1">
@@ -88,7 +153,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-6">
+                <div class="col-lg-6" style=" width: 50%;">
                     <div>
                         <div class="carousel-container">
                             <div class="carousel" id="carousel2">
@@ -148,19 +213,19 @@
                             <div class="cardddd">
                                 <img id="modalImage" src="" alt="Participant Image" width="205"
                                     height="307"
-                                    style="border: none;  box-shadow: 0px 9px 10px 0px rgba(0, 0, 0, 0.25),
-        9px 0px 10px 0px rgba(0, 0, 0, 0.25);">
+                                    style="border: none;  box-shadow: 0px 0px 2px 1px rgba(0, 0, 0, 0.25),
+        0px 1px 2px 4px rgba(0, 0, 0, 0.25); border-radius: 10px;">
                             </div>
-                            <div class="voucher-info ml-5" style="margin-left: 50px;">
-                                <p style="text-align: left;" id="modalNoPeserta"></p>
-                                <p style="text-align: left;" id="modalNamaPeserta"></p>
-                                <p style="text-align: left;">Kode Voucher</p>
+                            <div class="voucher-info ml-5" style="margin-left: 70px;">
+                                <p style="text-align: left; margin-top: -120px !important; font-size: 26px; font-weight: bold;" id="modalNoPeserta"></p>
+                                <p style="text-align: left;  margin-top: -0px !important; font-size: 18px; " id="modalNamaPeserta"></p>
+                                <p style="text-align: left; margin-top: 0px;">Kode Voucher</p>
                                 <input type="text" class="form-control" name="kode_voucher" id="voucherCode">
                                 <input type="text" class="form-control" hidden name="id_peserta" id="modalIdPeserta"
                                     value="">
                             </div>
                         </div>
-                        <div class="bottom" style="margin-top: -0px; display: flex; margin-left: 250px; gap: 20px;">
+                        <div class="bottom" style="margin-top: -90px; display: flex; margin-left: 260px; gap: 20px; position: absolute;">
                             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Tutup</button>
                             <button type="submit" class="btn btn-primary" id="myModalVoteInput">Vote</button>
                         </div>
@@ -175,7 +240,7 @@
                 <div class="col-lg-3">
                     <img src="{{ asset('images/logoduta.png') }}" style="width: 282px; height: 232px;" alt="">
                 </div>
-                <div class="col-lg-6" style="color: white;">
+                <div class="col-lg-6 mt-4" style="color: white;">
                     <b style="font-size: 32px;">Duta GenRe Sumatera Selatan</b>
                     <div class="row">
                         <div class="col-lg-4">
@@ -211,8 +276,8 @@
         @if (session('success'))
             <script>
                 Swal.fire({
-                    title: "Good job!",
-                    text: "You clicked the button!",
+                    title: "Berhasil Vote Senilai Rp. xxx untuk",
+                    text: $("#modalNoPeserta").text() + ' - ' + $("#modalNamaPeserta").text(),
                     icon: "success"
                 });
             </script>
@@ -222,9 +287,7 @@
             <script>
                 Swal.fire({
                     icon: "error",
-                    title: "Oops...",
-                    text: "Something went wrong!",
-                    footer: '<a href="#">Why do I have this issue?</a>'
+                    title: "Voucher Kadaluarsa atau telah digunakan",
                 });
             </script>
         @endif

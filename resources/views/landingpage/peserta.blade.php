@@ -1,7 +1,7 @@
 @extends('fLayout')
 
 @section('content')
-    <div id="sejarah">
+    <div id="peserta">
         <div class="text-center">
             <h1 class="corinthia-text" style="color: #AA8D6B;">E-Voting</h1>
             <h2 class="poppins-text">Duta GenRe Sumatera Selatan 2023</h2>

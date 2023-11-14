@@ -8,9 +8,9 @@
     <div class="container">
         <div class="latarbelakang">
             <div style="margin-top: -13%" class="d-flex justify-content-center">
-                <img src="images/dugensumsel.png" alt="21" />
+                <img src="images/tentangbanner.jpg" alt="21" />
             </div>
-            <b>Latar Belakang</b>
+            <b style="text-align: left !important;">Latar Belakang</b>
             <p>Ikatan Duta Mahasiswa Generasi Berecana (GenRe) Sumatera Selatan adalah organisasi beranggotakan Duta
                 Mahasiswa GenRe provinsi Sumatera Selatan yang merupakan suatu wujud loyalitas untuk mensosialisasikan
                 dan
@@ -193,7 +193,7 @@
         <div class="gabung">
             <a href="/voting" class="votenoww-button">Vote</a>
 
-            <button type="button" class="buyy-button" data-bs-toggle="modal" data-bs-target="#modal">
+            <button type="button" class="buyy-button" data-bs-toggle="modal" data-bs-target="#modal" style="margin-left: 30px;">
                 Beli Voucher
             </button>
             <!-- Modal -->
@@ -204,10 +204,8 @@
                             <h1 class="modal-title fs-5">Beli Voucher</h1>
                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
-                        <div class="modal-body" style="display: flex; align-items: center; margin-left: -180px;">
-                            <div class="cardddd">
-                                <img src="images/qris.png" alt="Participant Image" style="width: 215px; height: 287px;">
-                            </div>
+                        <div class="modal-body" style="display: flex; align-items: center; margin-left: -0px;">
+                            
                             <div class="voucher-info ml-3">
                                 <b>Cara Pembelian Voucher :</b>
                                 <ol style="text-align: justify;">
@@ -250,13 +248,13 @@
         </div>
     </div>
 </div>
-<div class="footer" id="footer">
+<div class="footer mt-4" id="footer">
     <div class="konten" style="background-color: #3F3F3F; padding: 10px; flex: 1; width: 100%;">
         <div class="row">
             <div class="col-lg-3">
                 <img src="{{ asset('images/logoduta.png') }}" style="width: 282px; height: 232px;" alt="">
             </div>
-            <div class="col-lg-6" style="color: white;">
+            <div class="col-lg-6 mt-4" style="color: white;">
                 <b style="font-size: 32px;">Duta GenRe Sumatera Selatan</b>
                 <div class="row">
                     <div class="col-lg-4">

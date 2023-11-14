@@ -52,23 +52,21 @@
 <body>
     <!-- Navbar -->
     <div id="navBar">
-        <nav class="navbar">
-            <div class="navbar-left">
-                <img src="{{ asset('images/logodinas.png') }}" class="logo" alt="Logo 1">
-                <img src="{{ asset('images/logoduta.png') }}" class="logo2" alt="Logo 2">
-            </div>
-            <div class="navbar-right">
-                <ul>
-                    <li><a href="/">Beranda</a></li>
-                    <li><a href="/tentang-kami">Tentang</a></li>
-                    <li><a href="sejarah-kami">Sejarah</a></li>
-                    <a href="/voting" class="vote-button">Vote Sekarang</a>
-                </ul>
-
-            </div>
-        </nav>
-
-    </div>
+    <nav class="navbar">
+        <div class="navbar-left">
+            <img src="{{ asset('images/forum.png') }}" class="logo" alt="Logo 1">
+            <img src="{{ asset('images/logoduta.png') }}" class="logo2" alt="Logo 2">
+        </div>
+        <div class="navbar-right">
+            <ul>
+                <li><a href="/">Beranda</a></li>
+                <li><a href="/tentang-kami">Tentang</a></li>
+                <li><a href="sejarah-kami">Sejarah</a></li>
+                <li><a href="/voting" class="vote-button">Vote Sekarang</a></li>
+            </ul>
+        </div>
+    </nav>
+</div>
     @yield('content')
     <!-- Footer -->
    
@@ -81,17 +79,22 @@
     <script src="{{ asset('../assets/js/core/bootstrap.min.js') }}"></script>
     <script src="{{ asset('../assets/js/plugins/perfect-scrollbar.min.js') }}"></script>
     <script src="{{ asset('../assets/js/plugins/smooth-scrollbar.min.js') }}"></script>
-    <script>
-        var win = navigator.platform.indexOf('Win') > -1;
-        if (win && document.querySelector('#sidenav-scrollbar')) {
-            var options = {
-                damping: '0.5'
-            }
-            Scrollbar.init(document.querySelector('#sidenav-scrollbar'), options);
-        }
-    </script>
+ <script>
+    window.onscroll = function() {
+    scrollFunction();
+};
 
-    <!-- boostrap js -->
+function scrollFunction() {
+    var navbar = document.getElementById("navBar");
+    if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
+        navbar.classList.add("navbar-fixed");
+    } else {
+        navbar.classList.remove("navbar-fixed");
+    }
+}
+
+ </script>
+</script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
         integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous">
     </script>

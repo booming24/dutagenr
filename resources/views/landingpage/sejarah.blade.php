@@ -49,8 +49,8 @@
                     </div>
                 </div>
                 <div class="carousel-controls">
-                    <div class="carousel-control" id="prev">&lt;</div>
-                    <div class="carousel-control" id="next">&gt;</div>
+                    <div class="carousel-control mr-5" style="margin-left: -60px;" id="prev">&lt;</div>
+                    <div class="carousel-control ml-5" style="margin-left: 160px;" id="next">&gt;</div>
                 </div>
                 <p>Program Genre (Generasi berencana) diinisiasi pada tahun 2007 oleh Bapak Dr. Sudibyo Alimoeso yang saat
                     itu
@@ -138,7 +138,7 @@
             <div class="gabung">
             <a href="/voting" class="votenoww-button">Vote</a>
 
-<button type="button" class="buyy-button" data-bs-toggle="modal" data-bs-target="#modal">
+<button type="button" class="buyy-button" data-bs-toggle="modal" data-bs-target="#modal" style="margin-left: 30px;">
     Beli Voucher
 </button>
 <!-- Modal -->
@@ -150,9 +150,7 @@
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body" style="display: flex; align-items: center; margin-left: -0px;">
-                <div class="cardddd">
-                    <img src="images/qris.png" alt="Participant Image" style="width: 215px; height: 287px;" >
-                </div>
+              
                 <div class="voucher-info ml-3">
                     <b>Cara Pembelian Voucher :</b>
                     <ol style="text-align: justify;">

@@ -19,13 +19,13 @@ body {
 }
 
 .navbar-left .logo {
-    width: 40.21px;
+    width: 47.21px;
     height: 51px;
     margin-right: 10px;
 }
 
 .navbar-left .logo2 {
-    width: 72px;
+    width: 62px;
     height: 58px;
     margin-right: 10px;
 }
@@ -45,38 +45,81 @@ body {
     margin: 0;
     padding: 0;
     padding-right: 50px;
-    align-items: center; /* Menyelaraskan elemen vertikal ke tengah */
+    align-items: center;
 }
 
+/* Gaya untuk navbar tetap */
+.navbar-fixed {
+    position: fixed;
+    width: 100%;
+    transition: 500ms;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar-fixed .navbar {
+    background-color: #191919;
+    height: 88px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.navbar-fixed .navbar-left {
+    display: flex;
+    align-items: center;
+}
+
+.navbar-fixed .navbar-right {
+    display: flex;
+    align-items: center;
+}
+
+.navbar-fixed .navbar-right ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+    padding-right: 50px;
+    align-items: center;
+}
+
+/* Tambah margin-right pada navbar-right li */
 .navbar-right li {
     margin-right: 20px;
 }
 
+/* Atur style untuk link */
 .navbar-right a {
     text-decoration: none;
     color: #fff;
-    font-family: "Poppins";
+    font-family: "Poppins", sans-serif; /* Pastikan font Poppins sudah di-load */
     font-weight: 400;
 }
+
+/* Efek hover pada link */
 .navbar-right a:hover {
-    text-decoration: none;
+    color: #ccc; /* Atur warna sesuai preferensi Anda */
+}
+
+/* Style untuk vote-button */
+.navbar-right .vote-button {
     color: #fff;
 }
 
-.navbar-right .vote-button {
-    color: #191919;
+/* Efek hover untuk vote-button */
+.navbar-right .vote-button:hover {
+    color: #ccc; /* Atur warna sesuai preferensi Anda */
 }
 
-.navbar-right .vote-button:hover {
-    color: #191919;
-}
 
 .vote-button {
     background-color: #ffd600;
     border: none;
     padding: 8px;
     border-radius: 16px;
-    width: 134px;
+    width: 164px;
     height: 35px;
     cursor: pointer;
     font-family: "Poppins";
@@ -92,8 +135,8 @@ body {
     border: 2px solid #ffd600;
     padding: 8px;
     border-radius: 16px;
-    width: 134px;
-    height: 35px;
+    width: 164px;
+    height: 65px;
     cursor: pointer;
     font-family: "Poppins";
     font-weight: 700;
@@ -166,7 +209,7 @@ body {
     background-color: rgba(0, 0, 0, 0.6);
     padding: 0;
     margin-top: 150px;
-    margin-left: -20px;
+    margin-left: 0px;
     height: 318px;
     margin-bottom: 30px;
 }
@@ -186,7 +229,7 @@ body {
     border: 2px solid #ffd600;
     padding: 8px;
     border-radius: 16px;
-    width: 134px;
+    width: 164px;
     height: 40px;
     cursor: pointer;
     font-family: "Poppins";
@@ -209,6 +252,60 @@ body {
     display: flex;
     gap: 20px;
 }
+#voting .kotak {
+    position: relative;
+    width: 112%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 0;
+    margin-top: 150px;
+    margin-left: -80px !important;
+    height: 318px;
+    margin-bottom: 30px;
+}
+
+#voting .kotak p {
+    color: white;
+    font-family: "Poppins";
+    font-weight: 700;
+    font-size: 42px;
+    margin: 0;
+}
+
+#voting .kotak .votenoww-button,
+#voting .kotak .buyy-button {
+    display: block;
+    background-color: transparent;
+    border: 2px solid #ffd600;
+    padding: 8px;
+    border-radius: 16px;
+    width: 164px;
+    height: 40px;
+    cursor: pointer;
+    font-family: "Poppins";
+    font-weight: 700;
+    text-decoration: none;
+    color: #ffd600;
+}
+
+#voting .kotak .votenoww-button:hover {
+    background-color: #8c7d26;
+    border: 2px solid #8c7d26;
+}
+
+#voting .kotak .buyy-button:hover {
+    background-color: #8c7d26;
+    border: 2px solid #8c7d26;
+}
+
+#voting .kotak .gabung {
+    display: flex;
+    gap: 20px;
+}
 
 #landingpage .sejarah {
     margin-top: 550px;
@@ -224,17 +321,26 @@ body {
 }
 
 #landingpage .timelinee {
-    margin-left: 133px;
-    margin-right: 133px;
+    margin-left: 0px;
+    margin-right: 0px;
+    background: linear-gradient(
+        to bottom,
+        #dcc4aa 0%,
+        #dcc4aa 50%,
+        #ffffff 100%
+    );
+    
 }
 
 #landingpage .timelinee h3 {
     text-align: end;
     margin-top: 150px;
+    margin-right: 130px;
 }
 
 #landingpage .timelinee h4 {
     text-align: end;
+    margin-right: 130px;
 }
 
 .fluid {
@@ -261,6 +367,7 @@ body {
     font-weight: 700;
     font-size: 100px;
     font-weight: bold;
+    /* margin-left: -40px !important; */
 }
 
 .poppins-text {
@@ -275,8 +382,8 @@ body {
     width: 100%;
     background-color: rgba(255, 255, 255, 0.8);
     padding-top: 20px;
-    padding-left: 20px;
-    padding-right: 20px;
+    padding-left: 0px;
+    padding-right: 0px;
     box-sizing: border-box;
     transition: top 0.5s;
     top: 100%;
@@ -349,9 +456,16 @@ body {
     font-weight: 700;
     font-size: 38px;
     line-height: 100px;
+    text-align: left !important;
 }
 
 #tentang .latarbelakang p {
+    font-family: "Poppins";
+    font-weight: 400;
+    text-align: justify;
+    font-size: 16px;
+}
+#tentang .latarbelakang ul {
     font-family: "Poppins";
     font-weight: 400;
     text-align: justify;
@@ -363,7 +477,8 @@ body {
     font-size: 38px;
     font-family: "Poppins";
     font-weight: 700;
-    margin-left: 83px;
+    margin-left: 13px;
+    
 }
 
 #tentang .card {
@@ -516,7 +631,7 @@ body {
     width: 100%;
     height: auto;
     border: none;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.1);
 }
 
 .carousel-controls {
@@ -534,8 +649,10 @@ body {
 
 .carousel-control {
     cursor: pointer;
-    background: rgba(0, 0, 0, 0.5);
-    color: rgb(194, 53, 53);
+    /* background: ; */
+    color: #DCC4AA;
+    font-size: 44px;
+    margin-top: -170px;
     padding: 10px;
 }
 
@@ -710,6 +827,35 @@ body {
 
 #voting .right {
     right: 10px;
+}
+
+#voting .corinthia-text {
+    font-family: "Corinthia";
+    font-weight: 700;
+    font-size: 100px;
+    font-weight: bold;
+    /* margin-left: -40px !important; */
+}
+
+#voting .poppins-text {
+    font-family: "Poppins";
+    font-weight: 400;
+    font-size: 48px;
+    /* line-height: 72px; */
+}
+#peserta .corinthia-text {
+    font-family: "Corinthia";
+    font-weight: 700;
+    font-size: 100px;
+    font-weight: bold;
+    /* margin-left: -40px !important; */
+}
+
+#peserta .poppins-text {
+    font-family: "Poppins";
+    font-weight: 400;
+    font-size: 48px;
+    /* line-height: 72px; */
 }
 
 #voting .see-all {
@@ -1017,7 +1163,7 @@ body {
     width: 90%;
     max-width: 1200px;
     margin: 0 auto;
-    text-align: center;
+    /* text-align: center; */
 }
 
 h1 {
@@ -1025,12 +1171,7 @@ h1 {
 }
 
 .timeline ul {
-    background: linear-gradient(
-        to bottom,
-        #dcc4aa 0%,
-        #dcc4aa 50%,
-        #ffffff 100%
-    );
+   
 
     padding: 50px 0;
 }
@@ -1040,6 +1181,7 @@ h1 {
     position: relative;
     width: 6px;
     margin: 0 auto;
+    border-radius: 10px;
     padding-top: 50px;
     background: #fff;
 }
@@ -1096,7 +1238,7 @@ h1 {
 
 time {
     display: block;
-    font-size: 1.2rem;
+    font-size: 28px;
     font-weight: bold;
     margin-bottom: 8px;
 }
@@ -1127,6 +1269,7 @@ time {
     transform: none;
     visibility: visible;
     opacity: 1;
+    border-radius: 10px;
 }
 
 @media screen and (max-width: 900px) {
@@ -1234,6 +1377,11 @@ time {
 }
 
 .shadow-card-vote {
-    box-shadow: 0px 9px 10px 0px rgba(0, 0, 0, 0.25),
-        9px 0px 10px 0px rgba(0, 0, 0, 0.25);
+    box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.25),
+        0px 1px 2px 4px rgba(0, 0, 0, 0.25);
+}
+
+#landingfooter .iclass a{
+    text-decoration: none;
+    color: white;
 }
