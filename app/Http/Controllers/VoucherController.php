@@ -88,16 +88,7 @@ class VoucherController extends Controller
 
             $periode = $voucher->periode;
             $nominal = $voucher->nominal;
-            $point = 0;
-
-            $pointMapping = [
-                10000 => 10,
-                20000 => 20,
-                50000 => 50,
-                100000 => 100,
-            ];
-
-            $point = $pointMapping[$nominal] ?? 0;
+            $point = $nominal / 1000;
 
             $voucher->is_used = true;
             $voucher->used_to = $id_peserta;
