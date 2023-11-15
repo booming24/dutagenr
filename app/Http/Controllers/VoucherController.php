@@ -16,8 +16,38 @@ class VoucherController extends Controller
      */
     public function index()
     {
-        $voucher = Voucher::all();
-        return view("admin.master.voucher.index", compact('voucher'));
+        $voucher_tersedia = Voucher::where('');
+        return view("admin.dashboard", compact('voucher_tersedia'));
+    }
+
+    /**
+     * Display a listing of the resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function dashboard()
+    {
+        $data = [];
+        $data['voucher_terjual'] = Voucher::where('is_used', 1)->sum('nominal');
+        $data['voucher_tersedia'] = Voucher::where('is_used', 0)->sum('nominal');
+        $data['point_putra'] = Peserta::where('kategori', '=', 'PUTRA')
+            ->orderBy('point_semifinal', 'desc')
+            ->pluck('point_semifinal')
+            ->toArray();
+        $data['point_putri'] = Peserta::where('kategori', '=', 'PUTRI')
+            ->orderBy('point_semifinal', 'desc')
+            ->pluck('point_semifinal')
+            ->toArray();
+        $data['label_putra'] = Peserta::where('kategori', '=', 'PUTRA')
+            ->orderBy('point_semifinal', 'desc')
+            ->pluck('nama_peserta')
+            ->toArray();
+        $data['label_putri'] = Peserta::where('kategori', '=', 'PUTRI')
+            ->orderBy('point_semifinal', 'desc')
+            ->pluck('nama_peserta')
+            ->toArray();
+
+        return view("admin.dashboard", compact('data'));
     }
 
     /**

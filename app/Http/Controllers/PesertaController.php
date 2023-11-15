@@ -42,6 +42,29 @@ class PesertaController extends Controller
         return view("landingpage.voting", compact('putra', 'putri', 'point_putri', 'point_putra', 'label_putri', 'label_putra', 'top_three_putra', 'top_three_putri'));
     }
 
+
+    /**
+     * Display a listing of the resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function allPutera()
+    {
+        $data = Peserta::where('kategori', 'PUTRA')->orderBy('no_peserta', 'asc')->get();
+        return view("landingpage.peserta", compact('data'));
+    }
+
+    /**
+     * Display a listing of the resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function allPuteri()
+    {
+        $data = Peserta::where('kategori', 'PUTRI')->orderBy('no_peserta', 'asc')->get();
+        return view("landingpage.peserta", compact('data'));
+    }
+
     /**
      * Display a listing of the resource.
      *
@@ -52,16 +75,6 @@ class PesertaController extends Controller
         $peserta = Peserta::all();
         return view("admin.master.peserta.index", compact('peserta'));
     }
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-
-    public function create()
-    {
-        return view("admin.master.peserta.create");
-    }
 
     /**
      * Store a newly created resource in storage.
@@ -71,26 +84,73 @@ class PesertaController extends Controller
      */
     public function store(Request $request)
     {
-        $request->validate([
-            'foto' => 'required|image|mimes:jpeg,png,jpg,gif|max:2048',
-        ]);
+        try {
+            $request->validate([
+                'foto' => 'required|image|mimes:jpeg,png,jpg,gif|max:2048',
+            ]);
 
-        $imageName = time() . '.' . $request->foto->extension();
+            $imageName = time() . '.' . $request->foto->extension();
 
-        $request->foto->move(public_path('peserta'), $imageName);
-        $peserta = new Peserta();
+            $request->foto->move(public_path('peserta'), $imageName);
+            $peserta = new Peserta();
 
-        $peserta->no_peserta = $request->no_peserta;
-        $peserta->nama_peserta = $request->nama_peserta;
-        $peserta->foto = $imageName;
-        $peserta->kategori = $request->kategori;
-        $peserta->asal_instansi = $request->asal_instansi;
-        $peserta->status = $request->status;
+            $peserta->no_peserta = $request->no_peserta;
+            $peserta->nama_peserta = $request->nama_peserta;
+            $peserta->foto = $imageName;
+            $peserta->kategori = $request->kategori;
+            $peserta->asal_instansi = $request->asal_instansi;
+            $peserta->status = $request->status;
 
-        $peserta->save();
+            $peserta->save();
 
-        return redirect(route('peserta'));
+            return redirect(route('peserta'))->with('success', 'Data peserta berhasil disimpan');
+        } catch (\Exception $error) {
+            return redirect(route('peserta'))->with('error', $error);
+        }
     }
+
+    /**
+     * Update the specified resource in storage.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function update(Request $request, $id)
+    {
+        try {
+            $request->validate([
+                'foto' => 'image|mimes:jpeg,png,jpg,gif|max:2048',
+            ]);
+
+            $peserta = Peserta::find($id);
+
+            if (!$peserta) {
+                return redirect(route('peserta'))->with('error', 'Peserta tidak ditemukan');
+            }
+
+            if ($request->hasFile('foto')) {
+                // Jika ada file foto yang diunggah, proses pembaruan foto
+                $imageName = time() . '.' . $request->foto->extension();
+                $request->foto->move(public_path('peserta'), $imageName);
+                $peserta->foto = $imageName;
+            }
+
+            // Update data peserta
+            $peserta->no_peserta = $request->no_peserta;
+            $peserta->nama_peserta = $request->nama_peserta;
+            $peserta->kategori = $request->kategori;
+            $peserta->asal_instansi = $request->asal_instansi;
+            $peserta->status = $request->status;
+
+            $peserta->save();
+
+            return redirect(route('peserta'))->with('success', 'Data peserta berhasil diperbarui');
+        } catch (\Exception $error) {
+            return redirect(route('peserta'))->with('error', $error);
+        }
+    }
+
 
     /**
      * Remove the specified resource from storage.
@@ -99,20 +159,27 @@ class PesertaController extends Controller
      */
     public function destroy($id)
     {
-        // // hapus file
-        // $peserta = Peserta::where('id', $id)->first();
-        // $filePath = public_path("images/peserta") . "/" . $peserta->foto;
+        try {
+            $peserta = Peserta::find($id);
 
-        // if (Storage::exists($filePath)) {
-        //     Storage::delete($filePath);
-        //     return "Foto berhasil dihapus.";
-        // } else {
-        //     return "Foto tidak ditemukan.";
-        // }
+            if (!$peserta) {
+                return redirect(route('peserta'))->with('error', 'Peserta tidak ditemukan');
+            }
 
-        // // hapus data
-        // Peserta::where('id', $id)->delete();
+            // Hapus foto dari direktori jika ada
+            if ($peserta->foto) {
+                $imagePath = public_path('peserta/') . $peserta->foto;
+                if (file_exists($imagePath)) {
+                    unlink($imagePath);
+                }
+            }
 
-        // return redirect()->back();
+            // Hapus data peserta dari database
+            $peserta->delete();
+
+            return redirect(route('peserta'))->with('success', 'Data peserta berhasil dihapus');
+        } catch (\Exception $error) {
+            return redirect(route('peserta'))->with('error', $error);
+        }
     }
 }

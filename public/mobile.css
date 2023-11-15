@@ -232,16 +232,16 @@
         margin-bottom: 60px;
     }
 
-    #landingpage   .modal-content {
+    #landingpage .modal-content {
         border-radius: 0;
     }
 
-    #landingpage   .modal-header,
-    #landingpage  .modal-footer {
+    #landingpage .modal-header,
+    #landingpage .modal-footer {
         border-radius: 0;
     }
 
-    #landingpage  .modal-body {
+    #landingpage .modal-body {
         padding: 15px;
         display: flex;
         flex-direction: column;
@@ -250,20 +250,19 @@
 
     #landingpage .cardddd img {
         width: 100%;
-        max-width: 200px; 
+        max-width: 200px;
         text-align: center;
         margin-left: 0px;
         height: auto;
     }
 
-    #landingpage  .voucher-info {
+    #landingpage .voucher-info {
         margin-top: 15px;
         text-align: center;
         width: 350px;
         margin-left: -30px;
     }
-    #landingpage  .voucher-info b{
-      
+    #landingpage .voucher-info b {
         margin-left: 20px;
     }
 
@@ -275,18 +274,17 @@
         width: 100%;
     }
 
-    #landingpage  .modal-footer .btn-secondary,
-    #landingpage  .modal-footer .btn-primary {
+    #landingpage .modal-footer .btn-secondary,
+    #landingpage .modal-footer .btn-primary {
         width: 100%;
     }
 
-    #landingpage .footer .konten{
+    #landingpage .footer .konten {
         margin-top: 800px !important;
     }
 
     .hero {
-        text-align: center; 
-       
+        text-align: center;
     }
 
     .hero img.fluid {
@@ -430,7 +428,7 @@
         font-size: 28px;
         font-family: "Poppins";
         font-weight: 700;
-        margin-left:47px;
+        margin-left: 47px;
         margin-bottom: 20px;
     }
 
@@ -445,7 +443,7 @@
         margin-left: 0px;
         margin-right: 20px;
     }
-    #tentang .filosofi .card{
+    #tentang .filosofi .card {
         margin-left: 45px;
         /* margin-right: 20px; */
     }
@@ -480,7 +478,7 @@
     }
 
     #tentang .card .genre img {
-        margin-left:50px;
+        margin-left: 50px;
         width: 188px;
         height: 161px;
     }
@@ -558,16 +556,16 @@
         margin-bottom: 60px;
     }
 
-    #tentang   .modal-content {
+    #tentang .modal-content {
         border-radius: 0;
     }
 
-    #tentang   .modal-header,
-    #tentang  .modal-footer {
+    #tentang .modal-header,
+    #tentang .modal-footer {
         border-radius: 0;
     }
 
-    #tentang  .modal-body {
+    #tentang .modal-body {
         padding: 15px;
         display: flex;
         flex-direction: column;
@@ -576,20 +574,19 @@
 
     #tentang .cardddd img {
         width: 100%;
-        max-width: 200px; 
+        max-width: 200px;
         text-align: center;
         margin-left: 80px;
         height: auto;
     }
 
-    #tentang  .voucher-info {
+    #tentang .voucher-info {
         margin-top: 15px;
         text-align: center;
         width: 350px;
         margin-left: 140px;
     }
-    #tentang  .voucher-info b{
-      
+    #tentang .voucher-info b {
         margin-left: 20px;
     }
 
@@ -601,8 +598,8 @@
         width: 100%;
     }
 
-    #tentang  .modal-footer .btn-secondary,
-    #tentang  .modal-footer .btn-primary {
+    #tentang .modal-footer .btn-secondary,
+    #tentang .modal-footer .btn-primary {
         width: 100%;
     }
 
@@ -613,16 +610,16 @@
         margin-bottom: 60px;
     }
 
-    #sejarah   .modal-content {
+    #sejarah .modal-content {
         border-radius: 0;
     }
 
-    #sejarah   .modal-header,
-    #sejarah  .modal-footer {
+    #sejarah .modal-header,
+    #sejarah .modal-footer {
         border-radius: 0;
     }
 
-    #sejarah  .modal-body {
+    #sejarah .modal-body {
         padding: 15px;
         display: flex;
         flex-direction: column;
@@ -631,20 +628,19 @@
 
     #sejarah .cardddd img {
         width: 100%;
-        max-width: 200px; 
+        max-width: 200px;
         text-align: center;
         margin-left: -0px;
         height: auto;
     }
 
-    #sejarah  .voucher-info {
+    #sejarah .voucher-info {
         margin-top: 15px;
         text-align: center;
         width: 350px;
         margin-left: -20px;
     }
-    #sejarah  .voucher-info b{
-      
+    #sejarah .voucher-info b {
         margin-left: 20px;
     }
 
@@ -656,15 +652,14 @@
         width: 100%;
     }
 
-    #sejarah  .modal-footer .btn-secondary,
-    #sejarah  .modal-footer .btn-primary {
+    #sejarah .modal-footer .btn-secondary,
+    #sejarah .modal-footer .btn-primary {
         width: 100%;
     }
 
-
     #sejarah .intro img {
-        width: 100%; 
-        max-width: 100%; 
+        width: 100%;
+        max-width: 100%;
         height: auto;
     }
 
@@ -706,7 +701,7 @@
     }
 
     .carousel-card img {
-        width: 90%; 
+        width: 90%;
         /* max-width: 100%;  */
         height: 80px;
     }
@@ -812,8 +807,6 @@
         /* line-height: 120px; */
     }
 
-   
-
     #voting .statistik p {
         font-size: 22px;
         font-family: "Poppins";
@@ -866,19 +859,17 @@
         margin-bottom: 60px;
     }
 
-    #voting   .modal-content {
+    #voting .modal-content {
         border-radius: 0;
-        margin-left: -0px ;
+        margin-left: -0px;
         width: 400px;
     }
 
-    #voting .modal-content .bottom button{
+    #voting .modal-content .bottom button {
         margin-left: -30px !important;
-    
     }
     #voting .modal-content .bottom {
         gap: 40px !important;
-    
     }
 
     #voting .cardd {
@@ -933,12 +924,12 @@
         margin-left: 50px;
     }
 
-    #voting .carousel-card img{
+    #voting .carousel-card img {
         width: 200px;
         height: 250px;
         margin-left: 15px;
     }
-    
+
     .modal-dialog {
         width: 100%; /* Modal akan mengisi seluruh lebar layar */
         max-width: 100%; /* Batasi lebar modal jika diperlukan */
@@ -958,7 +949,7 @@
         text-align: center;
     }
 
-    .modal-body .cardddd img{
+    .modal-body .cardddd img {
         width: 114px !important;
         height: 150px !important;
     }
@@ -977,7 +968,7 @@
         z-index: 1;
     }
 
-    #voting .cardd b{
+    #voting .cardd b {
         margin-top: -350px;
     }
 
@@ -1106,10 +1097,10 @@
         opacity: 1;
     }
 
-     /* Atur lebar grafik agar sesuai dengan layar mobile */
-     canvas, canvas2 {
+    /* Atur lebar grafik agar sesuai dengan layar mobile */
+    canvas,
+    canvas2 {
         width: 100%;
-        max-width: 300px; /* Sesuaikan sesuai kebutuhan Anda */
     }
 
     /* Sesuaikan margin atau jarak antara grafik */
@@ -1126,22 +1117,22 @@
         font-size: 12px;
     }
 
-    #footer{
+    #footer {
         margin-top: 470px;
         margin-bottom: 0px;
     }
 
-    #footer .konten img{
+    #footer .konten img {
         text-align: center;
         align-items: center;
         margin-left: 50px;
     }
-    #landingfooter{
+    #landingfooter {
         margin-top: -1850px !important;
         margin-bottom: 0px;
-     }
-    #votingfooter{
+    }
+    #votingfooter {
         margin-top: -100px !important;
         margin-bottom: 0px;
-     }
+    }
 }

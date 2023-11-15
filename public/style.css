@@ -113,7 +113,6 @@ body {
     color: #ccc; /* Atur warna sesuai preferensi Anda */
 }
 
-
 .vote-button {
     background-color: #ffd600;
     border: none;
@@ -150,7 +149,7 @@ body {
     border: 2px solid #8c7d26;
 }
 
-#landingpage  .buy-button {
+#landingpage .buy-button {
     background-color: transparent;
     border: 2px solid #ffd600;
     padding: 10px;
@@ -329,7 +328,6 @@ body {
         #dcc4aa 50%,
         #ffffff 100%
     );
-    
 }
 
 #landingpage .timelinee h3 {
@@ -478,7 +476,6 @@ body {
     font-family: "Poppins";
     font-weight: 700;
     margin-left: 13px;
-    
 }
 
 #tentang .card {
@@ -650,7 +647,7 @@ body {
 .carousel-control {
     cursor: pointer;
     /* background: ; */
-    color: #DCC4AA;
+    color: #dcc4aa;
     font-size: 44px;
     margin-top: -170px;
     padding: 10px;
@@ -1171,8 +1168,6 @@ h1 {
 }
 
 .timeline ul {
-   
-
     padding: 50px 0;
 }
 
@@ -1381,7 +1376,13 @@ time {
         0px 1px 2px 4px rgba(0, 0, 0, 0.25);
 }
 
-#landingfooter .iclass a{
+#landingfooter .iclass a {
     text-decoration: none;
     color: white;
+}
+
+@media only screen and (max-width: 600px) {
+    canvas#barChart {
+        width: 600px !important;
+    }
 }

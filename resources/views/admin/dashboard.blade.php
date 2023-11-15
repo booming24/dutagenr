@@ -38,8 +38,8 @@
                             style="background-color: #418897; width: 485px; height: 37px; margin-top: -20px;">
                             Voucher Tersedia
                         </div>
-                        <div class="card-body">
-                            <h5 class="card-title">Rp. XXXX</h5>
+                        <div class="card-body d-flex justify-content-center align-items-center">
+                            <h1 class="card-title">Rp. {{ $data['voucher_tersedia'] }}</h1>
                         </div>
                     </div>
                 </div>
@@ -49,8 +49,8 @@
                             style="background-color: #FF7B3D; width: 485px; height: 37px; margin-top: -20px;">
                             Voucher Terjual
                         </div>
-                        <div class="card-body">
-                            <h5 class="card-title">Rp. XXXX</h5>
+                        <div class="card-body d-flex justify-content-center align-items-center">
+                            <h1 class="card-title">Rp. {{ $data['voucher_terjual'] }}</h1>
                         </div>
                     </div>
                 </div>
@@ -84,7 +84,8 @@
         const ctx = canvas.getContext("2d");
 
         // Data untuk grafik pertama
-        const data = [30, 50, 80, 120, 70];
+        const dataPutra = {!! json_encode($data['point_putra']) !!};
+        const labelsPutra = {!! json_encode($data['label_putra']) !!};
 
         // Konfigurasi untuk latar belakang linear gradient pada grafik pertama
         const gradient = ctx.createLinearGradient(0, 0, canvas.width, 0);
@@ -95,10 +96,10 @@
         const chart = new Chart(canvas, {
             type: "bar",
             data: {
-                labels: ["Label 1", "Label 2", "Label 3", "Label 4", "Label 5"],
+                labels: labelsPutra,
                 datasets: [{
                     label: "Data",
-                    data: data,
+                    data: dataPutra,
                     backgroundColor: gradient,
                     borderColor: "transparent",
                     borderRadius: 20,
@@ -124,7 +125,8 @@
         const ctx2 = canvas2.getContext("2d");
 
         // Data untuk grafik kedua
-        const data2 = [20, 40, 60, 90, 50];
+        const dataPutri = {!! json_encode($data['point_putri']) !!};
+        const labelsPutri = {!! json_encode($data['label_putri']) !!};
 
         // Konfigurasi untuk latar belakang linear gradient pada grafik kedua
         const gradient2 = ctx2.createLinearGradient(0, 0, canvas2.width, 0);
@@ -136,10 +138,10 @@
         const chart2 = new Chart(canvas2, {
             type: "bar",
             data: {
-                labels: ["Label 1", "Label 2", "Label 3", "Label 4", "Label 5"],
+                labels: labelsPutri,
                 datasets: [{
                     label: "Data",
-                    data: data2,
+                    data: dataPutri,
                     backgroundColor: gradient2,
                     borderColor: "transparent",
                     borderRadius: 20,
