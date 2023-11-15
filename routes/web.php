@@ -23,10 +23,7 @@ Route::post('/postlogin', [App\Http\Controllers\LoginController::class, 'postlog
 Auth::routes();
 Route::group(['middleware' => 'auth'], function () {
     Route::prefix('admin')->group(function () {
-        Route::get('/', [App\Http\Controllers\VoucherController::class, 'dashboard'])->name('dashboard')->middleware('adminalpha');
-        Route::get('/dashboard', function () {
-            return view('admin.dashboard');
-        });
+        Route::get('/', [App\Http\Controllers\VoucherController::class, 'dashboard'])->name('dashboard')->middleware('adminalpha', 'admingenre');
         Route::prefix('voucher')->group(function () {
             // user
             Route::get('/', [App\Http\Controllers\VoucherController::class, 'index'])->name('voucher')->middleware('adminalpha');
@@ -73,10 +70,4 @@ Route::prefix('/')->group(function () {
     Route::get('/puteri', [App\Http\Controllers\PesertaController::class, 'allPuteri'])->name('puteri');
     Route::post('/use-voucher', [App\Http\Controllers\VoucherController::class, 'useVoucher'])->name('voucher-use');
     Route::get('/voting', [App\Http\Controllers\PesertaController::class, 'landingPage'])->name('voting');
-    Route::get('/hapus-session', function () {
-        // Hapus session di sini
-        session()->flush();
-        // Response berhasil
-        return response()->json(['message' => 'Session berhasil dihapus'], 200);
-    });
 });

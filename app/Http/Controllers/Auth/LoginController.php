@@ -46,10 +46,10 @@ class LoginController extends Controller
         if (Auth::attempt($request->only('username', 'password'))) {
             switch (Auth::user()['level']) {
                 case 'adminalpha':
-                    return redirect('/welcome');
+                    return redirect()->route('dashboard');
                     break;
                 case 'admingenre':
-                    return redirect('/kepaladinas/dashboard');
+                    return redirect()->route('dashboard');
                     break;
             }
         }
