@@ -52,9 +52,8 @@ Route::group(['middleware' => 'auth'], function () {
             Route::get('/delete/{id}', [App\Http\Controllers\UserController::class, 'delete'])->name('user-delete');
         });
     });
-    Route::get('/sdadasd', function () {
-        return view('landingpage.peserta');
-    })->name('laporan-penjualan');
+    Route::get('/laporan-penjualan', [App\Http\Controllers\VoucherController::class, 'penjualan'])->name('laporan-penjualan')->middleware('adminalpha');
+    Route::get('/laporan-peserta', [App\Http\Controllers\VoucherController::class, 'peserta'])->name('laporan-peserta')->middleware('adminalpha');
 });
 
 Route::prefix('/')->group(function () {

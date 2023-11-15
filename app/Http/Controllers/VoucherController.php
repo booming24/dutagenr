@@ -51,6 +51,47 @@ class VoucherController extends Controller
     }
 
     /**
+     * Display a listing of the resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function penjualan()
+    {
+        $data = [];
+        $data['voucher_terjual'] = Voucher::where('is_used', 1)->sum('nominal');
+        $data['voucher_tersedia'] = Voucher::where('is_used', 0)->sum('nominal');
+        $data['point_putra'] = Peserta::where('kategori', '=', 'PUTRA')
+            ->orderBy('point_semifinal', 'desc')
+            ->pluck('point_semifinal')
+            ->toArray();
+        $data['point_putri'] = Peserta::where('kategori', '=', 'PUTRI')
+            ->orderBy('point_semifinal', 'desc')
+            ->pluck('point_semifinal')
+            ->toArray();
+        $data['label_putra'] = Peserta::where('kategori', '=', 'PUTRA')
+            ->orderBy('point_semifinal', 'desc')
+            ->pluck('nama_peserta')
+            ->toArray();
+        $data['label_putri'] = Peserta::where('kategori', '=', 'PUTRI')
+            ->orderBy('point_semifinal', 'desc')
+            ->pluck('nama_peserta')
+            ->toArray();
+
+        return view("admin.laporan.laporanpenjualan", compact('data'));
+    }
+
+    /**
+     * Display a listing of the resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function peserta()
+    {
+        $peserta = Peserta::all();
+        return view("admin.laporan.laporankandidat", compact('peserta'));
+    }
+
+    /**
      * Store a newly created resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
