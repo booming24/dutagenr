@@ -16,8 +16,8 @@ class VoucherController extends Controller
      */
     public function index()
     {
-        $voucher_tersedia = Voucher::where('');
-        return view("admin.master.voucher.index", compact('voucher_tersedia'));
+        $voucher = Voucher::where('');
+        return view("admin.master.voucher.index", compact('voucher'));
     }
 
     /**
