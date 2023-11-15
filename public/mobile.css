@@ -1,78 +1,90 @@
 /* CSS untuk tampilan seluler */
 @media (max-width: 768px) {
-    #navBar .logo {
-        margin-left: 20px;
-    }
-
-    .navbar-left .logo {
-        width: 27px;
-        height: 30px;
-        margin-right: 10px;
-    }
-
-    .navbar-left .logo2 {
-        width: 43px;
-        height: 39px;
-        margin-right: 10px;
+    .burger-menu {
+        display: block;
+        cursor: pointer;
+        z-index: 1000;
+        margin-left: -10px;
     }
 
     .navbar {
+        position: fixed;
+        width: 100%;
+        top: 0;
+        left: 0;
+        z-index: 1000; /* Pastikan z-index cukup tinggi agar navbar tetap terlihat */
+    }
+
+    .navbar-links {
+        display: none;
+        position: fixed;
+        width: 100%;
+        top: 70px;
+        background-color: #191919;
+        z-index: 999;
+        margin: 0;
+        padding: 0;
+    }
+
+    .navbar-scrolled {
+        transform: translateY(-100%);
+        transition: transform 0.3s ease;
+    }
+
+    .navbar.fixed {
+        position: fixed;
+        width: 100%;
+        transition: 500ms;
+        top: 0;
+        z-index: 1000;
+    }
+
+    /* Properti navbar saat fixed */
+    .navbar.fixed .navbar {
         background-color: #191919;
         height: 88px;
         display: flex;
         justify-content: space-between;
         align-items: center;
-        padding: 0 20px;
+        padding: 0 0px;
     }
 
-    .navbar-right ul {
-        list-style: none;
-        display: flex;
-        margin: 0;
+    /* Navbar muncul kembali saat diperlukan */
+    .navbar-show {
+        transform: translateY(0%);
+    }
+
+    .navbar-links.active {
+        display: block;
+    }
+
+    .navbar-links ul {
+        list-style-type: none;
+        text-decoration: none;
         padding: 0;
-        padding-right: 50px;
-        align-items: center; /* Menyelaraskan elemen vertikal ke tengah */
+        margin: 0; /* Hilangkan margin */
     }
 
-    .navbar-right li {
-        margin-right: 20px;
-        margin-left: 20px;
-    }
-
-    .navbar-right a {
+    .navbar-links ul li a {
         text-decoration: none;
-        color: #fff;
-        font-family: "Poppins";
-        font-weight: 400;
-        font-size: 12px;
-    }
-    .navbar-right a:hover {
-        text-decoration: none;
-        color: #fff;
-    }
-
-    .navbar-right .vote-button {
-        color: #191919;
-    }
-
-    .navbar-right .vote-button:hover {
-        color: #191919;
+        color: white;
+        display: block;
+        padding: 10px 20px;
+        margin: 0; /* Hilangkan margin */
     }
 
     .vote-button {
-        background-color: #ffd600;
-        border: none;
-        padding: 8px;
-        border-radius: 16px;
-        width: 104px;
-        height: 30px;
-        cursor: pointer;
-        font-family: "Poppins";
-        font-weight: 400;
+        width: 100%; /* Ubah lebar agar menyesuaikan ukuran layar */
+        margin-left: 0;
     }
 
-    .vote-button:hover {
-        background-color: #8c7d26;
+    .burger-menu span {
+        display: block;
+        width: 30px;
+        height: 3px;
+        background-color: #fff;
+        margin: 5px auto;
+        transition: all 0.3s ease-in-out;
     }
 
     #landingpage .votenow-button {
@@ -150,7 +162,11 @@
         justify-content: center;
         align-items: center;
         text-align: center;
-        background-color: rgba(0, 0, 0, 0.6);
+        /* background-color: rgba(0, 0, 0, 0.6); */
+        background-image: url(../images/banner-kotak-2.jpg);
+        background-position: center center;
+        background-size: cover;
+        background-repeat: no-repeat;
         padding: 0;
         margin-top: 150px;
         margin-left: -20px;
@@ -259,7 +275,7 @@
     #landingpage .voucher-info {
         margin-top: 15px;
         text-align: center;
-        width: 350px;
+        width: 100%;
         margin-left: -30px;
     }
     #landingpage .voucher-info b {
@@ -293,12 +309,43 @@
         height: auto; /* Gambar akan menyesuaikan tingginya */
     }
 
+    .hero .gambarbanner .fluid {
+        width: 100%;
+        height: 90.5% !important;
+    }
+
+    .fluid {
+        width: 100%;
+        height: calc(103vh - 88px);
+        object-fit: cover;
+        position: absolute;
+        top: 88px;
+        left: 0;
+    }
+
+    #tentang .fluid {
+        width: 100%;
+        height: auto !important;
+        object-fit: cover;
+        position: absolute;
+        top: 70px;
+        left: 0;
+    }
+    #sejarah .fluid {
+        width: 100%;
+        height: auto !important;
+        object-fit: cover;
+        position: absolute;
+        top: 70px;
+        left: 0;
+    }
+
     .title {
         color: #fff;
         text-align: center;
         position: absolute;
         width: max-content;
-        top: 20%;
+        top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
     }
@@ -308,13 +355,12 @@
         font-weight: 700;
         font-size: 50px;
         font-weight: bold;
-        margin-top: 50px !important;
     }
 
     .poppins-text {
         font-family: "Poppins";
         font-weight: 600;
-        font-size: 18px;
+        font-size: 16px;
         margin-top: -20px;
         /* line-height: 72px; */
     }
@@ -331,7 +377,7 @@
         padding: 20px;
         box-sizing: border-box;
         transition: top 0.5s;
-        top: 30%;
+        top: 90%;
     }
 
     /* Atur kapan elemen "tentang" muncul saat diskrol */
@@ -377,17 +423,37 @@
         width: 287px;
         height: 219px;
         margin-top: 10px;
-        margin-left: 34px;
     }
 
     #tentang .intro {
-        margin-top: 150px;
+        background-position: center center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        height: 288px;
+        padding-top: 160px;
     }
-    #tentang .intro img {
-        width: 100%;
-        max-width: 100%;
-        height: auto;
+    #tentang .intro h1 {
+        font-size: 44px;
     }
+    #tentang .intro h2 {
+        font-size: 20px;
+        margin-top: -10px;
+    }
+    #sejarah .intro {
+        background-position: center center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        height: 288px;
+        padding-top: 160px;
+    }
+    #sejarah .intro h1 {
+        font-size: 44px;
+    }
+    #sejarah .intro h2 {
+        font-size: 20px;
+        margin-top: -10px;
+    }
+    
 
     #tentang .latarbelakang {
         margin-left: 20px;
@@ -398,9 +464,10 @@
         width: 100%;
         max-width: 100%;
         height: auto;
-        margin-top: 0px;
+        /* margin-top: 40px; */
         border-radius: 10px;
         display: block;
+        margin-bottom: 20px;
     }
 
     #tentang .latarbelakang b {
@@ -424,16 +491,15 @@
     }
 
     #tentang .filosofi b {
-        line-height: 30px;
+        line-height: 60px;
         font-size: 28px;
         font-family: "Poppins";
         font-weight: 700;
-        margin-left: 47px;
         margin-bottom: 20px;
     }
 
     #tentang .card {
-        width: 307px;
+        width: 100%;
         height: auto;
         gap: 40px;
         padding-bottom: 0px;
@@ -443,10 +509,10 @@
         margin-left: 0px;
         margin-right: 20px;
     }
-    #tentang .filosofi .card {
+    /* #tentang .filosofi .card {
         margin-left: 45px;
-        /* margin-right: 20px; */
-    }
+        margin-right: 20px;
+    } */
 
     #tentang .bkkbn img {
         width: 168px;
@@ -502,7 +568,11 @@
         justify-content: center;
         align-items: center;
         text-align: center;
-        background-color: rgba(0, 0, 0, 0.6);
+        /* background-color: rgba(0, 0, 0, 0.6); */
+        background-image: url(../images/banner-kotak-2.jpg);
+        background-position: center center;
+        background-size: cover;
+        background-repeat: no-repeat;
         padding: 0;
         margin-top: 150px;
         margin-left: 0px;
@@ -514,8 +584,9 @@
         color: white;
         font-family: "Poppins";
         font-weight: 700;
-        font-size: 28px;
+        font-size: 20px;
         margin: 0;
+        margin-bottom: 10px;
     }
 
     #tentang .kotak .votenoww-button,
@@ -721,8 +792,10 @@
 
     .carousel-control {
         cursor: pointer;
-        background: rgba(0, 0, 0, 0.5);
-        color: rgb(194, 53, 53);
+        /* background: ; */
+        color: #dcc4aa;
+        font-size: 44px;
+        margin-top: -190px;
         padding: 10px;
     }
 
@@ -749,7 +822,11 @@
         justify-content: center;
         align-items: center;
         text-align: center;
-        background-color: rgba(0, 0, 0, 0.6);
+        /* background-color: rgba(0, 0, 0, 0.6); */
+        background-image: url(../images/banner-kotak-2.jpg);
+        background-position: center center;
+        background-size: cover;
+        background-repeat: no-repeat;
         padding: 0;
         margin-top: 150px;
         margin-left: 0px;
@@ -761,8 +838,9 @@
         color: white;
         font-family: "Poppins";
         font-weight: 700;
-        font-size: 28px;
+        font-size: 20px;
         margin: 0;
+        margin-bottom: 10px;
     }
 
     #sejarah .kotak .votenoww-button,
@@ -804,7 +882,92 @@
         text-align: center;
         color: #aa8d6b;
         margin: 0;
+        margin-top: 50px !important;
         /* line-height: 120px; */
+    }
+    #voting .corinthia-text {
+        font-family: "Corinthia";
+        font-weight: 700;
+        font-size: 60px !important;
+        font-weight: bold;
+        text-align: center;
+        color: #aa8d6b;
+        margin: 0;
+        margin-top: 500px !important;
+        /* line-height: 120px; */
+    }
+
+    #voting .cardpeserta {
+        display: flex;
+        flex-direction: column !important;
+        /* gap: 50px; */
+        /* margin-left: 20px !important; */
+    }
+
+    #voting .poppins-text {
+        font-family: "Poppins";
+        font-weight: 400;
+        font-size: 28px;
+        /* line-height: 72px; */
+    }
+
+    #voting .kotak {
+        position: absolute;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        /* background-color: rgba(0, 0, 0, 0.6); */
+        background-image: url(../images/banner-kotak-2.jpg);
+        background-position: center center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        padding: 0;
+        margin-top: 150px;
+        margin-left: -12px !important;
+        height: 288px;
+        margin-bottom: 30px;
+    }
+
+    #voting .kotak p {
+        color: white;
+        font-family: "Poppins";
+        font-weight: 700;
+        font-size: 28px;
+        margin: 0;
+    }
+
+    #voting .kotak .votenoww-button,
+    #voting .kotak .buyy-button {
+        display: block;
+        background-color: transparent;
+        border: 2px solid #ffd600;
+        padding: 8px;
+        border-radius: 16px;
+        width: 134px;
+        height: 40px;
+        cursor: pointer;
+        font-family: "Poppins";
+        font-weight: 700;
+        text-decoration: none;
+        color: #ffd600;
+    }
+
+    #voting .kotak .votenoww-button:hover {
+        background-color: #8c7d26;
+        border: 2px solid #8c7d26;
+    }
+
+    #voting .kotak .buyy-button:hover {
+        background-color: #8c7d26;
+        border: 2px solid #8c7d26;
+    }
+
+    #voting .kotak .gabung {
+        display: flex;
+        gap: 20px;
     }
 
     #voting .statistik p {
@@ -862,16 +1025,25 @@
     #voting .modal-content {
         border-radius: 0;
         margin-left: -0px;
-        width: 400px;
+        width: 380px;
+    }
+
+    #voting .buttonbiru {
+        margin-left: 30px !important;
     }
 
     #voting .modal-content .bottom button {
-        margin-left: -30px !important;
+        margin-left: 0px !important;
+        margin-top: 30px;
     }
     #voting .modal-content .bottom {
-        gap: 40px !important;
+        gap: 20px !important;
+        margin-left: 180px !important;
     }
 
+    #voting .modalbeli {
+        margin-left: -40px;
+    }
     #voting .cardd {
         display: flex;
         flex-direction: column;
@@ -899,13 +1071,17 @@
         margin-left: 5%;
     }
 
+    #voting .shadow-card-vote {
+        height: max-content !important;
+    }
+
     #voting .carousel-container {
         overflow: hidden;
         position: relative;
         width: 337px;
         height: 647px;
         margin: 10px;
-        margin-bottom: 140px;
+        /* margin-bottom: 140px; */
     }
 
     #voting .carousel {
@@ -919,15 +1095,26 @@
         text-align: center;
         padding: 20px;
         border: 1px solid black;
-        height: 617px;
+        /* height: 317px; */
         width: 337px;
-        margin-left: 50px;
+        gap: 30px;
+        margin-left: 35px !important;
+    }
+
+    #voting .left img {
+        left: -50px !important;
+        margin-top: 150px;
+    }
+
+    #voting .right img {
+        margin-left: -80px;
+        margin-top: 150px;
     }
 
     #voting .carousel-card img {
         width: 200px;
         height: 250px;
-        margin-left: 15px;
+        /* margin-left: 15px; */
     }
 
     .modal-dialog {
@@ -947,6 +1134,8 @@
 
     .voucher-info {
         text-align: center;
+        width: 360px;
+        margin-left: -40px;
     }
 
     .modal-body .cardddd img {
@@ -1101,6 +1290,7 @@
     canvas,
     canvas2 {
         width: 100%;
+        max-width: 300px; /* Sesuaikan sesuai kebutuhan Anda */
     }
 
     /* Sesuaikan margin atau jarak antara grafik */
@@ -1118,21 +1308,31 @@
     }
 
     #footer {
-        margin-top: 470px;
+        margin-top: 470px !important;
         margin-bottom: 0px;
     }
 
     #footer .konten img {
         text-align: center;
         align-items: center;
-        margin-left: 50px;
     }
     #landingfooter {
-        margin-top: -1850px !important;
+        margin-top: -450px !important;
         margin-bottom: 0px;
     }
     #votingfooter {
         margin-top: -100px !important;
         margin-bottom: 0px;
+    }
+
+    .login-card {
+        width: 100%;
+        margin: 0 auto;
+        background-color: #418897;
+        padding: 20px;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        border-radius: 5px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     }
 }

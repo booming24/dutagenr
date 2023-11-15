@@ -3,38 +3,46 @@
 @section('content')
 <div id="tentang" style="padding-bottom: 0 !important;">
     <div class="intro">
-        <img src="images/frame5.png" alt="21" class="fluid" />
+        <h1 class="corinthia-text-banner">Tentang</h1>
+        <h2 class="poppins-text-banner">Duta GenRe Sumatera Selatan</h2>
     </div>
     <div class="container">
         <div class="latarbelakang">
-            <div style="margin-top: -13%" class="d-flex justify-content-center">
+            <div class="d-flex justify-content-center">
                 <img src="images/tentangbanner.jpg" alt="21" />
             </div>
-            <b style="text-align: left !important;">Latar Belakang</b>
+            <b>Latar Belakang</b>
             <p>Ikatan Duta Mahasiswa Generasi Berecana (GenRe) Sumatera Selatan adalah organisasi beranggotakan Duta
-                Mahasiswa GenRe provinsi Sumatera Selatan yang merupakan suatu wujud loyalitas untuk mensosialisasikan
+                Mahasiswa GenRe provinsi Sumatera Selatan yang merupakan suatu wujud loyalitas untuk
+                mensosialisasikan
                 dan
-                melaksanakan advokasi terkait program Generasi Berencana ke seluruh remaja di Provinsi Sumatera Selatan.
+                melaksanakan advokasi terkait program Generasi Berencana ke seluruh remaja di Provinsi Sumatera
+                Selatan.
 
-                IDMSS didirikan pada tanggal 14 Februari 2016 yang merupakan hasil dari Forum Tukar Pengalaman Program
+                IDMSS didirikan pada tanggal 14 Februari 2016 yang merupakan hasil dari Forum Tukar Pengalaman
+                Program
                 GenRe
-                bagi Duta Mahasiswa Genre Sumatera Selatan dari angkatan 2011-2015 di Palembang untuk jangka waktu yang
+                bagi Duta Mahasiswa Genre Sumatera Selatan dari angkatan 2011-2015 di Palembang untuk jangka waktu
+                yang
                 tidak ditentukan.
             </p>
             <b>Tugas Duta GenRe Sumsel</b>
             <ul>
                 <li>Melakukan sosialisasi program-program GenRe di kalangan remaja dan mahasiswa serta meningkatkan
-                    pengetahuan, sikap, dan perilaku remaja dan mahasiswa untuk berperilaku sehat dan berakhlak mulia.
+                    pengetahuan, sikap, dan perilaku remaja dan mahasiswa untuk berperilaku sehat dan berakhlak
+                    mulia.
                 </li>
                 <li>Mempromosikan program GenRe dengan menjadi figure motivator dari kalangan remaja dan mahasiswa,
                     sesuai
                     dengan prinsip dari, oleh dan untuk remaja dan mahasiswa.</li>
-                <li>Menumbuhkan, mengembangkan, dan mengelola PIK R/M yang ada sebagai wadah atau tempat berlangsungnya
+                <li>Menumbuhkan, mengembangkan, dan mengelola PIK R/M yang ada sebagai wadah atau tempat
+                    berlangsungnya
                     konseling ataupun kegiatan-kegiatan GenRe melalui pendekatan ramah remaja atau mahasiswa.</li>
                 <li>Menjadi tempat konseling teman sebaya atau remaja agar dapat memberikan solusi bagi permasalahan
                     remaja
                     yang ada dengan memasukkan nilai-nilai GenRe di dalamnya.</li>
-                <li>Menjadi role model yang memiliki masa depan terencana bagi remaja masa kini agar memiliki kualitas
+                <li>Menjadi role model yang memiliki masa depan terencana bagi remaja masa kini agar memiliki
+                    kualitas
                     hidup
                     yang tinggi. Menjadi remaja dan mahasiswa yang berperilaku sehat dan berakhlak mulia.</li>
             </ul>
@@ -57,23 +65,28 @@
                         <b>BKKBN</b>
                         <ol>
                             <li><strong>Bentuk Love</strong>
-                                <p>Logogram diadopsi dari lambang cinta yaitu hati. Bentuk ini merepresentasikan, awal
+                                <p>Logogram diadopsi dari lambang cinta yaitu hati. Bentuk ini merepresentasikan,
+                                    awal
                                     sebuah perencanaan berasal dari kasih sayang keluarga dan keharmonisan keluarga,
                                     yang
                                     didukung dengan lingkungan yang selalu mendukung.</p>
                             </li>
                             <li><strong>Merangkul</strong>
-                                <p>BKKBN akan selalu berusaha untuk merangkul dan memfasilitasi serta menjadi partner
+                                <p>BKKBN akan selalu berusaha untuk merangkul dan memfasilitasi serta menjadi
+                                    partner
                                     dalam
-                                    setiap perencanaan yang dilakukan oleh keluarga dan masyarakat. Perencanaan ini dari
+                                    setiap perencanaan yang dilakukan oleh keluarga dan masyarakat. Perencanaan ini
+                                    dari
                                     masa kanak kanak sampai dewasa.</p>
                             </li>
                             <li><strong>Kupu - Kupu</strong>
-                                <p>Kupu-kupu adalah lambang perencanaan dan proses. Hal ini dapat dilihat dari proses
+                                <p>Kupu-kupu adalah lambang perencanaan dan proses. Hal ini dapat dilihat dari
+                                    proses
                                     metamorfosis kupu-kupu dari seekor ulat hingga menjadi kupu-kupu yang indah.</p>
                             </li>
                             <li><strong>Simbol Tak Terbatas</strong>
-                                <p>Pencapaian harus direncanakan tanpa batas. Setiap jatuh harus bangun tanpa henti. Pun
+                                <p>Pencapaian harus direncanakan tanpa batas. Setiap jatuh harus bangun tanpa henti.
+                                    Pun
                                     begitu dengan BKKBN yang tanpa lelah akan terus menjadi partner keluarga dan
                                     masyarakat.
                                 </p>
@@ -90,16 +103,16 @@
                         <div class="genre">
                             <img src="images/forum.png" alt="21" class="logo" />
                         </div>
-
-
                     </div>
                     <div class="col-lg-5 penjelasan">
                         <b>Forum GenRe Sumsel</b>
                         <ol>
                             <li><strong>Atap Rumah Limas</strong>
-                                <p>Atap rumah limas merupakan atap khas dari rumah ada Sumatra Selatan yang berbentuk
+                                <p>Atap rumah limas merupakan atap khas dari rumah ada Sumatra Selatan yang
+                                    berbentuk
                                     limas.
-                                    Memiliki ujung sebannyak 18 buah, 8 garis genting dengan total 45 buah genting, ini
+                                    Memiliki ujung sebannyak 18 buah, 8 garis genting dengan total 45 buah genting,
+                                    ini
                                     merupakan symbol kemerdekaan Republik Indonesia tanggal 17 Agustus 1945.</p>
                             </li>
                             <li><strong>Pita Bermotif Songket</strong>
@@ -139,14 +152,16 @@
                         <ol>
                             <li>
                                 <strong>Logo BKKBN</strong>
-                                <p>Menjelaskan bahwa Ikatan Duta GenRe Sumatera Selatan terbentuk karena adanya dukungan
+                                <p>Menjelaskan bahwa Ikatan Duta GenRe Sumatera Selatan terbentuk karena adanya
+                                    dukungan
                                     dari BKKBN, baik BKKBN pusat maupun Provinsi. Ikatan Duta GenRe di bawah naungan
                                     BKKBN.
                                 </p>
                             </li>
                             <li>
                                 <strong>Bunga Seruni</strong>
-                                <p>Merupakan carminan dari Sumatera Selatan yang merupakan bunga tertua yang sudah ada
+                                <p>Merupakan carminan dari Sumatera Selatan yang merupakan bunga tertua yang sudah
+                                    ada
                                     sejak
                                     zaman Kerajaan Sriwijaya. Bunga ini mencerminkan kehebatan kerajaan Sriwijaya
                                     sebagai
@@ -163,8 +178,10 @@
                             <li>
                                 <strong>Panji Segi Lima yang menancap pada Bunga Seruni</strong>
                                 <p>Merupakan cerminan dari Pancasila yang berarti Ikatan Duta GenRe Sumatera Selatan
-                                    berlandaskan dan berpegang teguh pada Pancasila serta UUD 1945. Hal ini menunjukkan
-                                    bahwa segala bentuk kegiatan yang dilakukan ditujukan untuk kepentingan negara dan
+                                    berlandaskan dan berpegang teguh pada Pancasila serta UUD 1945. Hal ini
+                                    menunjukkan
+                                    bahwa segala bentuk kegiatan yang dilakukan ditujukan untuk kepentingan negara
+                                    dan
                                     bangsa.</p>
                             </li>
                             <li>
@@ -178,7 +195,8 @@
                                     pada bunga seruni</strong>
                                 <p>Merupakan Kewajiban Seorang Duta GenRe untuk terus menyebarkan virus-virus GenRe
                                     kepada
-                                    remaja-remaja di Sumatera Selatan yang berfaalsafah pada Pancasila dan Undang-Undang
+                                    remaja-remaja di Sumatera Selatan yang berfaalsafah pada Pancasila dan
+                                    Undang-Undang
                                     Dasar 1945.</p>
                             </li>
                         </ol>
@@ -190,14 +208,15 @@
     </div>
     <div class="kotak">
         <p>Berikan Dukungan Kepada Peserta Pemilihan Duta GenRe Sumatera Selatan 2023</p>
-        <div class="gabung">
+        <div class="gabung" style="gap: 90px;">
             <a href="/voting" class="votenoww-button">Vote</a>
 
-            <button type="button" class="buyy-button" data-bs-toggle="modal" data-bs-target="#modal" style="margin-left: 30px;">
+            <button type="button" class="buyy-button" data-bs-toggle="modal" data-bs-target="#modal">
                 Beli Voucher
             </button>
             <!-- Modal -->
-            <div class="modal modal-lg fade" id="modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal modal-lg fade" id="modal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                aria-hidden="true">
                 <div class="modal-dialog modal-dialog-centered" style="width: 1971px !important; height: 472px;">
                     <div class="modal-content">
                         <div class="modal-header bg-dark text-white" style="border-radius: 10px;">
@@ -205,31 +224,37 @@
                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
                         <div class="modal-body" style="display: flex; align-items: center; margin-left: -0px;">
-                            
+
                             <div class="voucher-info ml-3">
                                 <b>Cara Pembelian Voucher :</b>
-                                <ol style="text-align: justify;">
-                                    <li>Membeli voucher dengan nominal 10k, 20k, 50k dan 100k melalui scan QRIS
-                                        di samping atau dapat melalui: </li>
+                                <ol>
+                                    <li>Membeli voucher dengan nominal 10k, 20k, 50k dan 100k melalui Transfer
+                                        Bank atau e-Wallet:
+                                    </li>
                                     <ol type='a'>
-                                        <li>OVO - 081271701998 a.n Cindy Octavina </li>
-                                        <li>Gopay - 081271701998 a.n Cindy Octavina </li>
-                                        <li>Shopeepay - 081271701998 a.n Cindy Octavina;</li>
+                                        <li>Shopeepay - 081366882925 an Ni Luh Ajeng </li>
+                                        <li>Sea Bank - 901081671424 an Ni Luh Ajeng </li>
                                     </ol>
                                     <li>
-                                        Melakukan konfirmasi ke WA GenRe Sumsel (081271701998) dengan
+                                        Melakukan konfirmasi ke WA GenRe Sumsel (081366882925) dengan
                                         mengirimkan bukti pembayaran;
+
                                     </li>
                                     <li>Setelah melakukan konfirmasi kamu akan menerima kode voucher sesuai
                                         dengan nominal voucher yang telah dibeli.</li>
                                 </ol>
                                 <div class="tombol pl-1 d-flex g-2" style="margin-left:20px; gap: 20px;">
-                                    <button style="background-color: transparent; border: 2px solid #FF7B3D; border-radius: 10px; color: #FF7B3D; padding: 10px;">10.000</button>
-                                    <button style="background-color: transparent; border: 2px solid #84A6D0; border-radius: 10px; color: #84A6D0; padding: 10px;">20.000</button>
-                                    <button style="background-color: transparent; border: 2px solid #418897; border-radius: 10px; color: #418897; padding: 10px;">50.000</button>
-                                    <button style="background-color: transparent; border: 2px solid #FFDD2B; border-radius: 10px; color: #FFDD2B; padding: 10px;">100.000</button>
+                                    <button
+                                        style="background-color: transparent; border: 2px solid #FF7B3D; border-radius: 10px; color: #FF7B3D; padding: 10px;">10.000</button>
+                                    <button
+                                        style="background-color: transparent; border: 2px solid #84A6D0; border-radius: 10px; color: #84A6D0; padding: 10px;">20.000</button>
+                                    <button
+                                        style="background-color: transparent; border: 2px solid #418897; border-radius: 10px; color: #418897; padding: 10px;">50.000</button>
+                                    <button
+                                        style="background-color: transparent; border: 2px solid #FFDD2B; border-radius: 10px; color: #FFDD2B; padding: 10px;">100.000</button>
                                 </div>
-                                <p style="font-size: 10px; color: black; text-align: justify; margin-left: 20px; margin-top: 10px">
+                                <p
+                                    style="font-size: 10px; color: black; text-align: justify; margin-left: 20px; margin-top: 10px">
                                     Klik tombol di bawah ini untuk konfirmasi pembelian voucher (kirim bukti
                                     pembayaran).</p>
                             </div>
@@ -239,7 +264,7 @@
                         <div class="modal-footer">
 
                             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                            <input type="submit" class="btn btn-primary" value="Konfirmasi">
+                            <a href="https://wa.me/6285156116914" target="_blank" class="btn btn-primary">Konfirmasi</a>
 
                         </div>
                     </div>
@@ -248,7 +273,7 @@
         </div>
     </div>
 </div>
-<div class="footer mt-4" id="footer">
+<div class="footer" id="footer">
     <div class="konten" style="background-color: #3F3F3F; padding: 10px; flex: 1; width: 100%;">
         <div class="row">
             <div class="col-lg-3">
@@ -257,22 +282,25 @@
             <div class="col-lg-6 mt-4" style="color: white;">
                 <b style="font-size: 32px;">Duta GenRe Sumatera Selatan</b>
                 <div class="row">
-                    <div class="col-lg-4">
+                <div class="col-lg-4">
                         <b style="font-size: 18px;">Sosial Media</b> <br>
                         <div class="iclass">
-                            <i class="bi bi-instagram"></i> Bkkbn Official <br>
-                            <i class="bi bi-instagram"></i> Bkkbn Sumsel <br>
-                            <i class="bi bi-instagram"></i> GenRe Sumsel <br>
-                            <i class="bi bi-instagram"></i> Dugen Sumsel
+                            <i class="bi bi-instagram"></i> <a href="https://www.instagram.com/bkkbnofficial"
+                                target="_blank">Bkkbn Official</a> <br>
+                            <i class="bi bi-instagram"></i> <a href="https://www.instagram.com/bkkbnsumsel_official"
+                                target="_blank">Bkkbn Sumsel</a> <br>
+                            <i class="bi bi-instagram"></i> <a href="https://www.instagram.com/genre_sumsel"
+                                target="_blank">GenRe Sumsel</a> <br>
+                            <i class="bi bi-instagram"></i> <a href="https://www.instagram.com/dugen_sumsel"
+                                target="_blank">Dugen Sumsel</a>
                         </div>
-
                     </div>
                     <div class="col-lg-5">
                         <b style="font-size: 18px;">Narahubung</b>
                         <div class="iclass">
-                            <i class="bi bi-whatsapp"></i> +62 852 6923 2867
+                            <i class="bi bi-whatsapp"></i> <a href="https://wa.me/6285269232867" target="_blank">+62 852
+                                6923 2867</a>
                         </div>
-
                     </div>
                 </div>
             </div>
@@ -283,4 +311,4 @@
             Palembang</p>
     </div>
 </div>
-    @endsection
+@endsection

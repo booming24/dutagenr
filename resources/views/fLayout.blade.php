@@ -24,77 +24,50 @@
         integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <link rel="stylesheet" href="{{ asset('../assets/dataTables/datatables.min.css') }}">
     <link href="https://cdn.datatables.net/v/dt/dt-1.13.4/datatables.min.css" rel="stylesheet" />
-    <style>
-    body {
-        display: flex;
-        flex-direction: column;
-        /* min-height: 100vh; */
-        margin: 0;
-    }
-
-    #navBar {
-        /* Gaya navbar Anda */
-    }
-
-    .container {
-        /* Gaya konten Anda */
-        flex: 1;
-    }
-
-    .footer {
-        /* Gaya footer Anda */
-        margin-top: auto;
-    }
-</style>
 
 </head>
 
 <body>
     <!-- Navbar -->
-    <div id="navBar">
-    <nav class="navbar">
-        <div class="navbar-left">
-            <img src="{{ asset('images/forum.png') }}" class="logo" alt="Logo 1">
-            <img src="{{ asset('images/logoduta.png') }}" class="logo2" alt="Logo 2">
-        </div>
-        <div class="navbar-right">
-            <ul>
-                <li><a href="/">Beranda</a></li>
-                <li><a href="/tentang-kami">Tentang</a></li>
-                <li><a href="sejarah-kami">Sejarah</a></li>
-                <li><a href="/voting" class="vote-button">Vote Sekarang</a></li>
-            </ul>
+
+    <nav class="navbar navbar-expand-lg sticky-top" data-bs-theme="dark" style="background-color: #191919;">
+        <div class="container-fluid" style="background-color: #191919;">
+            <a class="navbar-brand" href="#">
+                <img src="{{ asset('images/forum.png') }}" style="width: 47.21px;height: 51px;" alt="Logo 1">
+                <img src="{{ asset('images/logoduta.png') }}" style="width: 62px;height: 58px;" alt="Logo 2">
+            </a>
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarTogglerDemo02"
+                style="font-family: 'Poppins',sans-serif; font-weight: 400;">
+                <ul class="navbar-nav mb-2 mb-lg-0 ms-auto gap-3">
+                    <li class="nav-item">
+                        <a href="/" class="nav-link">Beranda</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="/tentang-kami" class="nav-link">Tentang</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="sejarah-kami" class="nav-link">Sejarah</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="/voting" class="btn btn-warning rounded-pill">Vote Sekarang</a>
+                    </li>
+                </ul>
+            </div>
         </div>
     </nav>
-</div>
+
     @yield('content')
     <!-- Footer -->
-   
+
     </div>
 
 
-    <!-- Script -->
-    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
-    <script src="{{ asset('../assets/js/core/popper.min.js') }}"></script>
-    <script src="{{ asset('../assets/js/core/bootstrap.min.js') }}"></script>
-    <script src="{{ asset('../assets/js/plugins/perfect-scrollbar.min.js') }}"></script>
-    <script src="{{ asset('../assets/js/plugins/smooth-scrollbar.min.js') }}"></script>
- <script>
-    window.onscroll = function() {
-    scrollFunction();
-};
-
-function scrollFunction() {
-    var navbar = document.getElementById("navBar");
-    if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
-        navbar.classList.add("navbar-fixed");
-    } else {
-        navbar.classList.remove("navbar-fixed");
-    }
-}
-
- </script>
-</script>
+    </script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
         integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous">
     </script>
@@ -106,11 +79,11 @@ function scrollFunction() {
         integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
     <script src="https://cdn.datatables.net/v/dt/dt-1.13.4/datatables.min.js"></script>
     <script>
-        let table = new DataTable('#datatables');
+    let table = new DataTable('#datatables');
     </script>
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>
-        AOS.init();
+    AOS.init();
     </script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
     @yield('script')

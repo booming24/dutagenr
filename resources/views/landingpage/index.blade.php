@@ -3,12 +3,17 @@
 @section('content')
 <div id="landingpage">
     <div class="hero">
-        <img src="images/grandfinal.png" alt="21" class="fluid" />
+        <div class="gambarbanner">
+            <img src="images/grandfinal.png" alt="21" class="fluid" />
+        </div>
+
         <div class="title">
             <h1 class="corinthia-text">Pemilihan</h1>
             <h2 class="poppins-text">Duta GenRe Sumatera Selatan 2023</h2>
-            <a href="/voting" class="votenow-button">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Vote&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
-            <button type="button" class="buy-button" data-bs-toggle="modal" data-bs-target="#modal" style=" background-color: transparent;border: 2px solid #ffd600;padding: 8px;border-radius: 16px;width: 134px;height:42px;cursor: pointer;font-family: Poppins; font-weight: 700; text-decoration: none; color: #ffd600; margin-top: 30px; margin-left: 50px;">
+            <a href="/voting"
+                class="votenow-button">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Vote&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
+            <button type="button" class="buy-button" data-bs-toggle="modal" data-bs-target="#modal"
+                style=" background-color: transparent;border: 2px solid #ffd600;padding: 8px;border-radius: 16px;width: 134px;height:42px;cursor: pointer;font-family: Poppins; font-weight: 700; text-decoration: none; color: #ffd600; margin-top: 30px; margin-left: 50px;">
                 Beli Voucher
             </button>
 
@@ -16,7 +21,7 @@
     </div>
     <div class="tentang">
         <div class="row">
-            <div class="col-lg-6">
+            <div class="col-lg-6 text-center">
                 <img src="images/logoduta.png" alt="21" class="logo" />
             </div>
             <div class="col-lg-5 penjelasan">
@@ -53,46 +58,54 @@
         <div class="dukungan">
             <div class="kotak">
                 <p>Berikan Dukungan Kepada Peserta Pemilihan Duta GenRe Sumatera Selatan 2023</p>
-                <div class="gabung">
+                <div class="gabung" style="gap: 90px;">
                     <a href="/voting" class="votenoww-button">Vote</a>
 
-                    <button type="button" class="buyy-button" data-bs-toggle="modal" data-bs-target="#modal" style="margin-left: 30px;">
+                    <button type="button" class="buyy-button" data-bs-toggle="modal" data-bs-target="#modal">
                         Beli Voucher
                     </button>
                     <!-- Modal -->
-                    <div class="modal modal-lg fade" id="modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                        <div class="modal-dialog modal-dialog-centered" style="width: 1971px !important; height: 472px;">
+                    <div class="modal modal-lg fade" id="modal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                        aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered">
                             <div class="modal-content">
-                                <div class="modal-header bg-dark text-white" style="border-radius: 10px;">
+                                <div class="modal-header bg-dark text-white">
                                     <h1 class="modal-title fs-5">Beli Voucher</h1>
-                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                        aria-label="Close"></button>
                                 </div>
-                                <div class="modal-body" style="display: flex; align-items: center;">
-                                   
-                                    <div class="voucher-info ml-3">
+                                <div class="modal-body">
+
+                                    <div class="voucher-info">
                                         <b>Cara Pembelian Voucher :</b>
-                                        <ol style="text-align: justify;">
-                                            <li>Membeli voucher dengan nominal 10k, 20k, 50k dan 100k melalui scan QRIS
-                                                di samping atau dapat melalui: </li>
+                                        <ol>
+                                            <li>Membeli voucher dengan nominal 10k, 20k, 50k dan 100k melalui Transfer
+                                                Bank atau e-Wallet:
+                                            </li>
                                             <ol type='a'>
-                                                <li>OVO - 081271701998 a.n Cindy Octavina </li>
-                                                <li>Gopay - 081271701998 a.n Cindy Octavina </li>
-                                                <li>Shopeepay - 081271701998 a.n Cindy Octavina;</li>
+                                                <li>Shopeepay - 081366882925 an Ni Luh Ajeng </li>
+                                                <li>Sea Bank - 901081671424 an Ni Luh Ajeng </li>
                                             </ol>
                                             <li>
-                                                Melakukan konfirmasi ke WA GenRe Sumsel (081271701998) dengan
+                                                Melakukan konfirmasi ke WA GenRe Sumsel (081366882925) dengan
                                                 mengirimkan bukti pembayaran;
+
                                             </li>
                                             <li>Setelah melakukan konfirmasi kamu akan menerima kode voucher sesuai
                                                 dengan nominal voucher yang telah dibeli.</li>
                                         </ol>
-                                        <div class="tombol pl-1 d-flex g-2" style="margin-left:20px; gap: 20px;">
-                                            <button style="background-color: transparent; border: 2px solid #FF7B3D; border-radius: 10px; color: #FF7B3D; padding: 10px;">10.000</button>
-                                            <button style="background-color: transparent; border: 2px solid #84A6D0; border-radius: 10px; color: #84A6D0; padding: 10px;">20.000</button>
-                                            <button style="background-color: transparent; border: 2px solid #418897; border-radius: 10px; color: #418897; padding: 10px;">50.000</button>
-                                            <button style="background-color: transparent; border: 2px solid #FFDD2B; border-radius: 10px; color: #FFDD2B; padding: 10px;">100.000</button>
+                                        <div class="tombol pl-1 d-flex g-2" style="gap: 1px;">
+                                            <button
+                                                style="background-color: transparent; border: 2px solid #FF7B3D; border-radius: 10px; color: #FF7B3D; padding: 10px;">10.000</button>
+                                            <button
+                                                style="background-color: transparent; border: 2px solid #84A6D0; border-radius: 10px; color: #84A6D0; padding: 10px;">20.000</button>
+                                            <button
+                                                style="background-color: transparent; border: 2px solid #418897; border-radius: 10px; color: #418897; padding: 10px;">50.000</button>
+                                            <button
+                                                style="background-color: transparent; border: 2px solid #FFDD2B; border-radius: 10px; color: #FFDD2B; padding: 10px;">100.000</button>
                                         </div>
-                                        <p style="font-size: 10px; color: black; text-align: justify; margin-left: 20px; margin-top: 10px">
+                                        <p
+                                            style="font-size: 10px; color: black; text-align: justify; margin-left: 20px; margin-top: 10px">
                                             Klik tombol di bawah ini untuk konfirmasi pembelian voucher (kirim bukti
                                             pembayaran).</p>
                                     </div>
@@ -101,8 +114,9 @@
 
                                 <div class="modal-footer">
 
-                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                                    <input type="submit" class="btn btn-primary" value="Konfirmasi">
+                                    <button type="button" class="btn btn-secondary"
+                                        data-bs-dismiss="modal">Close</button>
+                                        <a href="https://wa.me/6285156116914" target="_blank" class="btn btn-primary">Konfirmasi</a>
 
                                 </div>
                             </div>
@@ -151,70 +165,80 @@
                     <li>
                         <div>
                             <time>2011</time> <!-- Tahun disini -->
-                            <img src="images/2011.png" alt="Gambar Anda" style="width: 485px; height: 274px; margin-left: -10px;">
+                            <img src="images/2011.png" alt="Gambar Anda"
+                                style="width: 485px; height: 274px; margin-left: -10px;">
                             <!-- Gambar disini -->
                         </div>
                     </li>
                     <li>
                         <div>
                             <time>2012</time> <!-- Tahun disini -->
-                            <img src="images/2012.png" alt="Gambar Anda" style="width: 485px; height: 274px; margin-left: -10px;">
+                            <img src="images/2012.png" alt="Gambar Anda"
+                                style="width: 485px; height: 274px; margin-left: -10px;">
                             <!-- Gambar disini -->
                         </div>
                     </li>
                     <li>
                         <div>
                             <time>2013</time> <!-- Tahun disini -->
-                            <img src="images/2013.png" alt="Gambar Anda" style="width: 485px; height: 274px; margin-left: -10px;">
+                            <img src="images/2013.png" alt="Gambar Anda"
+                                style="width: 485px; height: 274px; margin-left: -10px;">
                             <!-- Gambar disini -->
                         </div>
                     </li>
                     <li>
                         <div>
                             <time>2014</time> <!-- Tahun disini -->
-                            <img src="images/2014.png" alt="Gambar Anda" style="width: 485px; height: 274px; margin-left: -10px;">
+                            <img src="images/2014.png" alt="Gambar Anda"
+                                style="width: 485px; height: 274px; margin-left: -10px;">
                             <!-- Gambar disini -->
                         </div>
                     </li>
                     <li>
                         <div>
                             <time>2015</time> <!-- Tahun disini -->
-                            <img src="images/2015.png" alt="Gambar Anda" style="width: 485px; height: 274px; margin-left: -10px;">
+                            <img src="images/2015.png" alt="Gambar Anda"
+                                style="width: 485px; height: 274px; margin-left: -10px;">
                             <!-- Gambar disini -->
                         </div>
                     </li>
                     <li>
                         <div>
                             <time>2016</time> <!-- Tahun disini -->
-                            <img src="images/2016.png" alt="Gambar Anda" style="width: 485px; height: 274px; margin-left: -10px;">
+                            <img src="images/2016.png" alt="Gambar Anda"
+                                style="width: 485px; height: 274px; margin-left: -10px;">
                             <!-- Gambar disini -->
                         </div>
                     </li>
                     <li>
                         <div>
                             <time>2017</time> <!-- Tahun disini -->
-                            <img src="images/2017.png" alt="Gambar Anda" style="width: 485px; height: 274px; margin-left: -10px;">
+                            <img src="images/2017.png" alt="Gambar Anda"
+                                style="width: 485px; height: 274px; margin-left: -10px;">
                             <!-- Gambar disini -->
                         </div>
                     </li>
                     <li>
                         <div>
                             <time>2018</time> <!-- Tahun disini -->
-                            <img src="images/2018.png" alt="Gambar Anda" style="width: 485px; height: 274px; margin-left: -10px;">
+                            <img src="images/2018.png" alt="Gambar Anda"
+                                style="width: 485px; height: 274px; margin-left: -10px;">
                             <!-- Gambar disini -->
                         </div>
                     </li>
                     <li>
                         <div>
                             <time>2019</time> <!-- Tahun disini -->
-                            <img src="images/2019.png" alt="Gambar Anda" style="width: 485px; height: 274px; margin-left: -10px;">
+                            <img src="images/2019.png" alt="Gambar Anda"
+                                style="width: 485px; height: 274px; margin-left: -10px;">
                             <!-- Gambar disini -->
                         </div>
                     </li>
                     <li>
                         <div>
                             <time>2020</time> <!-- Tahun disini -->
-                            <img src="images/2020.png" alt="Gambar Anda" style="width: 485px; height: 274px; margin-left: -10px;">
+                            <img src="images/2020.png" alt="Gambar Anda"
+                                style="width: 485px; height: 274px; margin-left: -10px;">
                             <!-- Gambar disini -->
                         </div>
                     </li>
@@ -222,7 +246,8 @@
                     <li>
                         <div>
                             <time>2022</time> <!-- Tahun disini -->
-                            <img src="images/2022.png" alt="Gambar Anda" style="width: 485px; height: 274px; margin-left: -10px;">
+                            <img src="images/2022.png" alt="Gambar Anda"
+                                style="width: 485px; height: 274px; margin-left: -10px;">
                             <!-- Gambar disini -->
                         </div>
                     </li>
@@ -233,27 +258,32 @@
     </div>
 </div>
 <div class="footer" id="landingfooter">
-    <div class="konten" style="background-color: #3F3F3F; padding: 10px; flex: 1; width: 100%; margin-top: 9000px;">
+    <div class="konten" style="background-color: #3F3F3F; padding: 10px; flex: 1; width: 100%; margin-top: 8000px;">
         <div class="row">
             <div class="col-lg-3">
                 <img src="{{ asset('images/logoduta.png') }}" style="width: 282px; height: 232px;" alt="">
             </div>
             <div class="col-lg-6 mt-4" style="color: white;">
                 <b style="font-size: 32px;">Duta GenRe Sumatera Selatan</b>
-                <div class="row" >
+                <div class="row">
                     <div class="col-lg-4">
                         <b style="font-size: 18px;">Sosial Media</b> <br>
                         <div class="iclass">
-                            <i class="bi bi-instagram"></i> <a href="https://www.instagram.com/bkkbnofficial" target="_blank">Bkkbn Official</a> <br>
-                            <i class="bi bi-instagram"></i> <a href="https://www.instagram.com/bkkbnsumsel_official" target="_blank">Bkkbn Sumsel</a> <br>
-                            <i class="bi bi-instagram"></i> <a href="https://www.instagram.com/genre_sumsel" target="_blank">GenRe Sumsel</a> <br>
-                            <i class="bi bi-instagram"></i> <a href="https://www.instagram.com/dugen_sumsel" target="_blank">Dugen Sumsel</a>
+                            <i class="bi bi-instagram"></i> <a href="https://www.instagram.com/bkkbnofficial"
+                                target="_blank">Bkkbn Official</a> <br>
+                            <i class="bi bi-instagram"></i> <a href="https://www.instagram.com/bkkbnsumsel_official"
+                                target="_blank">Bkkbn Sumsel</a> <br>
+                            <i class="bi bi-instagram"></i> <a href="https://www.instagram.com/genre_sumsel"
+                                target="_blank">GenRe Sumsel</a> <br>
+                            <i class="bi bi-instagram"></i> <a href="https://www.instagram.com/dugen_sumsel"
+                                target="_blank">Dugen Sumsel</a>
                         </div>
                     </div>
                     <div class="col-lg-5">
                         <b style="font-size: 18px;">Narahubung</b>
                         <div class="iclass">
-                            <i class="bi bi-whatsapp"></i> <a href="https://wa.me/6285269232867" target="_blank">+62 852 6923 2867</a>
+                            <i class="bi bi-whatsapp"></i> <a href="https://wa.me/6285269232867" target="_blank">+62 852
+                                6923 2867</a>
                         </div>
                     </div>
 
@@ -268,37 +298,37 @@
     @endsection
     @section('script')
     <script>
-        (function() {
-            "use strict";
+    (function() {
+        "use strict";
 
-            // define variables
-            var items = document.querySelectorAll(".timeline li");
+        // define variables
+        var items = document.querySelectorAll(".timeline li");
 
-            // check if an element is in viewport
-            // http://stackoverflow.com/questions/123999/how-to-tell-if-a-dom-element-is-visible-in-the-current-viewport
-            function isElementInViewport(el) {
-                var rect = el.getBoundingClientRect();
-                return (
-                    rect.top >= 0 &&
-                    rect.left >= 0 &&
-                    rect.bottom <=
-                    (window.innerHeight || document.documentElement.clientHeight) &&
-                    rect.right <= (window.innerWidth || document.documentElement.clientWidth)
-                );
-            }
+        // check if an element is in viewport
+        // http://stackoverflow.com/questions/123999/how-to-tell-if-a-dom-element-is-visible-in-the-current-viewport
+        function isElementInViewport(el) {
+            var rect = el.getBoundingClientRect();
+            return (
+                rect.top >= 0 &&
+                rect.left >= 0 &&
+                rect.bottom <=
+                (window.innerHeight || document.documentElement.clientHeight) &&
+                rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+            );
+        }
 
-            function callbackFunc() {
-                for (var i = 0; i < items.length; i++) {
-                    if (isElementInViewport(items[i])) {
-                        items[i].classList.add("in-view");
-                    }
+        function callbackFunc() {
+            for (var i = 0; i < items.length; i++) {
+                if (isElementInViewport(items[i])) {
+                    items[i].classList.add("in-view");
                 }
             }
+        }
 
-            // listen for events
-            window.addEventListener("load", callbackFunc);
-            window.addEventListener("resize", callbackFunc);
-            window.addEventListener("scroll", callbackFunc);
-        })();
+        // listen for events
+        window.addEventListener("load", callbackFunc);
+        window.addEventListener("resize", callbackFunc);
+        window.addEventListener("scroll", callbackFunc);
+    })();
     </script>
     @endsection

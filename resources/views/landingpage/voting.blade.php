@@ -31,18 +31,18 @@
                     </div>
                 </div>
             </div>
-            <div class="mt-5 text-center">
+            <div class="chartputra mt-5 text-center">
                 <p class="text-center">Grafik Voting</p>
                 <b class="text-center">Putera</b>
-                <div style="overflow-x: auto">
-                    <canvas id="barChart" height="150"></canvas>
+                <div class="wrapper">
+                    <canvas id="barChart" width="200" height="90"></canvas>
                 </div>
             </div>
-            <div class="mt-5 text-center">
+            <div class="chartputri mt-5 text-center">
                 <p>Grafik Voting</p>
                 <b>Puteri</b>
-                <div>
-                    <canvas id="barChart2" height="150"></canvas>
+                <div class="wrapper">
+                    <canvas id="barChart2" width="200" height="90"></canvas>
                 </div>
             </div>
 
@@ -63,21 +63,23 @@
                                     <button type="button" class="btn-close" data-bs-dismiss="modal"
                                         aria-label="Close"></button>
                                 </div>
-                                <div class="modal-body" style="display: flex; align-items: center; margin-left: -0px;">
+                                <div class="modal-body modalbeli"
+                                    style="display: flex; align-items: center; margin-left: -0px;">
 
                                     <div class="voucher-info ml-3">
                                         <b>Cara Pembelian Voucher :</b>
-                                        <ol style="text-align: justify;">
-                                            <li>Membeli voucher dengan nominal 10k, 20k, 50k dan 100k melalui scan QRIS
-                                                di samping atau dapat melalui: </li>
+                                        <ol>
+                                            <li>Membeli voucher dengan nominal 10k, 20k, 50k dan 100k melalui Transfer
+                                                Bank atau e-Wallet:
+                                            </li>
                                             <ol type='a'>
-                                                <li>OVO - 081271701998 a.n Cindy Octavina </li>
-                                                <li>Gopay - 081271701998 a.n Cindy Octavina </li>
-                                                <li>Shopeepay - 081271701998 a.n Cindy Octavina;</li>
+                                                <li>Shopeepay - 081366882925 an Ni Luh Ajeng </li>
+                                                <li>Sea Bank - 901081671424 an Ni Luh Ajeng </li>
                                             </ol>
                                             <li>
-                                                Melakukan konfirmasi ke WA GenRe Sumsel (081271701998) dengan
+                                                Melakukan konfirmasi ke WA GenRe Sumsel (081366882925) dengan
                                                 mengirimkan bukti pembayaran;
+
                                             </li>
                                             <li>Setelah melakukan konfirmasi kamu akan menerima kode voucher sesuai
                                                 dengan nominal voucher yang telah dibeli.</li>
@@ -103,7 +105,8 @@
                                 <div class="modal-footer">
 
                                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                                    <input type="submit" class="btn btn-primary" value="Konfirmasi">
+                                    <a href="https://wa.me/6285156116914" target="_blank"
+                                        class="btn btn-primary">Konfirmasi</a>
 
                                 </div>
                             </div>
@@ -118,16 +121,16 @@
 
             </div>
 
-            <div class="row mt-5" style="display: flex;justify-content: center;align-items: center; margin-top: 20px;">
+            <div class="row mt-5 cardpeserta" style="display: flex;margin-top: 20px;">
                 <div class="col-lg-6" style=" width: 50%;">
                     <div>
                         <div class="carousel-container">
                             <div class="carousel" id="carousel1">
                                 @foreach ($putra as $item)
                                     <div class="carousel-card border-0 shadow-card-vote p-3 mb-5 bg-white rounded">
-                                        <h1
-                                            style="
-                                        margin-left: -146px;"class="text-left">
+                                        <h1 style="
+                                        margin-left: -146px;"
+                                            class="text-left">
                                             Putera</h1>
                                         <div class="d-flex justify-content-center">
                                             <div style="height: 370px; width: 250px;"
@@ -167,9 +170,9 @@
                             <div class="carousel" id="carousel2">
                                 @foreach ($putri as $item)
                                     <div class="carousel-card border-0 shadow-card-vote p-3 mb-5 bg-white rounded">
-                                        <h1
-                                            style="
-                                        margin-left: -146px;"class="text-left">
+                                        <h1 style="
+                                        margin-left: -146px;"
+                                            class="text-left">
                                             Puteri</h1>
                                         <div class="d-flex justify-content-center">
                                             <div style="height: 370px; width: 250px;"
@@ -217,7 +220,7 @@
                     <form action="{{ route('voucher-use') }}" id="form-voucher" enctype="multipart/form-data"
                         method="post">
                         @csrf
-                        <div class="modal-body" style="display: flex; align-items: center;">
+                        <div class="modal-body " style="display: flex; align-items: center;">
                             <div class="cardddd">
                                 <img id="modalImage" src="" alt="Participant Image" width="205"
                                     height="307"
@@ -238,7 +241,7 @@
                         <div class="bottom"
                             style="margin-top: -90px; display: flex; margin-left: 260px; gap: 20px; position: absolute;">
                             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Tutup</button>
-                            <button type="submit" class="btn btn-primary" id="myModalVoteInput">Vote</button>
+                            <button type="submit" class="btn btn-primary buttonbiru" id="myModalVoteInput">Vote</button>
                         </div>
                     </form>
                 </div>
@@ -257,17 +260,22 @@
                         <div class="col-lg-4">
                             <b style="font-size: 18px;">Sosial Media</b> <br>
                             <div class="iclass">
-                                <i class="bi bi-instagram"></i> Bkkbn Official <br>
-                                <i class="bi bi-instagram"></i> Bkkbn Sumsel <br>
-                                <i class="bi bi-instagram"></i> GenRe Sumsel <br>
-                                <i class="bi bi-instagram"></i> Dugen Sumsel
+                                <i class="bi bi-instagram"></i> <a href="https://www.instagram.com/bkkbnofficial"
+                                    target="_blank">Bkkbn Official</a> <br>
+                                <i class="bi bi-instagram"></i> <a href="https://www.instagram.com/bkkbnsumsel_official"
+                                    target="_blank">Bkkbn Sumsel</a> <br>
+                                <i class="bi bi-instagram"></i> <a href="https://www.instagram.com/genre_sumsel"
+                                    target="_blank">GenRe Sumsel</a> <br>
+                                <i class="bi bi-instagram"></i> <a href="https://www.instagram.com/dugen_sumsel"
+                                    target="_blank">Dugen Sumsel</a>
                             </div>
-
                         </div>
                         <div class="col-lg-5">
                             <b style="font-size: 18px;">Narahubung</b>
                             <div class="iclass">
-                                <i class="bi bi-whatsapp"></i> +62 852 6923 2867
+                                <i class="bi bi-whatsapp"></i> <a href="https://wa.me/6285269232867" target="_blank">+62
+                                    852
+                                    6923 2867</a>
                             </div>
                         </div>
                     </div>
@@ -279,7 +287,6 @@
             <p style="margin-top: auto; text-align: center;">Hak Cipta © 2023 Alpha E-Voting by Alpha Project
                 Palembang</p>
         </div>
-
         <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
         <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>

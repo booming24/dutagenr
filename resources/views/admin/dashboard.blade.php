@@ -70,12 +70,15 @@
                 <canvas id="barChart2" width="200" height="90"></canvas>
             </div>
         </div>
-
-
-
-
     </div>
+    <div id="Footer" style="display: flex; flex-direction: column;  width: 100%; ">
 
+        <div class="konten2 mt-4"
+            style="background-color: #418897; color: white; padding: 10px; width: 100%; margin-left: 0px;">
+            <p style="margin-top: auto; text-align: center;">Hak Cipta © 2023 Alpha E-Voting by Alpha Project
+                Palembang</p>
+        </div>
+    </div>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script>
