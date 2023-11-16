@@ -23,7 +23,7 @@ Route::post('/postlogin', [App\Http\Controllers\LoginController::class, 'postlog
 Auth::routes();
 Route::group(['middleware' => 'auth'], function () {
     Route::prefix('admin')->group(function () {
-        Route::get('/', [App\Http\Controllers\VoucherController::class, 'dashboard'])->name('dashboard')->middleware('adminalpha', 'admingenre');
+        Route::get('/', [App\Http\Controllers\VoucherController::class, 'dashboard'])->name('dashboard');
         Route::prefix('voucher')->group(function () {
             // user
             Route::get('/', [App\Http\Controllers\VoucherController::class, 'index'])->name('voucher')->middleware('adminalpha');
@@ -62,9 +62,6 @@ Route::prefix('/')->group(function () {
     });
     Route::get('/sejarah-kami', function () {
         return view('landingpage.sejarah');
-    });
-    Route::get('/all-peserta', function () {
-        return view('landingpage.peserta');
     });
     Route::get('/putera', [App\Http\Controllers\PesertaController::class, 'allPutera'])->name('putera');
     Route::get('/puteri', [App\Http\Controllers\PesertaController::class, 'allPuteri'])->name('puteri');
