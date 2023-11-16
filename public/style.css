@@ -789,7 +789,7 @@ body {
     gap: 20px;
 }
 
-#voting .statistik .corinthia-text {
+#voting .statistik .corinthias-text {
     font-family: "Corinthia";
     font-weight: 700;
     font-size: 100px;
@@ -911,6 +911,13 @@ body {
     font-size: 48px;
     /* line-height: 72px; */
 }
+
+#voting .top3-text {
+    font-family: "Poppins";
+    font-weight: 600;
+    font-size: 32px;
+}
+
 #peserta .corinthia-text {
     font-family: "Corinthia";
     font-weight: 700;
