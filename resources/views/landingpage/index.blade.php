@@ -87,7 +87,7 @@
                                                 <li>Sea Bank - 901081671424 an Ni Luh Ajeng </li>
                                             </ol>
                                             <li>
-                                                Melakukan konfirmasi ke WA GenRe Sumsel (081366882925) dengan
+                                                Melakukan konfirmasi ke WA GenRe Sumsel (085156116914) dengan
                                                 mengirimkan bukti pembayaran;
 
                                             </li>
