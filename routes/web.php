@@ -49,8 +49,8 @@ Route::group(['middleware' => 'auth'], function () {
             Route::get('/delete/{id}', [App\Http\Controllers\UserController::class, 'delete'])->name('user-delete');
         });
     });
-    Route::get('/laporan-penjualan', [App\Http\Controllers\VoucherController::class, 'penjualan'])->name('laporan-penjualan')->middleware('adminalpha');
-    Route::get('/laporan-peserta', [App\Http\Controllers\VoucherController::class, 'peserta'])->name('laporan-peserta')->middleware('adminalpha');
+    Route::get('/laporan-penjualan', [App\Http\Controllers\VoucherController::class, 'penjualan'])->name('laporan-penjualan');
+    Route::get('/laporan-peserta', [App\Http\Controllers\VoucherController::class, 'peserta'])->name('laporan-peserta');
 });
 
 Route::prefix('/')->group(function () {
@@ -62,9 +62,6 @@ Route::prefix('/')->group(function () {
     });
     Route::get('/sejarah-kami', function () {
         return view('landingpage.sejarah');
-    });
-    Route::get('/all-peserta', function () {
-        return view('landingpage.peserta');
     });
     Route::get('/putera', [App\Http\Controllers\PesertaController::class, 'allPutera'])->name('putera');
     Route::get('/puteri', [App\Http\Controllers\PesertaController::class, 'allPuteri'])->name('puteri');
