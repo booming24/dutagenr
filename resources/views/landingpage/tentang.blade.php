@@ -142,7 +142,7 @@
                 <div class="row">
                     <div class="col-lg-6 gambar">
                         <div class="duta">
-                            <img src="images/logoduta.png" alt="21" class="logo" />
+                            <img src="images/dugen.png" alt="21" class="logo" />
                         </div>
 
 
@@ -243,7 +243,7 @@
                                     <li>Setelah melakukan konfirmasi kamu akan menerima kode voucher sesuai
                                         dengan nominal voucher yang telah dibeli.</li>
                                 </ol>
-                                <div class="tombol pl-1 d-flex g-2" style="margin-left:20px; gap: 20px;">
+                                <div class="tombol pl-1 d-flex g-2" style="gap: 1px;">
                                     <button
                                         style="background-color: transparent; border: 2px solid #FF7B3D; border-radius: 10px; color: #FF7B3D; padding: 10px;">10.000</button>
                                     <button
@@ -277,12 +277,12 @@
     <div class="konten" style="background-color: #3F3F3F; padding: 10px; flex: 1; width: 100%;">
         <div class="row">
             <div class="col-lg-3">
-                <img src="{{ asset('images/logoduta.png') }}" style="width: 282px; height: 232px;" alt="">
+                <img src="{{ asset('images/dugen.png') }}" style="width: 282px; height: 200px;" alt="">
             </div>
             <div class="col-lg-6 mt-4" style="color: white;">
                 <b style="font-size: 32px;">Duta GenRe Sumatera Selatan</b>
                 <div class="row">
-                <div class="col-lg-4">
+                    <div class="col-lg-4">
                         <b style="font-size: 18px;">Sosial Media</b> <br>
                         <div class="iclass">
                             <i class="bi bi-instagram"></i> <a href="https://www.instagram.com/bkkbnofficial"

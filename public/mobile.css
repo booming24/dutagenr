@@ -235,10 +235,12 @@
     #landingpage .timelinee h3 {
         text-align: end;
         margin-top: 150px;
+        margin-right: 10px;
     }
 
     #landingpage .timelinee h4 {
         text-align: end;
+        margin-right: 0;
     }
 
     #landingpage .modal-dialog {
@@ -274,7 +276,7 @@
 
     #landingpage .voucher-info {
         margin-top: 15px;
-        text-align: center;
+        text-align: justify;
         width: 100%;
         margin-left: -30px;
     }
@@ -453,7 +455,6 @@
         font-size: 20px;
         margin-top: -10px;
     }
-    
 
     #tentang .latarbelakang {
         margin-left: 20px;
@@ -554,9 +555,9 @@
     }
 
     #tentang .duta img {
-        width: 191px;
+        width: 250px;
         height: 174px;
-        margin-left: 40px;
+        margin-left: 20px;
         margin-top: 20px;
     }
 
@@ -636,6 +637,9 @@
         border-radius: 0;
     }
 
+    #peserta .bottom{
+        margin-top: 20px !important;
+    }
     #tentang .modal-body {
         padding: 15px;
         display: flex;
@@ -653,9 +657,9 @@
 
     #tentang .voucher-info {
         margin-top: 15px;
-        text-align: center;
-        width: 350px;
-        margin-left: 140px;
+        text-align: justify;
+        width: 100%;
+        margin-left: -30px;
     }
     #tentang .voucher-info b {
         margin-left: 20px;
@@ -707,9 +711,9 @@
 
     #sejarah .voucher-info {
         margin-top: 15px;
-        text-align: center;
-        width: 350px;
-        margin-left: -20px;
+        text-align: justify;
+        width: 100%;
+        margin-left: -30px;
     }
     #sejarah .voucher-info b {
         margin-left: 20px;
@@ -906,7 +910,7 @@
 
     #voting .poppins-text {
         font-family: "Poppins";
-        font-weight: 400;
+        font-weight: 600;
         font-size: 28px;
         /* line-height: 72px; */
     }
@@ -1123,7 +1127,7 @@
     }
 
     .modal-body {
-        text-align: center; /* Pusatkan konten modal */
+        text-align: left; /* Pusatkan konten modal */
     }
 
     .cardddd {
@@ -1133,14 +1137,69 @@
     }
 
     .voucher-info {
-        text-align: center;
-        width: 360px;
-        margin-left: -40px;
+        margin-top: 15px;
+        text-align: justify;
+        width: 100%;
+        margin-left: -30px;
     }
 
     .modal-body .cardddd img {
         width: 114px !important;
         height: 150px !important;
+    }
+
+    #voting .modal-dialog {
+        width: 100%;
+        margin: 0;
+        overflow-y: auto;
+        margin-bottom: 60px;
+    }
+
+    #voting .modal-content {
+        border-radius: 0;
+    }
+
+    #voting .modal-header,
+    #voting .modal-footer {
+        border-radius: 0;
+    }
+
+    #voting .modal-body {
+        padding: 15px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #voting .cardddd img {
+        width: 100%;
+        max-width: 200px;
+        text-align: center;
+        margin-left: -0px;
+        height: auto;
+    }
+
+    #voting .voucher-info {
+        margin-top: 15px;
+        text-align: justify;
+        width: 100%;
+        margin-left: -30px;
+    }
+    #voting .voucher-info b {
+        margin-left: 20px;
+    }
+
+    #voting .tombol {
+        margin-top: 15px;
+    }
+
+    #voting .tombol button {
+        width: 100%;
+    }
+
+    #voting .modal-footer .btn-secondary,
+    #voting .modal-footer .btn-primary {
+        width: 100%;
     }
 
     #voting .carousel-control {
@@ -1289,8 +1348,9 @@
     /* Atur lebar grafik agar sesuai dengan layar mobile */
     canvas,
     canvas2 {
-        width: 100%;
-        max-width: 300px; /* Sesuaikan sesuai kebutuhan Anda */
+        width: 600px !important;
+        height: 600px !important;
+        overflow-x: scroll;
     }
 
     /* Sesuaikan margin atau jarak antara grafik */
@@ -1317,7 +1377,7 @@
         align-items: center;
     }
     #landingfooter {
-        margin-top: -450px !important;
+        margin-top: -1050px !important;
         margin-bottom: 0px;
     }
     #votingfooter {
@@ -1335,4 +1395,5 @@
         border-radius: 5px;
         box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     }
+
 }

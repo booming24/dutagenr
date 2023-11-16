@@ -23,7 +23,7 @@ Route::post('/postlogin', [App\Http\Controllers\LoginController::class, 'postlog
 Auth::routes();
 Route::group(['middleware' => 'auth'], function () {
     Route::prefix('admin')->group(function () {
-        Route::get('/', [App\Http\Controllers\VoucherController::class, 'dashboard'])->name('dashboard')->middleware('adminalpha', 'admingenre');
+        Route::get('/', [App\Http\Controllers\VoucherController::class, 'dashboard'])->name('dashboard');
         Route::prefix('voucher')->group(function () {
             // user
             Route::get('/', [App\Http\Controllers\VoucherController::class, 'index'])->name('voucher')->middleware('adminalpha');

@@ -22,7 +22,7 @@
     <div class="tentang">
         <div class="row">
             <div class="col-lg-6 text-center">
-                <img src="images/logoduta.png" alt="21" class="logo" />
+                <img src="images/dugen.png" alt="21" class="logo" />
             </div>
             <div class="col-lg-5 penjelasan">
                 <b>Tentang Duta GenRe Sumsel</b>
@@ -116,7 +116,8 @@
 
                                     <button type="button" class="btn btn-secondary"
                                         data-bs-dismiss="modal">Close</button>
-                                        <a href="https://wa.me/6285156116914" target="_blank" class="btn btn-primary">Konfirmasi</a>
+                                    <a href="https://wa.me/6285156116914" target="_blank"
+                                        class="btn btn-primary">Konfirmasi</a>
 
                                 </div>
                             </div>
@@ -261,7 +262,7 @@
     <div class="konten" style="background-color: #3F3F3F; padding: 10px; flex: 1; width: 100%; margin-top: 8000px;">
         <div class="row">
             <div class="col-lg-3">
-                <img src="{{ asset('images/logoduta.png') }}" style="width: 282px; height: 232px;" alt="">
+                <img src="{{ asset('images/dugen.png') }}" style="width: 282px; height: 200px;" alt="">
             </div>
             <div class="col-lg-6 mt-4" style="color: white;">
                 <b style="font-size: 32px;">Duta GenRe Sumatera Selatan</b>

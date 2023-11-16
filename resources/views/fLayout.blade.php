@@ -34,7 +34,7 @@
         <div class="container-fluid" style="background-color: #191919;">
             <a class="navbar-brand" href="#">
                 <img src="{{ asset('images/forum.png') }}" style="width: 47.21px;height: 51px;" alt="Logo 1">
-                <img src="{{ asset('images/logoduta.png') }}" style="width: 62px;height: 58px;" alt="Logo 2">
+                <img src="{{ asset('images/dugen.png') }}" style="width: 62px;height: 45px;" alt="Logo 2">
             </a>
             <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false"

@@ -477,7 +477,7 @@ body {
 }
 
 .tentang .logo {
-    width: 487px;
+    width: 510px;
     height: 419px;
     margin-top: 300px;
 }
@@ -907,7 +907,7 @@ body {
 
 #voting .poppins-text {
     font-family: "Poppins";
-    font-weight: 400;
+    font-weight: 600;
     font-size: 48px;
     /* line-height: 72px; */
 }

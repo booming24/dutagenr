@@ -35,14 +35,14 @@
                 <p class="text-center">Grafik Voting</p>
                 <b class="text-center">Putera</b>
                 <div class="wrapper">
-                    <canvas id="barChart" width="200" height="90"></canvas>
+                    <canvas id="barChart"></canvas>
                 </div>
             </div>
             <div class="chartputri mt-5 text-center">
                 <p>Grafik Voting</p>
                 <b>Puteri</b>
                 <div class="wrapper">
-                    <canvas id="barChart2" width="200" height="90"></canvas>
+                    <canvas id="barChart2"></canvas>
                 </div>
             </div>
 
@@ -414,7 +414,7 @@
                         backgroundColor: gradient,
                         borderColor: "transparent",
                         borderRadius: 20,
-                        barThickness: 31, // Atur tinggi bar
+                        barThickness: 21, // Atur tinggi bar
                         maxBarThickness: 300, // Atur lebar bar
                         categoryPercentage: 0.2,
                     }],
@@ -453,7 +453,7 @@
                         backgroundColor: gradient2,
                         borderColor: "transparent",
                         borderRadius: 20,
-                        barThickness: 31, // Atur tinggi bar
+                        barThickness: 21, // Atur tinggi bar
                         maxBarThickness: 300, // Atur lebar bar
                         categoryPercentage: 0.2,
                     }],
@@ -467,5 +467,94 @@
                     },
                 },
             });
+
+            const mediaQuery = window.matchMedia("(max-width: 768px)");
+
+const barThicknessDesktop = 30;
+const maxBarThicknessDesktop = 300;
+const categoryPercentageDesktop = 0.5;
+
+const barThicknessMobile = 10;
+const maxBarThicknessMobile = 100;
+const categoryPercentageMobile = 0.8;
+
+const chartHeight = 600;
+
+if (mediaQuery.matches) {
+    const mobileLabels = labelsPutra.slice(0, 13); 
+    chart.config.data.labels = mobileLabels;
+    chart.config.data.datasets[0].data = dataPutra.slice(0, 13); 
+    chart.config.options.barThickness = barThicknessMobile;
+    chart.config.options.maxBarThickness = maxBarThicknessMobile;
+    chart.config.options.categoryPercentage = categoryPercentageMobile;
+    chart.config.options.scales.y.ticks.fontSize = 8; 
+    chart.config.options.scales.y.ticks.padding = 5;
+    chart.config.options.scales.y.ticks.maxRotation = 45;
+    chart.config.options.scales.y.ticks.minRotation = 0;
+    chart.config.options.scales.y.ticks.autoSkip = false;
+
+    chart.config.options.layout = {
+        padding: {
+            left: 0,
+            right: 50,
+        }
+    };
+
+    const canvas = document.getElementById('barChart');
+    canvas.style.height = chartHeight + 'px';
+    canvas.parentNode.style.overflowX = 'auto';
+} else {
+    chart.config.options.barThickness = barThicknessDesktop;
+    chart.config.options.maxBarThickness = maxBarThicknessDesktop;
+    chart.config.options.categoryPercentage = categoryPercentageDesktop;
+    chart.config.data.labels = labelsPutra;
+
+    const canvas = document.getElementById('barChart');
+    canvas.style.height = chartHeight + 'px';
+    canvas.parentNode.style.overflowX = 'auto';
+}
+
+if (mediaQuery.matches) {
+    const mobileLabels2 = labelsPutri.slice(0, 15); 
+    chart2.config.data.labels = mobileLabels2;
+    chart2.config.data.datasets[0].data = dataPutri.slice(0, 15); 
+    chart2.config.options.barThickness = barThicknessMobile;
+    chart2.config.options.maxBarThickness = maxBarThicknessMobile;
+    chart2.config.options.categoryPercentage = categoryPercentageMobile;
+    chart2.config.options.scales.y.ticks.fontSize = 8;
+    chart2.config.options.scales.x.ticks.fontSize = 18;
+    chart2.config.options.scales.y.ticks.padding = 5; 
+    chart2.config.options.scales.y.ticks.maxRotation = 45;
+    chart2.config.options.scales.y.ticks.minRotation = 0;
+    chart2.config.options.scales.y.ticks.autoSkip = false;
+
+    chart2.config.options.layout = {
+        padding: {
+            left: 0,
+            right: 50,
+        }
+    };
+
+    const canvas2 = document.getElementById('barChart2');
+    canvas2.style.height = chartHeight + 'px';
+    canvas2.parentNode.style.overflowX = 'auto';
+} else {
+    chart2.config.options.barThickness = barThicknessDesktop;
+    chart2.config.options.maxBarThickness = maxBarThicknessDesktop;
+    chart2.config.options.categoryPercentage = categoryPercentageDesktop;
+    chart2.config.data.labels = labelsPutri;
+
+    const canvas2 = document.getElementById('barChart2');
+    canvas2.style.height = chartHeight + 'px';
+    canvas2.parentNode.style.overflowX = 'auto';
+}
+
+chart2.update();
+
+
+chart.update();
+
+
+
         </script>
     @endsection
