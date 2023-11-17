@@ -153,48 +153,48 @@
                         </div>
                         <div class="modal-body" style="display: flex; align-items: center; margin-left: -0px;">
 
-                            <div class="voucher-info ml-3">
-                                <b>Cara Pembelian Voucher :</b>
-                                <ol>
-                                    <li>Membeli voucher dengan nominal 10k, 20k, 50k dan 100k melalui Transfer
-                                        Bank atau e-Wallet:
-                                    </li>
-                                    <ol type='a'>
-                                        <li>Shopeepay - 081366882925 an Ni Luh Ajeng </li>
-                                        <li>Sea Bank - 901081671424 an Ni Luh Ajeng </li>
-                                    </ol>
-                                    <li>
-                                        Melakukan konfirmasi ke WA GenRe Sumsel (085156116914) dengan
-                                        mengirimkan bukti pembayaran;
+                        <div class="voucher-info">
+                                        <b>Cara Pembelian Voucher :</b>
+                                        <ol>
+                                            <li>Membeli voucher dengan nominal 10k, 20k, 50k dan 100k melalui Transfer
+                                                Bank atau e-Wallet:
+                                            </li>
+                                            <ol type='a'>
+                                                <li>BCA 8530363458 an Peby Marensia </li>
+                                              
+                                            </ol>
+                                            <li>
+                                            Melakukan konfirmasi ke WA GenRe Sumsel (082268775852) dengan mengirimkan bukti pembayaran;
 
-                                    </li>
-                                    <li>Setelah melakukan konfirmasi kamu akan menerima kode voucher sesuai
-                                        dengan nominal voucher yang telah dibeli.</li>
-                                </ol>
-                                <div class="tombol pl-1 d-flex g-2" style="gap: 1px;">
-                                    <button
-                                        style="background-color: transparent; border: 2px solid #FF7B3D; border-radius: 10px; color: #FF7B3D; padding: 10px;">10.000</button>
-                                    <button
-                                        style="background-color: transparent; border: 2px solid #84A6D0; border-radius: 10px; color: #84A6D0; padding: 10px;">20.000</button>
-                                    <button
-                                        style="background-color: transparent; border: 2px solid #418897; border-radius: 10px; color: #418897; padding: 10px;">50.000</button>
-                                    <button
-                                        style="background-color: transparent; border: 2px solid #FFDD2B; border-radius: 10px; color: #FFDD2B; padding: 10px;">100.000</button>
+                                            </li>
+                                            <li>Setelah melakukan konfirmasi kamu akan menerima kode voucher sesuai dengan nominal voucher yang telah dibeli.</li>
+                                        </ol>
+                                        <div class="tombol pl-1 d-flex g-2" style="gap: 1px;">
+                                            <button
+                                                style="background-color: transparent; border: 2px solid #FF7B3D; border-radius: 10px; color: #FF7B3D; padding: 10px;">10.000</button>
+                                            <button
+                                                style="background-color: transparent; border: 2px solid #84A6D0; border-radius: 10px; color: #84A6D0; padding: 10px;">20.000</button>
+                                            <button
+                                                style="background-color: transparent; border: 2px solid #418897; border-radius: 10px; color: #418897; padding: 10px;">50.000</button>
+                                            <button
+                                                style="background-color: transparent; border: 2px solid #FFDD2B; border-radius: 10px; color: #FFDD2B; padding: 10px;">100.000</button>
+                                        </div>
+                                        <p
+                                            style="font-size: 10px; color: black; text-align: justify; margin-left: 20px; margin-top: 10px">
+                                            Klik tombol di bawah ini untuk konfirmasi pembelian voucher (kirim bukti
+                                            pembayaran).</p>
+                                    </div>
+
                                 </div>
-                                <p
-                                    style="font-size: 10px; color: black; text-align: justify; margin-left: 20px; margin-top: 10px">
-                                    Klik tombol di bawah ini untuk konfirmasi pembelian voucher (kirim bukti
-                                    pembayaran).</p>
-                            </div>
 
-                        </div>
+                                <div class="modal-footer">
 
-                        <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary"
+                                        data-bs-dismiss="modal">Close</button>
+                                    <a href="https://wa.me/6282268775852" target="_blank"
+                                        class="btn btn-primary">Konfirmasi</a>
 
-                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                            <a href="https://wa.me/6285156116914" target="_blank" class="btn btn-primary">Konfirmasi</a>
-
-                        </div>
+                                </div>
                     </div>
                 </div>
             </div>

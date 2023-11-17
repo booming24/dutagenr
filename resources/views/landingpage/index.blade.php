@@ -83,16 +83,14 @@
                                                 Bank atau e-Wallet:
                                             </li>
                                             <ol type='a'>
-                                                <li>Shopeepay - 081366882925 an Ni Luh Ajeng </li>
-                                                <li>Sea Bank - 901081671424 an Ni Luh Ajeng </li>
+                                                <li>BCA 8530363458 an Peby Marensia </li>
+                                              
                                             </ol>
                                             <li>
-                                                Melakukan konfirmasi ke WA GenRe Sumsel (085156116914) dengan
-                                                mengirimkan bukti pembayaran;
+                                            Melakukan konfirmasi ke WA GenRe Sumsel (082268775852) dengan mengirimkan bukti pembayaran;
 
                                             </li>
-                                            <li>Setelah melakukan konfirmasi kamu akan menerima kode voucher sesuai
-                                                dengan nominal voucher yang telah dibeli.</li>
+                                            <li>Setelah melakukan konfirmasi kamu akan menerima kode voucher sesuai dengan nominal voucher yang telah dibeli.</li>
                                         </ol>
                                         <div class="tombol pl-1 d-flex g-2" style="gap: 1px;">
                                             <button
@@ -116,7 +114,7 @@
 
                                     <button type="button" class="btn btn-secondary"
                                         data-bs-dismiss="modal">Close</button>
-                                    <a href="https://wa.me/6285156116914" target="_blank"
+                                    <a href="https://wa.me/6282268775852" target="_blank"
                                         class="btn btn-primary">Konfirmasi</a>
 
                                 </div>
