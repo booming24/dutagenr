@@ -162,7 +162,10 @@ class VoucherController extends Controller
                 $voucher->update();
             });
 
-            return redirect()->route('voting')->with('success', 'Voucher used successfully.');
+
+            session(['nama_peserta' => $peserta->nama_peserta, 'nominal' => $nominal]);
+
+            return redirect()->route('voting')->with('success', 'Voucher redeemed successfully.');
         } catch (\Exception $e) {
             return redirect()->route('voting')->with('error', $e->getMessage());
         }
