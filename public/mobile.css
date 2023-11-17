@@ -1118,6 +1118,11 @@
         gap: 20px;
     }
 
+    .baris-2 {
+        display: flex;
+        flex-direction: column;
+    }
+    
     .circle,
     .small-circle {
         width: 64px;

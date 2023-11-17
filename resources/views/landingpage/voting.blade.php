@@ -38,7 +38,7 @@
                 </div>
             </div>
 
-            <div class="row">
+            <div class="row baris-2">
                 <div class="col">
                     <div class="circles mt-3">
                         <div class="profile">
