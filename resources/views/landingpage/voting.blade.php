@@ -75,7 +75,7 @@
                 <div class="modal modal-lg fade" id="modalll" tabindex="-1" aria-labelledby="exampleModalLabel"
                     aria-hidden="true">
                     <div class="modal-dialog modal-dialog-centered" style="width: 1971px !important; height: 472px;">
-                        <div class="modal-content">
+                        <div class="modal-content modalvoucher">
                             <div class="modal-header bg-dark text-white" style="border-radius: 10px;">
                                 <h1 class="modal-title fs-5">Beli Voucher</h1>
                                 <button type="button" class="btn-close" data-bs-dismiss="modal"
@@ -84,7 +84,7 @@
                             <div class="modal-body modalbeli"
                                 style="display: flex; align-items: center; margin-left: -0px;">
 
-                                <div class="voucher-info ml-3">
+                                <div class="voucher-infoo ml-3">
                                     <b>Cara Pembelian Voucher :</b>
                                     <ol>
                                         <li>Membeli voucher dengan nominal 10k, 20k, 50k dan 100k melalui Transfer
@@ -223,7 +223,7 @@
         <div class="modal-dialog modal-dialog-centered" style="width: 971px; height: 472px;">
             <div class="modal-content">
                 <div class="modal-header bg-dark text-white" style="border-radius: 10px;">
-                    <h1 class="modal-title fs-5">Participant Info</h1>
+                    <h1 class="modal-title fs-5">Vote Peserta</h1>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <form action="{{ route('voucher-use') }}" id="form-voucher" enctype="multipart/form-data" method="post">

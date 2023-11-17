@@ -18,7 +18,7 @@
             <div class="modal modal-lg fade" id="modal1" tabindex="-1" aria-labelledby="exampleModalLabel"
                 aria-hidden="true">
                 <div class="modal-dialog modal-dialog-centered" style="width: 1971px !important; height: 472px;">
-                    <div class="modal-content">
+                    <div class="modal-content modalvoucher">
                         <div class="modal-header bg-dark text-white" style="border-radius: 10px;">
                             <h1 class="modal-title fs-5">Beli Voucher</h1>
                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
@@ -26,7 +26,7 @@
                         <div class="modal-body modalbeli"
                             style="display: flex; align-items: center; margin-left: -0px;">
 
-                            <div class="voucher-info ml-3">
+                            <div class="voucher-info infovoucher ml-3">
                                 <b>Cara Pembelian Voucher :</b>
                                 <ol>
                                     <li>Membeli voucher dengan nominal 10k, 20k, 50k dan 100k melalui Transfer
@@ -73,9 +73,7 @@
             </div>
         </div>
     </div>
-</div>
-
-<div class="container-fluid">
+    <div class="container-fluid">
     <div class="col-lg-12">
         <div class="row d-flex justify-content-beetwen">
             @foreach ($data as $item)
@@ -107,9 +105,9 @@
     <!-- Modal -->
     <div class="modal fade" id="myModal1" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered" style="width: 971px; height: 472px;">
-            <div class="modal-content">
+            <div class="modal-content ">
                 <div class="modal-header bg-dark text-white" style="border-radius: 10px;">
-                    <h1 class="modal-title fs-5">Participant Info</h1>
+                    <h1 class="modal-title fs-5">Vote Peserta</h1>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <form action="{{ route('voucher-use') }}" id="form-voucher" enctype="multipart/form-data" method="post">
@@ -121,11 +119,11 @@
                                     <img id="modalImage" src="" alt="Participant Image" style="width: 215px !important; border: none;  box-shadow: 0px 0px 2px 1px rgba(0, 0, 0, 0.25),
             0px 1px 2px 4px rgba(0, 0, 0, 0.25); border-radius: 10px;">
                                 </div>
-                                <div class="col-lg-6 pt-4">
+                                <div class="col-lg-6 ">
                                     <h5 id="modalNoPeserta"></h5>
-                                    <h5 id="modalNamaPeserta"></h5>
-                                    <h3>Kode Voucher</h3>
-                                    <input type="text" class="form-control" name="kode_voucher" id="voucherCode">
+                                    <h5 style="font-weight: normal;" id="modalNamaPeserta"></h5>
+                                    <h3 style="font-weight: normal; font-size: 18px;">Kode Voucher</h3>
+                                    <input type="text" class="form-control" name="kode_voucher" id="voucherCodee">
                                     <input type="text" class="form-control" hidden name="id_peserta" id="modalIdPeserta"
                                         value="">
                                 </div>
@@ -141,6 +139,9 @@
             </div>
         </div>
     </div>
+</div>
+
+
 </div>
 </div>
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
