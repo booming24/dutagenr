@@ -90,21 +90,21 @@
         </div> -->
         <div class="content mt-5">
 
-    <div class="card card-primary" style="overflow-x: auto; border: none; margin: 0; padding: 0;">
+    <div class="card card-primary" style=" border: none; margin: 0; padding: 0; overflow-x: scroll;">
       <div class="card-header text-center" style="background-color: white;border: none;">
         <h3 class="card-title">Grafik Voting</h3>
         <b style="font-size:32px">Putera</b>
       </div>
-      <div class="card-body" style="overflow-x: auto;">
+      <div class="card-body" >
         <canvas id="barChart" style="height:530px; min-height:230px;"></canvas>
       </div>
     </div>
-    <div class="card card-success mt-5" style="overflow-x: auto;border: none; margin: 0; padding: 0;">
+    <div class="card card-success mt-5" style="border: none; margin: 0; padding: 0; overflow-x: scroll;">
       <div class="card-header text-center"  style="background-color: white;border: none;">
         <h3 class="card-title">Grafik Voting</h3>
         <b style="font-size:32px">Puteri</b>
       </div>
-      <div class="card-body" style="overflow-x: auto;">
+      <div class="card-body" >
         <canvas id="barChart2" style="height:530px; min-height:230px"></canvas>
       </div>
 
@@ -460,7 +460,7 @@
             }]
         },
         options: {
-            responsive: true,
+            responsive: false,
             maintainAspectRatio: false,
             scales: {
                 xAxes: [{
@@ -492,7 +492,7 @@
             }]
         },
         options: {
-            responsive: true,
+            responsive: false,
             maintainAspectRatio: false,
             scales: {
                 xAxes: [{

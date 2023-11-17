@@ -1576,12 +1576,12 @@
         font-size: 5px !important;
         min-height: 500px !important;
 }
-    }
+    
 
     /* Sesuaikan margin atau jarak antara grafik */
     canvas {
         margin-bottom: 20px;
-        margin-left: 260px;
+        margin-left: 260px !important;
     }
 
     /* Sesuaikan ukuran teks pada grafik jika perlu */
