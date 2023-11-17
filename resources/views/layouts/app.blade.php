@@ -115,22 +115,22 @@
                 </ul>
             @elseif (auth()->user()->level == 'admingenre')
                 <ul>
-                    <li><a href="/">Home</a></li>
+                    <li style="color: black">Home</li>
                     <ul>
-                        <li><a href="#" style="margin-left: 40px;">Dashboard</a></li>
+                        <li><a href="/admin" style="margin-left: 40px;">Dashboard</a></li>
                     </ul>
                 </ul>
                 <ul>
-                    <li><a href="#">Laporan</a></li>
+                    <li style="color: black">Laporan</li>
                     <ul>
-                        <li><a href="{{ route('laporan-penjualan') }}" style="margin-left: 89px;">Laporan Penjualan</a>
+                        <li><a href="{{ route('laporan-penjualan') }}" style="margin-left: 96px;">Laporan Penjualan</a>
                         </li>
                         <li><a href="{{ route('laporan-peserta') }}" style="margin-left: 82px;">Laporan Peserta </a>
                         </li>
                     </ul>
                 </ul>
+
                 <ul>
-                    <li><a href="#" style="margin-left: -20px;">Akun</a></li>
                     <ul>
                         <li>
                             <form action="{{ route('logout') }}" method="POST">
