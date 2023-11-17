@@ -34,7 +34,7 @@
                     <div class="circle">
                         <img class="mh-100" src="/peserta/{{ $top_three_putri[0]->foto }}" alt="Gambar 2">
                     </div>
-                    <p class="text-center fw-bold">{{ $top_three_putra[0]->nama_peserta }}</p>
+                    <p class="text-center fw-bold">{{ $top_three_putri[0]->nama_peserta }}</p>
                 </div>
             </div>
 
@@ -45,13 +45,13 @@
                             <div class="circle">
                                 <img class="mh-100" src="/peserta/{{ $top_three_putra[1]->foto }}" alt="Gambar 1">
                             </div>
-                            <p class="text-center fw-bold">{{ $top_three_putra[0]->nama_peserta }}</p>
+                            <p class="text-center fw-bold">{{ $top_three_putra[1]->nama_peserta }}</p>
                         </div>
                         <div class="profile">
                             <div class="circle">
                                 <img class="mh-100" src="/peserta/{{ $top_three_putri[1]->foto }}" alt="Gambar 2">
                             </div>
-                            <p class="text-center fw-bold">{{ $top_three_putra[0]->nama_peserta }}</p>
+                            <p class="text-center fw-bold">{{ $top_three_putri[1]->nama_peserta }}</p>
                         </div>
                     </div>
                 </div>
@@ -61,13 +61,13 @@
                             <div class="circle">
                                 <img class="mh-100" src="/peserta/{{ $top_three_putra[2]->foto }}" alt="Gambar 1">
                             </div>
-                            <p class="text-center fw-bold">{{ $top_three_putra[0]->nama_peserta }}</p>
+                            <p class="text-center fw-bold">{{ $top_three_putra[2]->nama_peserta }}</p>
                         </div>
                         <div class="profile">
                             <div class="circle">
                                 <img class="mh-100" src="/peserta/{{ $top_three_putri[2]->foto }}" alt="Gambar 2">
                             </div>
-                            <p class="text-center fw-bold">{{ $top_three_putra[0]->nama_peserta }}</p>
+                            <p class="text-center fw-bold">{{ $top_three_putri[0]->nama_peserta }}</p>
                         </div>
                     </div>
                 </div>
