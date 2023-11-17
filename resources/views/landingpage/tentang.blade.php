@@ -216,16 +216,17 @@
             </button>
             <!-- Modal -->
             <div class="modal modal-lg fade" id="modal" tabindex="-1" aria-labelledby="exampleModalLabel"
-                aria-hidden="true">
-                <div class="modal-dialog modal-dialog-centered" style="width: 1971px !important; height: 472px;">
-                    <div class="modal-content">
-                        <div class="modal-header bg-dark text-white" style="border-radius: 10px;">
-                            <h1 class="modal-title fs-5">Beli Voucher</h1>
-                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                        </div>
-                        <div class="modal-body" style="display: flex; align-items: center; margin-left: -0px;">
+                        aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered">
+                            <div class="modal-content">
+                                <div class="modal-header bg-dark text-white">
+                                    <h1 class="modal-title fs-5">Beli Voucher</h1>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                        aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
 
-                        <div class="voucher-info">
+                                    <div class="voucher-info">
                                         <b>Cara Pembelian Voucher :</b>
                                         <ol>
                                             <li>Membeli voucher dengan nominal 10k, 20k, 50k dan 100k melalui Transfer
@@ -267,9 +268,9 @@
                                         class="btn btn-primary">Konfirmasi</a>
 
                                 </div>
+                            </div>
+                        </div>
                     </div>
-                </div>
-            </div>
         </div>
     </div>
 </div>

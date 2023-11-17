@@ -55,11 +55,11 @@
                         <div class="modal-body">
                             <div class="col-lg-12">
                                 <div class="row d-flex justify-content-beetwen">
-                                    <div class="col-lg-6">
+                                    <div class="col-lg-6 ">
                                         <img id="modalImage" src="" alt="Participant Image" style="width: 215px !important; border: none;  box-shadow: 0px 0px 2px 1px rgba(0, 0, 0, 0.25),
             0px 1px 2px 4px rgba(0, 0, 0, 0.25); border-radius: 10px;">
                                     </div>
-                                    <div class="col-lg-6 ">
+                                    <div class="col-lg-6 isivote">
                                         <h5 id="modalNoPeserta"></h5>
                                         <h5 style="font-weight: normal;" id="modalNamaPeserta"></h5>
                                         <h3 style="font-weight: normal; font-size: 18px;">Kode Voucher</h3>
@@ -85,17 +85,18 @@
                 Beli Sekarang
             </button>
             <!-- Modal -->
-            <div class="modal modal-lg fade" id="modalll" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal modal-lg fade" id="modalll" tabindex="-1" aria-labelledby="exampleModalLabel"
+                aria-hidden="true">
                 <div class="modal-dialog modal-dialog-centered" style="width: 1971px !important; height: 472px;">
-                    <div class="modal-content modalvoucher">
+                    <div class="modal-content">
                         <div class="modal-header bg-dark text-white" style="border-radius: 10px;">
                             <h1 class="modal-title fs-5">Beli Voucher</h1>
                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
-                        <div class="modal-body modalbeli" style="display: flex; align-items: center; margin-left: -0px;">
+                        <div class="modal-body" style="display: flex; align-items: center; margin-left: -0px;">
 
-                            <div class="voucher-infoo ml-3">
-                            <b>Cara Pembelian Voucher :</b>
+                        <div class="voucher-info" style="text-align: justify;">
+                                        <b>Cara Pembelian Voucher :</b>
                                         <ol>
                                             <li>Membeli voucher dengan nominal 10k, 20k, 50k dan 100k melalui Transfer
                                                 Bank atau e-Wallet:
@@ -124,16 +125,18 @@
                                             style="font-size: 10px; color: black; text-align: justify; margin-left: 20px; margin-top: 10px">
                                             Klik tombol di bawah ini untuk konfirmasi pembelian voucher (kirim bukti
                                             pembayaran).</p>
-                            </div>
+                                    </div>
 
-                        </div>
+                                </div>
 
-                        <div class="modal-footer">
+                                <div class="modal-footer">
 
-                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                            <a href="https://wa.me/6282268775852" target="_blank" class="btn btn-primary">Konfirmasi</a>
+                                    <button type="button" class="btn btn-secondary"
+                                        data-bs-dismiss="modal">Close</button>
+                                    <a href="https://wa.me/6282268775852" target="_blank"
+                                        class="btn btn-primary">Konfirmasi</a>
 
-                        </div>
+                                </div>
                     </div>
                 </div>
             </div>

@@ -34,7 +34,7 @@
                     <div class="circle">
                         <img class="mh-100" src="/peserta/{{ $top_three_putri[0]->foto }}" alt="Gambar 2">
                     </div>
-                    <p class="text-center fw-bold">{{ $top_three_putra[0]->nama_peserta }}</p>
+                    <p class="text-center fw-bold">{{ $top_three_putri[0]->nama_peserta }}</p>
                 </div>
             </div>
 
@@ -45,13 +45,13 @@
                             <div class="circle">
                                 <img class="mh-100" src="/peserta/{{ $top_three_putra[1]->foto }}" alt="Gambar 1">
                             </div>
-                            <p class="text-center fw-bold">{{ $top_three_putra[0]->nama_peserta }}</p>
+                            <p class="text-center fw-bold">{{ $top_three_putra[1]->nama_peserta }}</p>
                         </div>
                         <div class="profile">
                             <div class="circle">
                                 <img class="mh-100" src="/peserta/{{ $top_three_putri[1]->foto }}" alt="Gambar 2">
                             </div>
-                            <p class="text-center fw-bold">{{ $top_three_putra[0]->nama_peserta }}</p>
+                            <p class="text-center fw-bold">{{ $top_three_putri[1]->nama_peserta }}</p>
                         </div>
                     </div>
                 </div>
@@ -61,13 +61,13 @@
                             <div class="circle">
                                 <img class="mh-100" src="/peserta/{{ $top_three_putra[2]->foto }}" alt="Gambar 1">
                             </div>
-                            <p class="text-center fw-bold">{{ $top_three_putra[0]->nama_peserta }}</p>
+                            <p class="text-center fw-bold">{{ $top_three_putra[2]->nama_peserta }}</p>
                         </div>
                         <div class="profile">
                             <div class="circle">
                                 <img class="mh-100" src="/peserta/{{ $top_three_putri[2]->foto }}" alt="Gambar 2">
                             </div>
-                            <p class="text-center fw-bold">{{ $top_three_putra[0]->nama_peserta }}</p>
+                            <p class="text-center fw-bold">{{ $top_three_putri[2]->nama_peserta }}</p>
                         </div>
                     </div>
                 </div>
@@ -120,19 +120,18 @@
                 </button>
                 <!-- Modal -->
                 <div class="modal modal-lg fade" id="modalll" tabindex="-1" aria-labelledby="exampleModalLabel"
-                    aria-hidden="true">
-                    <div class="modal-dialog modal-dialog-centered" style="width: 1971px !important; height: 472px;">
-                        <div class="modal-content modalvoucher">
-                            <div class="modal-header bg-dark text-white" style="border-radius: 10px;">
-                                <h1 class="modal-title fs-5">Beli Voucher</h1>
-                                <button type="button" class="btn-close" data-bs-dismiss="modal"
-                                    aria-label="Close"></button>
-                            </div>
-                            <div class="modal-body modalbeli"
-                                style="display: flex; align-items: center; margin-left: -0px;">
+                        aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered">
+                            <div class="modal-content">
+                                <div class="modal-header bg-dark text-white">
+                                    <h1 class="modal-title fs-5">Beli Voucher</h1>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                        aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
 
-                                <div class="voucher-infoo ml-3">
-                                <b>Cara Pembelian Voucher :</b>
+                                    <div class="voucher-info">
+                                        <b>Cara Pembelian Voucher :</b>
                                         <ol>
                                             <li>Membeli voucher dengan nominal 10k, 20k, 50k dan 100k melalui Transfer
                                                 Bank atau e-Wallet:
@@ -161,20 +160,21 @@
                                             style="font-size: 10px; color: black; text-align: justify; margin-left: 20px; margin-top: 10px">
                                             Klik tombol di bawah ini untuk konfirmasi pembelian voucher (kirim bukti
                                             pembayaran).</p>
+                                    </div>
+
                                 </div>
 
-                            </div>
+                                <div class="modal-footer">
 
-                            <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary"
+                                        data-bs-dismiss="modal">Close</button>
+                                    <a href="https://wa.me/6282268775852" target="_blank"
+                                        class="btn btn-primary">Konfirmasi</a>
 
-                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                                <a href="https://wa.me/6282268775852" target="_blank"
-                                    class="btn btn-primary">Konfirmasi</a>
-
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
             </div>
         </div>
 
@@ -265,39 +265,39 @@
 
     <!-- Modal -->
     <div class="modal fade" id="myModal1" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered" style="width: 971px; height: 472px;">
-            <div class="modal-content">
-                <div class="modal-header bg-dark text-white" style="border-radius: 10px;">
-                    <h1 class="modal-title fs-5">Vote Peserta</h1>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            <div class="modal-dialog modal-dialog-centered" style="width: 971px; height: 472px;">
+                <div class="modal-content ">
+                    <div class="modal-header bg-dark text-white" style="border-radius: 10px;">
+                        <h1 class="modal-title fs-5">Vote Peserta</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <form action="{{ route('voucher-use') }}" id="form-voucher" enctype="multipart/form-data" method="post">
+                        @csrf
+                        <div class="modal-body">
+                            <div class="col-lg-12">
+                                <div class="row d-flex justify-content-beetwen">
+                                    <div class="col-lg-6">
+                                        <img id="modalImage" src="" alt="Participant Image" style="width: 215px !important; border: none;  box-shadow: 0px 0px 2px 1px rgba(0, 0, 0, 0.25),
+            0px 1px 2px 4px rgba(0, 0, 0, 0.25); border-radius: 10px;">
+                                    </div>
+                                    <div class="col-lg-6 isivote">
+                                        <h5 id="modalNoPeserta"></h5>
+                                        <h5 style="font-weight: normal;" id="modalNamaPeserta"></h5>
+                                        <h3 style="font-weight: normal; font-size: 18px;">Kode Voucher</h3>
+                                        <input type="text" class="form-control" name="kode_voucher" id="voucherCodee">
+                                        <input type="text" class="form-control" hidden name="id_peserta" id="modalIdPeserta" value="">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="bottom" style="margin-top: -18px; display: flex; margin-left: 180px; gap: 20px; position: absolute;">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Tutup</button>
+                            <button type="submit" class="btn btn-primary" id="myModalVoteInput">Vote</button>
+                        </div>
+                    </form>
                 </div>
-                <form action="{{ route('voucher-use') }}" id="form-voucher" enctype="multipart/form-data" method="post">
-                    @csrf
-                    <div class="modal-body " style="display: flex; align-items: center;">
-                        <div class="cardddd">
-                            <img id="modalImage" src="" alt="Participant Image" width="205" height="307" style="border: none;  box-shadow: 0px 0px 2px 1px rgba(0, 0, 0, 0.25),
-        0px 1px 2px 4px rgba(0, 0, 0, 0.25); border-radius: 10px;">
-                        </div>
-                        <div class="voucher-info ml-5" style="margin-left: 70px;">
-                            <p style="text-align: left; margin-top: -120px !important; font-size: 26px; font-weight: bold;"
-                                id="modalNoPeserta"></p>
-                            <p style="text-align: left;  margin-top: -0px !important; font-size: 18px; "
-                                id="modalNamaPeserta"></p>
-                            <p style="text-align: left; margin-top: 0px;">Kode Voucher</p>
-                            <input type="text" class="form-control" name="kode_voucher" id="voucherCode">
-                            <input type="text" class="form-control" hidden name="id_peserta" id="modalIdPeserta"
-                                value="">
-                        </div>
-                    </div>
-                    <div class="bottom"
-                        style="margin-top: -90px; display: flex; margin-left: 260px; gap: 20px; position: absolute;">
-                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Tutup</button>
-                        <button type="submit" class="btn btn-primary buttonbiru" id="myModalVoteInput">Vote</button>
-                    </div>
-                </form>
             </div>
         </div>
-    </div>
 </div>
 <div class="footer" id="votingfooter">
     <div class="konten" style="background-color: #3F3F3F; padding: 10px; flex: 1; width: 100%;">

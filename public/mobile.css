@@ -321,6 +321,10 @@
     #landingpage .modal-footer .btn-primary {
         width: 100%;
     }
+    #peserta .modal-footer .btn-secondary,
+    #peserta .modal-footer .btn-primary {
+        width: 100%;
+    }
 
     #landingpage .footer .konten {
         margin-top: 800px !important;
@@ -685,6 +689,14 @@
         margin-top: 10px !important;
         margin-left: 20px !important;
     }
+    #voting .bottom {
+        margin-top: -10px;
+    display: flex;
+    margin-left: 220px;
+    margin-left: 248px;
+    p: 20px;
+    position: absolute;
+    }
 
     #peserta .corinthia-text {
         font-family: "Corinthia";
@@ -745,6 +757,12 @@
     }
 
     #sejarah .modal-dialog {
+        width: 100%;
+        margin: 0;
+        overflow-y: auto;
+        margin-bottom: 60px;
+    }
+    #peserta .modal-dialog {
         width: 100%;
         margin: 0;
         overflow-y: auto;
@@ -989,6 +1007,10 @@
         font-size: 12px;
     }
 
+    #voting .bottom{
+        margin-top: 10px;
+        margin-left: 50px;
+    }
    
 
     #voting .statistik .evoting-text {
@@ -1122,7 +1144,7 @@
         display: flex;
         flex-direction: column;
     }
-    
+
     .circle,
     .small-circle {
         width: 64px;
@@ -1152,7 +1174,7 @@
         border-radius: 0;
         margin-left: -0px;
         width: 380px;
-        height: 550px;
+        height: 650px;
     }
     #peserta .modal-content {
         border-radius: 0;
@@ -1196,7 +1218,9 @@
         margin-top: -28px !important;
     }
 
-  
+  #voting .modalvotee{
+    margin-top: 120px !important;
+  }
 
     #voting .modalbeli {
         margin-left: -40px;
@@ -1307,12 +1331,19 @@
     }
 
     #peserta .tombol{
-        margin-left: -30px !important;
+        margin-left: -0px !important;
     }
 
     .modal-body .cardddd img {
         width: 114px !important;
         height: 150px !important;
+    }
+
+    #peserta .isivote{
+        margin-top: 20px !important;
+    }
+    #voting .isivote{
+        margin-top: 20px !important;
     }
 
     #voting .modal-dialog {
@@ -1347,10 +1378,14 @@
     }
 
     #voting .voucher-info {
-        margin-top: 120px;
+        margin-top: 0px;
         text-align: justify;
         width: 100%;
         margin-left: 0px !important;
+    }
+
+    #voting .modal-header{
+        border-radius: 10px !important;
     }
     #voting .voucher-info p {
         text-align: left;
@@ -1539,6 +1574,8 @@
         height: 200px !important;
         overflow-x: scroll;
         font-size: 5px !important;
+        min-height: 500px !important;
+}
     }
 
     /* Sesuaikan margin atau jarak antara grafik */
