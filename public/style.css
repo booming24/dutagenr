@@ -291,7 +291,6 @@ body {
     margin-bottom: 30px;
 }
 
-
 #landingpage .kotak p {
     color: white;
     font-family: "Poppins";
@@ -1035,9 +1034,9 @@ body {
     outline: 0;
 }
 
-#peserta .bottom{
+#peserta .bottom {
     margin-top: -8px !important;
-    display: flex!important;
+    display: flex !important;
     margin-left: 242px !important;
     gap: 20px;
     position: absolute;
@@ -1557,6 +1556,6 @@ time {
     color: white;
 }
 
-#pesertafooter{
+#pesertafooter {
     margin-top: 460px !important;
 }
