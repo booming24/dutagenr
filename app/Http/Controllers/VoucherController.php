@@ -16,7 +16,7 @@ class VoucherController extends Controller
      */
     public function index()
     {
-        $voucher = Voucher::all();
+        $voucher = Voucher::all()->where('is_used', 0);
         return view("admin.master.voucher.index", compact('voucher'));
     }
 
@@ -57,27 +57,12 @@ class VoucherController extends Controller
      */
     public function penjualan()
     {
-        $data = [];
-        $data['voucher_terjual'] = Voucher::where('is_used', 1)->sum('nominal');
-        $data['voucher_tersedia'] = Voucher::where('is_used', 0)->sum('nominal');
-        $data['point_putra'] = Peserta::where('kategori', '=', 'PUTRA')
-            ->orderBy('point_semifinal', 'desc')
-            ->pluck('point_semifinal')
-            ->toArray();
-        $data['point_putri'] = Peserta::where('kategori', '=', 'PUTRI')
-            ->orderBy('point_semifinal', 'desc')
-            ->pluck('point_semifinal')
-            ->toArray();
-        $data['label_putra'] = Peserta::where('kategori', '=', 'PUTRA')
-            ->orderBy('point_semifinal', 'desc')
-            ->pluck('nama_peserta')
-            ->toArray();
-        $data['label_putri'] = Peserta::where('kategori', '=', 'PUTRI')
-            ->orderBy('point_semifinal', 'desc')
-            ->pluck('nama_peserta')
-            ->toArray();
+        $voucher = Voucher::join('pesertas', 'vouchers.used_to', '=', 'pesertas.id')
+            ->select('vouchers.*', 'pesertas.nama_peserta as nama_peserta')
+            ->where('is_used', 1)
+            ->get();
 
-        return view("admin.laporan.laporanpenjualan", compact('data'));
+        return view("admin.laporan.laporanpenjualan", compact('voucher'));
     }
 
     /**
