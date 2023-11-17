@@ -321,6 +321,10 @@
     #landingpage .modal-footer .btn-primary {
         width: 100%;
     }
+    #peserta .modal-footer .btn-secondary,
+    #peserta .modal-footer .btn-primary {
+        width: 100%;
+    }
 
     #landingpage .footer .konten {
         margin-top: 800px !important;
@@ -410,10 +414,6 @@
     /* Atur kapan elemen "tentang" muncul saat diskrol */
     .tentang.show {
         top: 100%; /* Muncul saat diskrol ke bawah */
-    }
-
-    .tentang {
-        /* margin-top: 4px; */
     }
 
     .tentang .penjelasan b {
@@ -549,9 +549,9 @@
         margin-right: 20px;
     }
     /* #tentang .filosofi .card {
-        margin-left: 45px;
-        margin-right: 20px;
-    } */
+          margin-left: 45px;
+          margin-right: 20px;
+      } */
 
     #tentang .bkkbn img {
         width: 168px;
@@ -685,6 +685,13 @@
         margin-top: 10px !important;
         margin-left: 20px !important;
     }
+    #voting .bottom {
+        margin-top: -10px;
+        display: flex;
+        margin-left: 220px;
+        margin-left: 248px;
+        position: absolute;
+    }
 
     #peserta .corinthia-text {
         font-family: "Corinthia";
@@ -745,6 +752,12 @@
     }
 
     #sejarah .modal-dialog {
+        width: 100%;
+        margin: 0;
+        overflow-y: auto;
+        margin-bottom: 60px;
+    }
+    #peserta .modal-dialog {
         width: 100%;
         margin: 0;
         overflow-y: auto;
@@ -884,12 +897,12 @@
     }
 
     /* .carousel-control-right {
-      cursor: pointer;
-      background: rgba(0, 0, 0, 0.5);
-      color: rgb(194, 53, 53);
-      padding: 10px;
-      margin-left: 80px;
-    } */
+        cursor: pointer;
+        background: rgba(0, 0, 0, 0.5);
+        color: rgb(194, 53, 53);
+        padding: 10px;
+        margin-left: 80px;
+      } */
 
     #sejarah .konten p {
         text-align: justify;
@@ -930,9 +943,6 @@
     #sejarah .kotak .gabung {
         display: flex;
         gap: 20px !important;
-    }
-
-    #sejarah .carousel-card {
     }
 
     #sejarah .carousel-controls {
@@ -989,7 +999,10 @@
         font-size: 12px;
     }
 
-   
+    #voting .bottom {
+        margin-top: 10px;
+        margin-left: 50px;
+    }
 
     #voting .statistik .evoting-text {
         font-size: 13px;
@@ -1122,7 +1135,7 @@
         display: flex;
         flex-direction: column;
     }
-    
+
     .circle,
     .small-circle {
         width: 64px;
@@ -1152,7 +1165,7 @@
         border-radius: 0;
         margin-left: -0px;
         width: 380px;
-        height: 550px;
+        height: 650px;
     }
     #peserta .modal-content {
         border-radius: 0;
@@ -1179,7 +1192,6 @@
         border-radius: 0;
         margin-left: -0px;
         width: 330px;
-    
     }
 
     #voting .buttonbiru {
@@ -1196,7 +1208,9 @@
         margin-top: -28px !important;
     }
 
-  
+    #voting .modalvotee {
+        margin-top: 120px !important;
+    }
 
     #voting .modalbeli {
         margin-left: -40px;
@@ -1296,23 +1310,29 @@
         margin: 5px 0;
     }
 
-    #voting .voucher-infoo{
+    #voting .voucher-infoo {
         margin-left: 10px !important;
         padding: 10px;
     }
 
-
-    #peserta .modal-content{
+    #peserta .modal-content {
         height: 650px !important;
     }
 
-    #peserta .tombol{
-        margin-left: -30px !important;
+    #peserta .tombol {
+        margin-left: -0px !important;
     }
 
     .modal-body .cardddd img {
         width: 114px !important;
         height: 150px !important;
+    }
+
+    #peserta .isivote {
+        margin-top: 20px !important;
+    }
+    #voting .isivote {
+        margin-top: 20px !important;
     }
 
     #voting .modal-dialog {
@@ -1347,15 +1367,18 @@
     }
 
     #voting .voucher-info {
-        margin-top: 120px;
+        margin-top: 0px;
         text-align: justify;
         width: 100%;
         margin-left: 0px !important;
     }
+
+    #voting .modal-header {
+        border-radius: 10px !important;
+    }
     #voting .voucher-info p {
         text-align: left;
         margin-top: 0px !important;
-    
     }
 
     #voting .voucher-info b {
@@ -1449,8 +1472,8 @@
         width: 120px;
         padding: 15px;
         background: #fff;
-      
-            overflow-x: hidden;
+
+        overflow-x: hidden;
     }
     .timeline ul li div img {
         width: 290px !important;
@@ -1539,73 +1562,74 @@
         height: 200px !important;
         overflow-x: scroll;
         font-size: 5px !important;
+        min-height: 500px !important;
     }
+}
 
-    /* Sesuaikan margin atau jarak antara grafik */
-    canvas {
-        margin-bottom: 20px;
-        margin-left: 260px;
-    }
+/* Sesuaikan margin atau jarak antara grafik */
+canvas {
+    margin-bottom: 20px;
+    margin-left: 260px;
+}
 
-    /* Sesuaikan ukuran teks pada grafik jika perlu */
-    .chartjs-title {
-        font-size: 16px;
-    }
+/* Sesuaikan ukuran teks pada grafik jika perlu */
+.chartjs-title {
+    font-size: 16px;
+}
 
-    .chartjs-subtitle {
-        font-size: 12px;
-    }
+.chartjs-subtitle {
+    font-size: 12px;
+}
 
-    #footer {
-        margin-top: 430px !important;
-        margin-bottom: 0px;
-    }
+#footer {
+    margin-top: 430px !important;
+    margin-bottom: 0px;
+}
 
-    #footer .konten img {
-        text-align: center;
-        align-items: center;
-    }
-    #footer .col-lg-3 img {
-        display: none;
-    }
-    #votingfooter .col-lg-3 img {
-        display: none;
-    }
-    #pesertafooter .col-lg-3 img {
-        display: none;
-    }
-    #footer .konten2 p {
-        font-size: 12px;
-    }
-    #landingfooter {
-        margin-top: -250px !important;
-        margin-bottom: 0px;
-    }
-    #landingfooter .col-lg-3 img {
-        display: none;
-    }
-    #landingfooter .konten2 p {
-        font-size: 12px;
-    }
-    #pesertafooter .konten2 p {
-        font-size: 12px;
-    }
-    #votingfooter .konten2 p {
-        font-size: 12px;
-    }
-    #votingfooter {
-        margin-top: -100px !important;
-        margin-bottom: 0px;
-    }
+#footer .konten img {
+    text-align: center;
+    align-items: center;
+}
+#footer .col-lg-3 img {
+    display: none;
+}
+#votingfooter .col-lg-3 img {
+    display: none;
+}
+#pesertafooter .col-lg-3 img {
+    display: none;
+}
+#footer .konten2 p {
+    font-size: 12px;
+}
+#landingfooter {
+    margin-top: -250px !important;
+    margin-bottom: 0px;
+}
+#landingfooter .col-lg-3 img {
+    display: none;
+}
+#landingfooter .konten2 p {
+    font-size: 12px;
+}
+#pesertafooter .konten2 p {
+    font-size: 12px;
+}
+#votingfooter .konten2 p {
+    font-size: 12px;
+}
+#votingfooter {
+    margin-top: -100px !important;
+    margin-bottom: 0px;
+}
 
-    .login-card {
-        width: 100%;
-        margin: 0 auto;
-        background-color: #418897;
-        padding: 20px;
-        margin-top: 20px;
-        margin-bottom: 20px;
-        border-radius: 5px;
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    }
+.login-card {
+    width: 100%;
+    margin: 0 auto;
+    background-color: #418897;
+    padding: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
