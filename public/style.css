@@ -975,6 +975,10 @@ body {
     font-size: 32px;
 }
 
+#dashboard .contenttt{
+    margin-left: -100px !important;
+}
+
 #peserta .corinthia-text {
     font-family: "Corinthia";
     font-weight: 700;

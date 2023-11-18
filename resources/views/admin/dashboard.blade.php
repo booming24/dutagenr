@@ -29,7 +29,7 @@
             <h1 class="corinthia-text">Statistik</h1>
             <p>e-Voting Duta GenRe Sumatera Selatan 2023</p>
         </div>
-        <div class="content mt-5">
+        <div class="contenttt mt-5">
 
                 <div class="card card-primary" style=" border: none; margin: 0; padding: 0; overflow-x: scroll;">
                     <div class="card-header text-center" style="background-color: white;border: none;">
@@ -82,7 +82,7 @@
         data: {
             labels: labelsPutra,
             datasets: [{
-                label: 'Persentase (%)',
+                label: 'Poin',
                             data: dataPutra,
                             backgroundColor: 'rgba(10, 77, 161, 0.5)',
                             borderColor: 'rgba(10, 77, 161, 1)',
@@ -120,7 +120,7 @@
         data: {
             labels: labelsPutri,
             datasets: [{
-                label: 'Persentase (%)',
+                label: 'Poin',
                             data: dataPutri,
                             backgroundColor: 'rgba(255, 214, 0, 0.5)',
                             borderColor: 'rgba(255, 214, 0, 1)',
