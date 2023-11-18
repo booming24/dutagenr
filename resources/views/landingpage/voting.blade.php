@@ -188,7 +188,7 @@
                 <h2 class="poppins-text">Duta GenRe Sumatera Selatan 2023</h2>
             </div>
 
-            <div class="row mt-5 cardpeserta" style="display: flex;margin-top: 20px;">
+            <div class="row mt-5 cardpeserta" style="display: flex;margin-top: 20px; margin-left: 40px;">
                 <div class="col-lg-6" style=" width: 50%;">
                     <div>
                         <div class="carousel-container">
@@ -200,7 +200,7 @@
                                             class="text-left">
                                             Putera</h1>
                                         <div class="d-flex justify-content-center">
-                                            <div style="height: 370px; width: 250px;"
+                                            <div style="height: 334px; width: 250px;"
                                                 class="border-0 shadow-card-vote rounded">
                                                 <img class="img-fluid rounded" src="/peserta/{{ $item->foto }}"
                                                     alt="Slide 1">
@@ -242,7 +242,7 @@
                                             class="text-left">
                                             Puteri</h1>
                                         <div class="d-flex justify-content-center">
-                                            <div style="height: 370px; width: 250px;"
+                                            <div style="height: 334px; width: 250px;"
                                                 class="border-0 shadow-card-vote rounded">
                                                 <img class="img-fluid rounded" src="/peserta/{{ $item->foto }}"
                                                     alt="Slide 1">
@@ -279,7 +279,7 @@
         <!-- Modal -->
         <div class="modal fade" id="myModal1" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered" style="width: 971px; height: 472px;">
-                <div class="modal-content ">
+                <div class="modal-content votemodalll">
                     <div class="modal-header bg-dark text-white" style="border-radius: 10px;">
                         <h1 class="modal-title fs-5">Vote Peserta</h1>
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>

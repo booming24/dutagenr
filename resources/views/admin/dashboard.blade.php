@@ -29,16 +29,28 @@
             <h1 class="corinthia-text">Statistik</h1>
             <p>e-Voting Duta GenRe Sumatera Selatan 2023</p>
         </div>
-        <div class="cardd">
-            <p>Grafik Voting</p>
-            <b>Putera</b>
-            <canvas id="barChart" width="200" height="90"></canvas>
-        </div>
-        <div class="cardd">
-            <p>Grafik Voting</p>
-            <b>Puteri</b>
-            <canvas id="barChart2" width="200" height="90"></canvas>
-        </div>
+        <div class="content mt-5">
+
+                <div class="card card-primary" style=" border: none; margin: 0; padding: 0; overflow-x: scroll;">
+                    <div class="card-header text-center" style="background-color: white;border: none;">
+                        <h3 class="card-title">Grafik Voting</h3>
+                        <b style="font-size:32px">Putera</b>
+                    </div>
+                    <div class="card-body">
+                        <canvas id="barChart" style="height:530px; min-height:230px;"></canvas>
+                    </div>
+                </div>
+                <div class="card card-success mt-5" style="border: none; margin: 0; padding: 0; overflow-x: scroll;">
+                    <div class="card-header text-center" style="background-color: white;border: none;">
+                        <h3 class="card-title">Grafik Voting</h3>
+                        <b style="font-size:32px">Puteri</b>
+                    </div>
+                    <div class="card-body">
+                        <canvas id="barChart2" style="height:530px; min-height:230px"></canvas>
+                    </div>
+
+                </div>
+            </div>
     </div>
 </div>
 <div id="Footer" style="display: flex; flex-direction: column;  width: 100%; ">
@@ -70,14 +82,12 @@
         data: {
             labels: labelsPutra,
             datasets: [{
-                label: "Data",
-                data: dataPutra,
-                backgroundColor: gradient,
-                borderColor: "transparent",
-                borderRadius: 20,
-                barThickness: 31, // Atur tinggi bar
-                maxBarThickness: 658, // Atur lebar bar
-                categoryPercentage: 0.2,
+                label: 'Persentase (%)',
+                            data: dataPutra,
+                            backgroundColor: 'rgba(10, 77, 161, 0.5)',
+                            borderColor: 'rgba(10, 77, 161, 1)',
+                            borderWidth: 1,
+                            borderRadius: 20,
             }],
         },
         options: {
@@ -110,14 +120,12 @@
         data: {
             labels: labelsPutri,
             datasets: [{
-                label: "Data",
-                data: dataPutri,
-                backgroundColor: gradient2,
-                borderColor: "transparent",
-                borderRadius: 20,
-                barThickness: 31, // Atur tinggi bar
-                maxBarThickness: 658, // Atur lebar bar
-                categoryPercentage: 0.2,
+                label: 'Persentase (%)',
+                            data: dataPutri,
+                            backgroundColor: 'rgba(255, 214, 0, 0.5)',
+                            borderColor: 'rgba(255, 214, 0, 1)',
+                            borderWidth: 1,
+                            borderRadius: 20,
             }],
         },
         options: {
@@ -130,3 +138,5 @@
         },
     });
 </script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js"></script>

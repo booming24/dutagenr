@@ -535,7 +535,7 @@ body {
 
 .tentang .logo {
     width: 510px;
-    height: 419px;
+    height: 379px;
     margin-top: 300px;
 }
 
@@ -873,10 +873,10 @@ body {
 
 .circle,
 .small-circle {
-    width: 144px;
+    width: 104px;
     height: 144px;
     border: 1px solid black;
-    border-radius: 50%;
+    border-radius: 0%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -1033,11 +1033,32 @@ body {
     border-radius: var(--bs-modal-border-radius);
     outline: 0;
 }
+#voting  .votemodalll {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 300px;
+    color: var(--bs-modal-color);
+    pointer-events: auto;
+    background-color: var(--bs-modal-bg);
+    background-clip: padding-box;
+    border: var(--bs-modal-border-width) solid var(--bs-modal-border-color);
+    border-radius: var(--bs-modal-border-radius);
+    outline: 0;
+}
 
 #peserta .bottom {
     margin-top: -8px !important;
     display: flex !important;
     margin-left: 242px !important;
+    gap: 20px;
+    position: absolute;
+}
+#voting .bottom {
+    margin-top: 0px !important;
+    display: flex;
+    margin-left: 243px !important;
     gap: 20px;
     position: absolute;
 }
@@ -1103,6 +1124,10 @@ body {
 canvas {
     margin-bottom: 20px;
     margin-left: 100px !important;
+}
+#dashboard canvas {
+    margin-bottom: 20px;
+    margin-left: 0px !important;
 }
 
 .header {
@@ -1563,4 +1588,12 @@ time {
 
 #pesertafooter {
     margin-top: 460px !important;
+}
+
+#voting .profile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
 }

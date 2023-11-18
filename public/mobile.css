@@ -1028,7 +1028,7 @@
         display: flex;
         flex-direction: column !important;
         /* gap: 50px; */
-        /* margin-left: 20px !important; */
+        margin-left: 10px !important;
     }
 
     #voting .poppins-text {
@@ -1138,10 +1138,10 @@
 
     .circle,
     .small-circle {
-        width: 64px;
+        width: 44px;
         height: 64px;
         border: 1px solid black;
-        border-radius: 50%;
+        border-radius: 0%;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -1205,7 +1205,7 @@
     #voting .modal-content .bottom {
         gap: 20px !important;
         margin-left: 15px !important;
-        margin-top: -28px !important;
+        margin-top: -8px !important;
     }
 
     #voting .modalvotee {
@@ -1244,6 +1244,7 @@
 
     #voting .shadow-card-vote {
         height: max-content !important;
+        width: 200px !important;
     }
 
     #voting .carousel-container {
@@ -1631,5 +1632,13 @@
         margin-bottom: 20px;
         border-radius: 5px;
         box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+    #voting .profile {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        width: 150px;
     }
 }
