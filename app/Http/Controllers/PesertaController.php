@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use File;
 use App\Models\Peserta;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class PesertaController extends Controller
 {
@@ -17,13 +18,21 @@ class PesertaController extends Controller
     {
         $putra = Peserta::where('kategori', 'PUTRA')->orderBy('no_peserta', 'asc')->get();
         $putri = Peserta::where('kategori', 'PUTRI')->orderBy('no_peserta', 'asc')->get();
-        $point_putra = Peserta::where('kategori', '=', 'PUTRA')
-            ->orderBy('point_semifinal', 'desc')
-            ->pluck('point_semifinal')
+        $point_putra = Peserta::select(
+            DB::raw('ROUND(100 * point_semifinal / SUM(point_semifinal) OVER ()) as percentage')
+        )
+            ->where('kategori', '=', 'PUTRA')
+            ->orderBy('point_semifinal', 'desc') // You may remove this line if ordering is not necessary
+            ->get()
+            ->pluck('percentage')
             ->toArray();
-        $point_putri = Peserta::where('kategori', '=', 'PUTRI')
-            ->orderBy('point_semifinal', 'desc')
-            ->pluck('point_semifinal')
+        $point_putri = Peserta::select(
+            DB::raw('ROUND(100 * point_semifinal / SUM(point_semifinal) OVER ()) as percentage')
+        )
+            ->where('kategori', '=', 'PUTRI')
+            ->orderBy('point_semifinal', 'desc') // You may remove this line if ordering is not necessary
+            ->get()
+            ->pluck('percentage')
             ->toArray();
         $label_putra = Peserta::where('kategori', '=', 'PUTRA')
             ->orderBy('point_semifinal', 'desc')
@@ -50,7 +59,13 @@ class PesertaController extends Controller
      */
     public function allPutera()
     {
-        $data = Peserta::where('kategori', 'PUTRA')->orderBy('no_peserta', 'asc')->get();
+        $data = Peserta::select(
+            '*',
+            DB::raw('ROUND(100 * point_semifinal / SUM(point_semifinal) OVER ()) as percentage')
+        )
+            ->where('kategori', 'PUTRA')
+            ->orderBy('no_peserta', 'asc')
+            ->get();
         return view("landingpage.peserta", compact('data'));
     }
 
@@ -61,7 +76,13 @@ class PesertaController extends Controller
      */
     public function allPuteri()
     {
-        $data = Peserta::where('kategori', 'PUTRI')->orderBy('no_peserta', 'asc')->get();
+        $data = Peserta::select(
+            '*',
+            DB::raw('ROUND(100 * point_semifinal / SUM(point_semifinal) OVER ()) as percentage')
+        )
+            ->where('kategori', 'PUTRI')
+            ->orderBy('no_peserta', 'asc')
+            ->get();
         return view("landingpage.peserta", compact('data'));
     }
 

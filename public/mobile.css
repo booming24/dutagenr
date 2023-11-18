@@ -168,7 +168,7 @@
         align-items: center;
         text-align: center;
         /* background-color: rgba(0, 0, 0, 0.6); */
-        background-image: url(../images/banner-kotak-2.jpg);
+        background-image: url(../images/banner-kotak-2.webp);
         background-position: center center;
         background-size: cover;
         background-repeat: no-repeat;
@@ -187,7 +187,7 @@
         align-items: center;
         text-align: center;
         /* background-color: rgba(0, 0, 0, 0.6); */
-        background-image: url(../images/banner-kotak-2.jpg);
+        background-image: url(../images/banner-kotak-2.webp);
         background-position: center center;
         background-size: cover;
         background-repeat: no-repeat;
@@ -416,10 +416,6 @@
         top: 100%; /* Muncul saat diskrol ke bawah */
     }
 
-    .tentang {
-        /* margin-top: 4px; */
-    }
-
     .tentang .penjelasan b {
         font-family: "Poppins";
         font-weight: 700;
@@ -612,7 +608,7 @@
         align-items: center;
         text-align: center;
         /* background-color: rgba(0, 0, 0, 0.6); */
-        background-image: url(../images/banner-kotak-2.jpg);
+        background-image: url(../images/banner-kotak-2.webp);
         background-position: center center;
         background-size: cover;
         background-repeat: no-repeat;
@@ -691,11 +687,10 @@
     }
     #voting .bottom {
         margin-top: -10px;
-    display: flex;
-    margin-left: 220px;
-    margin-left: 248px;
-    p: 20px;
-    position: absolute;
+        display: flex;
+        margin-left: 220px;
+        margin-left: 248px;
+        position: absolute;
     }
 
     #peserta .corinthia-text {
@@ -926,7 +921,7 @@
         align-items: center;
         text-align: center;
         /* background-color: rgba(0, 0, 0, 0.6); */
-        background-image: url(../images/banner-kotak-2.jpg);
+        background-image: url(../images/banner-kotak-2.webp);
         background-position: center center;
         background-size: cover;
         background-repeat: no-repeat;
@@ -948,9 +943,6 @@
     #sejarah .kotak .gabung {
         display: flex;
         gap: 20px !important;
-    }
-
-    #sejarah .carousel-card {
     }
 
     #sejarah .carousel-controls {
@@ -1007,11 +999,10 @@
         font-size: 12px;
     }
 
-    #voting .bottom{
+    #voting .bottom {
         margin-top: 10px;
         margin-left: 50px;
     }
-   
 
     #voting .statistik .evoting-text {
         font-size: 13px;
@@ -1062,7 +1053,7 @@
         align-items: center;
         text-align: center;
         /* background-color: rgba(0, 0, 0, 0.6); */
-        background-image: url(../images/banner-kotak-2.jpg);
+        background-image: url(../images/banner-kotak-2.webp);
         background-position: center center;
         background-size: cover;
         background-repeat: no-repeat;
@@ -1201,7 +1192,6 @@
         border-radius: 0;
         margin-left: -0px;
         width: 330px;
-    
     }
 
     #voting .buttonbiru {
@@ -1218,9 +1208,9 @@
         margin-top: -28px !important;
     }
 
-  #voting .modalvotee{
-    margin-top: 120px !important;
-  }
+    #voting .modalvotee {
+        margin-top: 120px !important;
+    }
 
     #voting .modalbeli {
         margin-left: -40px;
@@ -1320,17 +1310,16 @@
         margin: 5px 0;
     }
 
-    #voting .voucher-infoo{
+    #voting .voucher-infoo {
         margin-left: 10px !important;
         padding: 10px;
     }
 
-
-    #peserta .modal-content{
+    #peserta .modal-content {
         height: 650px !important;
     }
 
-    #peserta .tombol{
+    #peserta .tombol {
         margin-left: -0px !important;
     }
 
@@ -1339,10 +1328,10 @@
         height: 150px !important;
     }
 
-    #peserta .isivote{
+    #peserta .isivote {
         margin-top: 20px !important;
     }
-    #voting .isivote{
+    #voting .isivote {
         margin-top: 20px !important;
     }
 
@@ -1384,13 +1373,12 @@
         margin-left: 0px !important;
     }
 
-    #voting .modal-header{
+    #voting .modal-header {
         border-radius: 10px !important;
     }
     #voting .voucher-info p {
         text-align: left;
         margin-top: 0px !important;
-    
     }
 
     #voting .voucher-info b {
@@ -1484,8 +1472,8 @@
         width: 120px;
         padding: 15px;
         background: #fff;
-      
-            overflow-x: hidden;
+
+        overflow-x: hidden;
     }
     .timeline ul li div img {
         width: 290px !important;
@@ -1575,8 +1563,7 @@
         overflow-x: scroll;
         font-size: 5px !important;
         min-height: 500px !important;
-}
-    
+    }
 
     /* Sesuaikan margin atau jarak antara grafik */
     canvas {

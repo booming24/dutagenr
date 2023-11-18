@@ -78,19 +78,19 @@
             </div>
 
             <!-- <div class="chartputra mt-5 text-center">
-                                        <p style="font-size:20px">Grafik Voting</p>
-                                        <b style="font-size:32px">Putera</b>
-                                        <div class="wrapper">
-                                            <canvas id="barChart"></canvas>
-                                        </div>
-                                    </div>
-                                    <div class="chartputri mt-5 text-center">
-                                        <p style="font-size:20px">Grafik Voting</p>
-                                        <b style="font-size:32px">Puteri</b>
-                                        <div class="wrapper">
-                                            <canvas id="barChart2"></canvas>
-                                        </div>
-                                    </div> -->
+                                                                                            <p style="font-size:20px">Grafik Voting</p>
+                                                                                            <b style="font-size:32px">Putera</b>
+                                                                                            <div class="wrapper">
+                                                                                                <canvas id="barChart"></canvas>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                        <div class="chartputri mt-5 text-center">
+                                                                                            <p style="font-size:20px">Grafik Voting</p>
+                                                                                            <b style="font-size:32px">Puteri</b>
+                                                                                            <div class="wrapper">
+                                                                                                <canvas id="barChart2"></canvas>
+                                                                                            </div>
+                                                                                        </div> -->
             <div class="content mt-5">
 
                 <div class="card card-primary" style=" border: none; margin: 0; padding: 0; overflow-x: scroll;">
@@ -223,10 +223,10 @@
                             </div>
                             <!-- Tambahkan card sesuai kebutuhan -->
                             <button id="prev-1" class="carousel-control left">
-                                <img class="img" src="/images/kiri.png" alt="">
+                                <img class="img" src="/images/kiri.webp" alt="">
                             </button>
                             <button id="next-1" class="carousel-control right">
-                                <img class="img" src="/images/kanan.png" alt="">
+                                <img class="img" src="/images/kanan.webp" alt="">
                             </button>
                         </div>
                     </div>
@@ -265,10 +265,10 @@
                             </div>
                             <!-- Tambahkan card sesuai kebutuhan -->
                             <button id="prev-2" class="carousel-control left">
-                                <img class="img" src="/images/kiri.png" alt="">
+                                <img class="img" src="/images/kiri.webp" alt="">
                             </button>
                             <button id="next-2" class="carousel-control right">
-                                <img class="img" src="/images/kanan.png" alt="">
+                                <img class="img" src="/images/kanan.webp" alt="">
                             </button>
                         </div>
                     </div>
@@ -321,7 +321,7 @@
         <div class="konten" style="background-color: #3F3F3F; padding: 10px; flex: 1; width: 100%;">
             <div class="row">
                 <div class="col-lg-3">
-                    <img src="{{ asset('images/logoduta.png') }}" style="width: 282px; height: 232px;" alt="">
+                    <img src="{{ asset('images/logoduta.webp') }}" style="width: 282px; height: 232px;" alt="">
                 </div>
                 <div class="col-lg-6 mt-4" style="color: white;">
                     <b style="font-size: 32px;">Duta GenRe Sumatera Selatan</b>
@@ -472,7 +472,7 @@
                     data: {
                         labels: labelsPutra,
                         datasets: [{
-                            label: 'Data',
+                            label: 'Persentase (%)',
                             data: dataPutra,
                             backgroundColor: 'rgba(10, 77, 161, 0.5)',
                             borderColor: 'rgba(10, 77, 161, 1)',
@@ -486,12 +486,13 @@
                         scales: {
                             xAxes: [{
                                 ticks: {
-                                    beginAtZero: true
+                                    beginAtZero: true,
+                                    max: 100, // Set the maximum value for the x-axis
                                 }
                             }]
                         },
-                        barThickness: 10, // Sesuaikan nilai barThickness untuk grafik pertama
-                        maxBarThickness: 100 // Sesuaikan nilai maxBarThickness untuk grafik pertama
+                        barThickness: 10,
+                        maxBarThickness: 100
                     }
                 });
 
@@ -504,7 +505,7 @@
                     data: {
                         labels: labelsPutri,
                         datasets: [{
-                            label: 'Data',
+                            label: 'Persentase (%)',
                             data: dataPutri,
                             backgroundColor: 'rgba(255, 214, 0, 0.5)',
                             borderColor: 'rgba(255, 214, 0, 1)',
@@ -518,182 +519,16 @@
                         scales: {
                             xAxes: [{
                                 ticks: {
-                                    beginAtZero: true
+                                    beginAtZero: true,
+                                    max: 100, // Set the maximum value for the x-axis
                                 }
                             }]
                         },
-                        barThickness: 8, // Sesuaikan nilai barThickness untuk grafik kedua
-                        maxBarThickness: 80 // Sesuaikan nilai maxBarThickness untuk grafik kedua
+                        barThickness: 10,
+                        maxBarThickness: 100
                     }
                 });
             });
-
-
-
-            //         // Mengambil elemen canvas untuk grafik pertama
-            //         const canvas = document.getElementById("barChart");
-            //             const ctx = canvas.getContext("2d");
-
-            //             const dataPutra = {!! json_encode($point_putra) !!};
-            //             const labelsPutra = {!! json_encode($label_putra) !!};
-
-            //             // Konfigurasi untuk latar belakang linear gradient pada grafik pertama
-            //             const gradient = ctx.createLinearGradient(0, 0, canvas.width, 0);
-            //             gradient.addColorStop(1, "#0A4DA1");
-            //             gradient.addColorStop(0, "rgba(10, 77, 161, 0)");
-
-            //             // Konfigurasi grafik pertama dengan Chart.js
-            //             const chart = new Chart(canvas, {
-            //                 type: "bar",
-            //                 data: {
-            //                     labels: labelsPutra,
-            //                     datasets: [{
-            //                         label: "Data",
-            //                         data: dataPutra,
-            //                         backgroundColor: gradient,
-            //                         borderColor: "transparent",
-            //                         borderRadius: 20,
-            //                         barThickness: 31, // Atur tinggi bar
-            //                         maxBarThickness: 300, // Atur lebar bar
-            //                         categoryPercentage: 0.2,
-            //                     }],
-            //                 },
-            //                 options: {
-            //                     indexAxis: 'y',
-            //                     scales: {
-            //                         y: {
-            //                             beginAtZero: true,
-            //                         },
-            //                     },
-            //                     responsive: true,
-            //         maintainAspectRatio: false,
-            //                 },
-            //             });
-
-            //             // Mengambil elemen canvas untuk grafik kedua
-            //             const canvas2 = document.getElementById("barChart2");
-            //             const ctx2 = canvas2.getContext("2d");
-            //             const dataPutri = {!! json_encode($point_putri) !!};
-            //             const labelsPutri = {!! json_encode($label_putri) !!};
-
-
-            //             // Konfigurasi untuk latar belakang linear gradient pada grafik kedua
-            //             const gradient2 = ctx2.createLinearGradient(0, 0, canvas2.width, 0);
-
-            //             gradient2.addColorStop(1, "#FFD600");
-            //             gradient2.addColorStop(0, "rgba(255, 214, 0, 0)");
-
-            //             // Konfigurasi grafik kedua dengan Chart.js
-            //             const chart2 = new Chart(canvas2, {
-            //                 type: "bar",
-            //                 data: {
-            //                     labels: labelsPutri,
-            //                     datasets: [{
-            //                         label: "Data",
-            //                         data: dataPutri,
-            //                         backgroundColor: gradient2,
-            //                         borderColor: "transparent",
-            //                         borderRadius: 20,
-            //                         barThickness: 21, // Atur tinggi bar
-            //                         maxBarThickness: 300, // Atur lebar bar
-            //                         categoryPercentage: 0.2,
-            //                     }],
-            //                 },
-            //                 options: {
-            //                     indexAxis: 'y',
-            //                     scales: {
-            //                         y: {
-            //                             beginAtZero: true,
-            //                         },
-            //                     },
-            //                 },
-            //             });
-
-            //             const mediaQuery = window.matchMedia("(max-width: 768px)");
-
-            // const barThicknessDesktop = 30;
-            // const maxBarThicknessDesktop = 300;
-            // const categoryPercentageDesktop = 0.5;
-
-            // const barThicknessMobile = 10;
-            // const maxBarThicknessMobile = 100;
-            // const categoryPercentageMobile = 0.8;
-
-            // const chartHeight = 800;
-
-            // if (mediaQuery.matches) {
-            //     const mobileLabels = labelsPutra.slice(0, 13); 
-            //     chart.config.data.labels = mobileLabels;
-            //     chart.config.data.datasets[0].data = dataPutra.slice(0, 13); 
-            //     chart.config.options.barThickness = barThicknessMobile;
-            //     chart.config.options.maxBarThickness = maxBarThicknessMobile;
-            //     chart.config.options.categoryPercentage = categoryPercentageMobile;
-            //     chart.config.options.scales.y.ticks.fontSize = 4; 
-            //     chart.config.options.scales.y.ticks.padding = 5;
-            //     chart.config.options.scales.y.ticks.maxRotation = 45;
-            //     chart.config.options.scales.y.ticks.minRotation = 0;
-            //     chart.config.options.scales.y.ticks.autoSkip = false;
-
-            //     chart.config.options.layout = {
-            //         padding: {
-            //             left: 0,
-            //             right: 50,
-            //         }
-            //     };
-
-            //     const canvas = document.getElementById('barChart');
-            //     canvas.style.height = chartHeight + 'px';
-            //     canvas.parentNode.style.overflowX = 'auto';
-            // } else {
-            //     chart.config.options.barThickness = barThicknessDesktop;
-            //     chart.config.options.maxBarThickness = maxBarThicknessDesktop;
-            //     chart.config.options.categoryPercentage = categoryPercentageDesktop;
-            //     chart.config.data.labels = labelsPutra;
-
-            //     const canvas = document.getElementById('barChart');
-            //     canvas.style.height = chartHeight + 'px';
-            //     canvas.parentNode.style.overflowX = 'auto';
-            // }
-
-            // if (mediaQuery.matches) {
-            //     const mobileLabels2 = labelsPutri.slice(0, 15); 
-            //     chart2.config.data.labels = mobileLabels2;
-            //     chart2.config.data.datasets[0].data = dataPutri.slice(0, 15); 
-            //     chart2.config.options.barThickness = barThicknessMobile;
-            //     chart2.config.options.maxBarThickness = maxBarThicknessMobile;
-            //     chart2.config.options.categoryPercentage = categoryPercentageMobile;
-            //     chart2.config.options.scales.y.ticks.fontSize = 8;
-            //     chart2.config.options.scales.x.ticks.fontSize = 18;
-            //     chart2.config.options.scales.y.ticks.padding = 5; 
-            //     chart2.config.options.scales.y.ticks.maxRotation = 45;
-            //     chart2.config.options.scales.y.ticks.minRotation = 0;
-            //     chart2.config.options.scales.y.ticks.autoSkip = false;
-
-            //     chart2.config.options.layout = {
-            //         padding: {
-            //             left: 0,
-            //             right: 50,
-            //         }
-            //     };
-
-            //     const canvas2 = document.getElementById('barChart2');
-            //     canvas2.style.height = chartHeight + 'px';
-            //     canvas2.parentNode.style.overflowX = 'auto';
-            // } else {
-            //     chart2.config.options.barThickness = barThicknessDesktop;
-            //     chart2.config.options.maxBarThickness = maxBarThicknessDesktop;
-            //     chart2.config.options.categoryPercentage = categoryPercentageDesktop;
-            //     chart2.config.data.labels = labelsPutri;
-
-            //     const canvas2 = document.getElementById('barChart2');
-            //     canvas2.style.height = chartHeight + 'px';
-            //     canvas2.parentNode.style.overflowX = 'auto';
-            // }
-
-            // chart2.update();
-
-
-            // chart.update();
         </script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js"></script>
     @endsection

@@ -33,8 +33,8 @@
     <nav class="navbar navbar-expand-lg sticky-top" data-bs-theme="dark" style="background-color: #191919;">
         <div class="container-fluid" style="background-color: #191919;">
             <a class="navbar-brand" href="#">
-                <img src="{{ asset('images/forum.png') }}" style="width: 47.21px;height: 51px;" alt="Logo 1">
-                <img src="{{ asset('images/dugen.png') }}" style="width: 62px;height: 45px;" alt="Logo 2">
+                <img src="{{ asset('images/forum.webp') }}" style="width: 47.21px;height: 51px;" alt="Logo 1">
+                <img src="{{ asset('images/dugen.webp') }}" style="width: 62px;height: 45px;" alt="Logo 2">
             </a>
             <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false"
@@ -79,11 +79,11 @@
         integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
     <script src="https://cdn.datatables.net/v/dt/dt-1.13.4/datatables.min.js"></script>
     <script>
-    let table = new DataTable('#datatables');
+        let table = new DataTable('#datatables');
     </script>
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>
-    AOS.init();
+        AOS.init();
     </script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
     @yield('script')

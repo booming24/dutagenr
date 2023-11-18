@@ -74,7 +74,7 @@
 <body>
     <div class="sidebar">
         <div class="logo">
-            <img src="{{ asset('images/logoduta.png') }}" alt="Logo">
+            <img src="{{ asset('images/logoduta.webp') }}" alt="Logo">
         </div>
         <div class="menu">
             @if (auth()->user()->level == 'adminalpha')

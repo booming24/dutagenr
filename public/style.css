@@ -223,7 +223,7 @@ body {
     align-items: center;
     text-align: center;
     /* background-color: rgba(0, 0, 0, 0.6); */
-    background-image: url(../images/banner-kotak-2.jpg);
+    background-image: url(../images/banner-kotak-2.webp);
     background-position: 0 -17.5rem;
     background-size: cover;
     background-repeat: no-repeat;
@@ -280,7 +280,7 @@ body {
     align-items: center;
     text-align: center;
     /* background-color: rgba(0, 0, 0, 0.6); */
-    background-image: url(../images/banner-kotak-2.jpg);
+    background-image: url(../images/banner-kotak-2.webp);
     background-position: 0 -17.5rem;
     background-size: cover;
     background-repeat: no-repeat;
@@ -290,7 +290,6 @@ body {
     height: 318px;
     margin-bottom: 30px;
 }
-
 
 #landingpage .kotak p {
     color: white;
@@ -339,7 +338,7 @@ body {
     align-items: center;
     text-align: center;
     /* background-color: rgba(0, 0, 0, 0.6); */
-    background-image: url(../images/banner-kotak-2.jpg);
+    background-image: url(../images/banner-kotak-2.webp);
     background-position: 0 -16rem;
     background-size: cover;
     background-repeat: no-repeat;
@@ -541,7 +540,7 @@ body {
 }
 
 #tentang .intro {
-    background-image: url(../images/banner-2.jpg);
+    background-image: url(../images/banner-2.webp);
     background-position: 0 -13rem;
     background-size: cover;
     background-repeat: no-repeat;
@@ -549,7 +548,7 @@ body {
     padding-top: 80px;
 }
 #sejarah .intro {
-    background-image: url(../images/banner-2.jpg);
+    background-image: url(../images/banner-2.webp);
     background-position: 0 -13rem;
     background-size: cover;
     background-repeat: no-repeat;
@@ -659,7 +658,7 @@ body {
     align-items: center;
     text-align: center;
     /* background-color: rgba(0, 0, 0, 0.6); */
-    background-image: url(../images/banner-kotak-2.jpg);
+    background-image: url(../images/banner-kotak-2.webp);
     background-position: 0 -17.5rem;
     background-size: cover;
     background-repeat: no-repeat;
@@ -799,7 +798,7 @@ body {
     align-items: center;
     text-align: center;
     /* background-color: rgba(0, 0, 0, 0.6); */
-    background-image: url(../images/banner-kotak-2.jpg);
+    background-image: url(../images/banner-kotak-2.webp);
     background-position: 0 -17.5rem;
     background-size: cover;
     background-repeat: no-repeat;
@@ -1035,9 +1034,9 @@ body {
     outline: 0;
 }
 
-#peserta .bottom{
+#peserta .bottom {
     margin-top: -8px !important;
-    display: flex!important;
+    display: flex !important;
     margin-left: 242px !important;
     gap: 20px;
     position: absolute;
@@ -1103,7 +1102,7 @@ body {
 
 canvas {
     margin-bottom: 20px;
-    margin-left:100px !important;
+    margin-left: 100px !important;
 }
 
 .header {
@@ -1562,6 +1561,6 @@ time {
     color: white;
 }
 
-#pesertafooter{
+#pesertafooter {
     margin-top: 460px !important;
 }
