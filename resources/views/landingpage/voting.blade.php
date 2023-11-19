@@ -265,9 +265,16 @@
             <!-- Modal -->
             <div class="modal fade" id="myModal1" tabindex="-1" aria-labelledby="exampleModalLabel"
                 aria-hidden="true">
-                <div class="modal-dialog modal-dialog-centered" style="width: 971px; height: 472px;">
-                    <div class="modal-content votemodalll">
-                        <h1>Vote Ditutup</h1>
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-header" style="border-radius: 10px; background-color: #ff4848 !important;">
+                            <h1>Vote ditutup</h1>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <h3>Terima kasih telah berpasrtisipasi di Pemilihan Semifinal Duta GenRe 2023</h3>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -290,8 +297,7 @@
                                     <div class="row d-flex justify-content-beetwen">
                                         <div class="col-lg-6">
                                             <img id="modalImage" src="" alt="Participant Image"
-                                                style="width: 215px !important; border: none;  box-shadow: 0px 0px 2px 1px rgba(0, 0, 0, 0.25),
-     0px 1px 2px 4px rgba(0, 0, 0, 0.25); border-radius: 10px;">
+                                                style="width: 215px !important; border: none;  box-shadow: 0px 0px 2px 1px rgba(0, 0, 0, 0.25), 0px 1px 2px 4px rgba(0, 0, 0, 0.25); border-radius: 10px;">
                                         </div>
                                         <div class="col-lg-6 isivote">
                                             <h5 id="modalNoPeserta"></h5>
