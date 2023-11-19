@@ -51,10 +51,6 @@
                     @endforeach
                 </div>
             </div>
-
-
-            {{ $now }}
-            {{ $expiredTime }}
             @if ($now > $expiredTime)
                 <!-- Modal -->
                 <div class="modal fade" id="myModal1" tabindex="-1" aria-labelledby="exampleModalLabel"

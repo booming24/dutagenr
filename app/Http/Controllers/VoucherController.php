@@ -141,7 +141,7 @@ class VoucherController extends Controller
     public function useVoucher(Request $request)
     {
         try {
-            $expiredTime = strtotime('2023-11-19 11:00:00');
+            $expiredTime = strtotime('2023-11-19 07:00:00');
             $now = time();
             if ($now > $expiredTime) {
                 throw new \Exception('Vote telah ditutup');
