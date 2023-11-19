@@ -76,21 +76,6 @@
                     </div>
                 </div>
             </div>
-
-            <!-- <div class="chartputra mt-5 text-center">
-                                                                                            <p style="font-size:20px">Grafik Voting</p>
-                                                                                            <b style="font-size:32px">Putera</b>
-                                                                                            <div class="wrapper">
-                                                                                                <canvas id="barChart"></canvas>
-                                                                                            </div>
-                                                                                        </div>
-                                                                                        <div class="chartputri mt-5 text-center">
-                                                                                            <p style="font-size:20px">Grafik Voting</p>
-                                                                                            <b style="font-size:32px">Puteri</b>
-                                                                                            <div class="wrapper">
-                                                                                                <canvas id="barChart2"></canvas>
-                                                                                            </div>
-                                                                                        </div> -->
             <div class="content mt-5">
 
                 <div class="card card-primary" style=" border: none; margin: 0; padding: 0; overflow-x: scroll;">
@@ -171,8 +156,7 @@
 
                                 <div class="modal-footer">
 
-                                    <button type="button" class="btn btn-secondary"
-                                        data-bs-dismiss="modal">Close</button>
+                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
                                     <a href="https://wa.me/6282268775852" target="_blank"
                                         class="btn btn-primary">Konfirmasi</a>
 
@@ -275,47 +259,62 @@
                 </div>
             </div>
         </div>
-
-        <!-- Modal -->
-        <div class="modal fade" id="myModal1" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered" style="width: 971px; height: 472px;">
-                <div class="modal-content votemodalll">
-                    <div class="modal-header bg-dark text-white" style="border-radius: 10px;">
-                        <h1 class="modal-title fs-5">Vote Peserta</h1>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        {{ $now }}
+        {{ $expiredTime }}
+        @if ($now > $expiredTime)
+            <!-- Modal -->
+            <div class="modal fade" id="myModal1" tabindex="-1" aria-labelledby="exampleModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered" style="width: 971px; height: 472px;">
+                    <div class="modal-content votemodalll">
+                        <h1>Vote Ditutup</h1>
                     </div>
-                    <form action="{{ route('voucher-use') }}" id="form-voucher" enctype="multipart/form-data"
-                        method="post">
-                        @csrf
-                        <div class="modal-body">
-                            <div class="col-lg-12">
-                                <div class="row d-flex justify-content-beetwen">
-                                    <div class="col-lg-6">
-                                        <img id="modalImage" src="" alt="Participant Image"
-                                            style="width: 215px !important; border: none;  box-shadow: 0px 0px 2px 1px rgba(0, 0, 0, 0.25),
-            0px 1px 2px 4px rgba(0, 0, 0, 0.25); border-radius: 10px;">
-                                    </div>
-                                    <div class="col-lg-6 isivote">
-                                        <h5 id="modalNoPeserta"></h5>
-                                        <h5 style="font-weight: normal;" id="modalNamaPeserta"></h5>
-                                        <h3 style="font-weight: normal; font-size: 18px;">Kode Voucher</h3>
-                                        <input type="text" class="form-control" name="kode_voucher"
-                                            id="voucherCodee">
-                                        <input type="text" class="form-control" hidden name="id_peserta"
-                                            id="modalIdPeserta" value="">
+                </div>
+            </div>
+        @else
+            <!-- Modal -->
+            <div class="modal fade" id="myModal1" tabindex="-1" aria-labelledby="exampleModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered" style="width: 971px; height: 472px;">
+                    <div class="modal-content votemodalll">
+                        <div class="modal-header bg-dark text-white" style="border-radius: 10px;">
+                            <h1 class="modal-title fs-5">Vote Peserta</h1>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                aria-label="Close"></button>
+                        </div>
+                        <form action="{{ route('voucher-use') }}" id="form-voucher" enctype="multipart/form-data"
+                            method="post">
+                            @csrf
+                            <div class="modal-body">
+                                <div class="col-lg-12">
+                                    <div class="row d-flex justify-content-beetwen">
+                                        <div class="col-lg-6">
+                                            <img id="modalImage" src="" alt="Participant Image"
+                                                style="width: 215px !important; border: none;  box-shadow: 0px 0px 2px 1px rgba(0, 0, 0, 0.25),
+     0px 1px 2px 4px rgba(0, 0, 0, 0.25); border-radius: 10px;">
+                                        </div>
+                                        <div class="col-lg-6 isivote">
+                                            <h5 id="modalNoPeserta"></h5>
+                                            <h5 style="font-weight: normal;" id="modalNamaPeserta"></h5>
+                                            <h3 style="font-weight: normal; font-size: 18px;">Kode Voucher</h3>
+                                            <input type="text" class="form-control" name="kode_voucher"
+                                                id="voucherCodee">
+                                            <input type="text" class="form-control" hidden name="id_peserta"
+                                                id="modalIdPeserta" value="">
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="bottom"
-                            style="margin-top: -18px; display: flex; margin-left: 180px; gap: 20px; position: absolute;">
-                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Tutup</button>
-                            <button type="submit" class="btn btn-primary" id="myModalVoteInput">Vote</button>
-                        </div>
-                    </form>
+                            <div class="bottom"
+                                style="margin-top: -18px; display: flex; margin-left: 180px; gap: 20px; position: absolute;">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Tutup</button>
+                                <button type="submit" class="btn btn-primary" id="myModalVoteInput">Vote</button>
+                            </div>
+                        </form>
+                    </div>
                 </div>
             </div>
-        </div>
+        @endif
     </div>
     <div class="footer" id="votingfooter">
         <div class="konten" style="background-color: #3F3F3F; padding: 10px; flex: 1; width: 100%;">

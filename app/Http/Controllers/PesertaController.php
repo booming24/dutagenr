@@ -48,7 +48,11 @@ class PesertaController extends Controller
         $top_three_putri = Peserta::where('kategori', 'PUTRI')->orderBy('point_semifinal', 'desc')
             ->limit(3) // Mengambil 10 record pertama
             ->get();
-        return view("landingpage.voting", compact('putra', 'putri', 'point_putri', 'point_putra', 'label_putri', 'label_putra', 'top_three_putra', 'top_three_putri'));
+
+        $expiredTime = strtotime('2023-11-19 11:00:00');
+        $now = time();
+
+        return view("landingpage.voting", compact('putra', 'putri', 'point_putri', 'point_putra', 'label_putri', 'label_putra', 'top_three_putra', 'top_three_putri', 'expiredTime', 'now'));
     }
 
 
@@ -66,7 +70,10 @@ class PesertaController extends Controller
             ->where('kategori', 'PUTRA')
             ->orderBy('no_peserta', 'asc')
             ->get();
-        return view("landingpage.peserta", compact('data'));
+
+        $expiredTime = strtotime('2023-11-19 11:00:00');
+        $now = time();
+        return view("landingpage.peserta", compact('data', 'expiredTime', 'now'));
     }
 
     /**
@@ -83,7 +90,10 @@ class PesertaController extends Controller
             ->where('kategori', 'PUTRI')
             ->orderBy('no_peserta', 'asc')
             ->get();
-        return view("landingpage.peserta", compact('data'));
+
+        $expiredTime = strtotime('2023-11-19 11:00:00');
+        $now = time();
+        return view("landingpage.peserta", compact('data', 'expiredTime', 'now'));
     }
 
     /**

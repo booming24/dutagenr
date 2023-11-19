@@ -16,7 +16,14 @@ class VoucherController extends Controller
      */
     public function index()
     {
-        $voucher = Voucher::all()->where('is_used', 0);
+        $voucher = Voucher::where('is_used', 0)
+            ->select(
+                'vouchers.*',
+                DB::raw('CONVERT_TZ(vouchers.created_at, "+00:00", "+07:00") as created_at_wib'),
+                DB::raw('CONVERT_TZ(vouchers.updated_at, "+00:00", "+07:00") as updated_at_wib')
+            )
+            ->get();
+
         return view("admin.master.voucher.index", compact('voucher'));
     }
 
@@ -58,7 +65,12 @@ class VoucherController extends Controller
     public function penjualan()
     {
         $voucher = Voucher::join('pesertas', 'vouchers.used_to', '=', 'pesertas.id')
-            ->select('vouchers.*', 'pesertas.nama_peserta as nama_peserta')
+            ->select(
+                'vouchers.*',
+                'pesertas.nama_peserta as nama_peserta',
+                DB::raw('CONVERT_TZ(vouchers.created_at, "+00:00", "+07:00") as created_at_wib'),
+                DB::raw('CONVERT_TZ(vouchers.updated_at, "+00:00", "+07:00") as updated_at_wib')
+            )
             ->where('is_used', 1)
             ->get();
 
@@ -129,6 +141,11 @@ class VoucherController extends Controller
     public function useVoucher(Request $request)
     {
         try {
+            $expiredTime = strtotime('2023-11-19 11:00:00');
+            $now = time();
+            if ($now > $expiredTime) {
+                throw new \Exception('Vote telah ditutup');
+            }
             $request->validate([
                 'kode_voucher' => 'required',
                 'id_peserta' => 'required|numeric',

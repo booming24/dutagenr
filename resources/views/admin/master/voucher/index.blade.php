@@ -73,8 +73,8 @@
                 <td>{{ $item->kode_voucher }}</td>
                 <td>{{ number_format($item->nominal, 0, ',', '.') }}</td>
                 <td>{{ $item->periode }}</td>
-                <td>{{ $item->created_at }}</td>
-                <td>{{ $item->updated_at }}</td>
+                <td>{{ $item->created_at_wib }}</td>
+                <td>{{ $item->updated_at_wib }}</td>
                 <td>
                     @if ($item->is_used == 1)
                         <h5 style="color: red">Terpakai</h5>
