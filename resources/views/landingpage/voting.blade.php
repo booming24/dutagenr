@@ -259,8 +259,6 @@
                 </div>
             </div>
         </div>
-        {{ $now }}
-        {{ $expiredTime }}
         @if ($now > $expiredTime)
             <!-- Modal -->
             <div class="modal fade" id="myModal1" tabindex="-1" aria-labelledby="exampleModalLabel"
@@ -492,7 +490,6 @@
                             xAxes: [{
                                 ticks: {
                                     beginAtZero: true,
-                                    max: 100, // Set the maximum value for the x-axis
                                 }
                             }]
                         },
@@ -525,7 +522,6 @@
                             xAxes: [{
                                 ticks: {
                                     beginAtZero: true,
-                                    max: 100, // Set the maximum value for the x-axis
                                 }
                             }]
                         },

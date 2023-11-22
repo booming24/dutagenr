@@ -16,40 +16,54 @@ class PesertaController extends Controller
      */
     public function landingPage()
     {
-        $putra = Peserta::where('kategori', 'PUTRA')->orderBy('no_peserta', 'asc')->get();
-        $putri = Peserta::where('kategori', 'PUTRI')->orderBy('no_peserta', 'asc')->get();
+        $putra = Peserta::where('kategori', 'PUTRA')
+            ->where('status', 'FINALIS')
+            ->orderBy('no_peserta', 'asc')
+            ->get();
+        $putri = Peserta::where('kategori', 'PUTRI')
+            ->where('status', 'FINALIS')
+            ->orderBy('no_peserta', 'asc')
+            ->get();
         $point_putra = Peserta::select(
-            DB::raw('ROUND(100 * point_semifinal / SUM(point_semifinal) OVER ()) as percentage')
+            DB::raw('100 * point_final / SUM(point_final) OVER () as percentage')
         )
             ->where('kategori', '=', 'PUTRA')
-            ->orderBy('point_semifinal', 'desc') // You may remove this line if ordering is not necessary
+            ->where('status', '=', 'FINALIS')
+            ->orderBy('point_final', 'desc') // You may remove this line if ordering is not necessary
             ->get()
             ->pluck('percentage')
             ->toArray();
         $point_putri = Peserta::select(
-            DB::raw('ROUND(100 * point_semifinal / SUM(point_semifinal) OVER ()) as percentage')
+            DB::raw('100 * point_final / SUM(point_final) OVER () as percentage')
         )
             ->where('kategori', '=', 'PUTRI')
-            ->orderBy('point_semifinal', 'desc') // You may remove this line if ordering is not necessary
+            ->where('status', '=', 'FINALIS')
+            ->orderBy('point_final', 'desc') // You may remove this line if ordering is not necessary
             ->get()
             ->pluck('percentage')
             ->toArray();
         $label_putra = Peserta::where('kategori', '=', 'PUTRA')
-            ->orderBy('point_semifinal', 'desc')
+            ->where('status', '=', 'FINALIS')
+            ->orderBy('point_final', 'desc')
             ->pluck('nama_peserta')
             ->toArray();
         $label_putri = Peserta::where('kategori', '=', 'PUTRI')
-            ->orderBy('point_semifinal', 'desc')
+            ->where('status', '=', 'FINALIS')
+            ->orderBy('point_final', 'desc')
             ->pluck('nama_peserta')
             ->toArray();
-        $top_three_putra = Peserta::where('kategori', 'PUTRA')->orderBy('point_semifinal', 'desc')
+        $top_three_putra = Peserta::where('kategori', 'PUTRA')
+            ->where('status', '=', 'FINALIS')
+            ->orderBy('point_final', 'desc')
             ->limit(3) // Mengambil 10 record pertama
             ->get();
-        $top_three_putri = Peserta::where('kategori', 'PUTRI')->orderBy('point_semifinal', 'desc')
+        $top_three_putri = Peserta::where('kategori', 'PUTRI')
+            ->where('status', '=', 'FINALIS')
+            ->orderBy('point_final', 'desc')
             ->limit(3) // Mengambil 10 record pertama
             ->get();
 
-        $expiredTime = strtotime('2023-11-19 07:00:00');
+        $expiredTime = strtotime('2023-12-1 10:00:00');
         $now = time();
 
         return view("landingpage.voting", compact('putra', 'putri', 'point_putri', 'point_putra', 'label_putri', 'label_putra', 'top_three_putra', 'top_three_putri', 'expiredTime', 'now'));
@@ -65,13 +79,14 @@ class PesertaController extends Controller
     {
         $data = Peserta::select(
             '*',
-            DB::raw('ROUND(100 * point_semifinal / SUM(point_semifinal) OVER ()) as percentage')
+            DB::raw('100 * point_final / SUM(point_final) OVER () as percentage')
         )
             ->where('kategori', 'PUTRA')
+            ->where('status', '=', 'FINALIS')
             ->orderBy('no_peserta', 'asc')
             ->get();
 
-        $expiredTime = strtotime('2023-11-19 07:00:00');
+        $expiredTime = strtotime('2023-12-1 10:00:00');
         $now = time();
         return view("landingpage.peserta", compact('data', 'expiredTime', 'now'));
     }
@@ -85,13 +100,14 @@ class PesertaController extends Controller
     {
         $data = Peserta::select(
             '*',
-            DB::raw('ROUND(100 * point_semifinal / SUM(point_semifinal) OVER ()) as percentage')
+            DB::raw('100 * point_final / SUM(point_final) OVER () as percentage')
         )
             ->where('kategori', 'PUTRI')
+            ->where('status', '=', 'FINALIS')
             ->orderBy('no_peserta', 'asc')
             ->get();
 
-        $expiredTime = strtotime('2023-11-19 07:00:00');
+        $expiredTime = strtotime('2023-12-1 10:00:00');
         $now = time();
         return view("landingpage.peserta", compact('data', 'expiredTime', 'now'));
     }

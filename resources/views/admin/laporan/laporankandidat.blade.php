@@ -12,7 +12,7 @@
                 <tr>
                     <td>{{ $item->no_peserta }}</td>
                     <td>{{ $item->nama_peserta }}</td>
-                    <td>{{ $item->point_semifinal }}</td>
+                    <td>{{ $item->point_final }}</td>
                 </tr>
             @endforeach
         </tbody>

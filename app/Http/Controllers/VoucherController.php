@@ -17,6 +17,7 @@ class VoucherController extends Controller
     public function index()
     {
         $voucher = Voucher::where('is_used', 0)
+            ->where('periode', 'FINAL')
             ->select(
                 'vouchers.*',
                 DB::raw('CONVERT_TZ(vouchers.created_at, "+00:00", "+07:00") as created_at_wib'),
@@ -35,22 +36,22 @@ class VoucherController extends Controller
     public function dashboard()
     {
         $data = [];
-        $data['voucher_terjual'] = Voucher::where('is_used', 1)->sum('nominal');
-        $data['voucher_tersedia'] = Voucher::where('is_used', 0)->sum('nominal');
+        $data['voucher_terjual'] = Voucher::all()->where('is_used', 1)->where('periode', 'FINAL')->sum('nominal');
+        $data['voucher_tersedia'] = Voucher::all()->where('is_used', 0)->where('periode', 'FINAL')->sum('nominal');
         $data['point_putra'] = Peserta::where('kategori', '=', 'PUTRA')
-            ->orderBy('point_semifinal', 'desc')
-            ->pluck('point_semifinal')
+            ->orderBy('point_final', 'desc')
+            ->pluck('point_final')
             ->toArray();
         $data['point_putri'] = Peserta::where('kategori', '=', 'PUTRI')
-            ->orderBy('point_semifinal', 'desc')
-            ->pluck('point_semifinal')
+            ->orderBy('point_final', 'desc')
+            ->pluck('point_final')
             ->toArray();
         $data['label_putra'] = Peserta::where('kategori', '=', 'PUTRA')
-            ->orderBy('point_semifinal', 'desc')
+            ->orderBy('point_final', 'desc')
             ->pluck('nama_peserta')
             ->toArray();
         $data['label_putri'] = Peserta::where('kategori', '=', 'PUTRI')
-            ->orderBy('point_semifinal', 'desc')
+            ->orderBy('point_final', 'desc')
             ->pluck('nama_peserta')
             ->toArray();
 
@@ -72,6 +73,7 @@ class VoucherController extends Controller
                 DB::raw('CONVERT_TZ(vouchers.updated_at, "+00:00", "+07:00") as updated_at_wib')
             )
             ->where('is_used', 1)
+            ->where('periode', 'FINAL')
             ->get();
 
         return view("admin.laporan.laporanpenjualan", compact('voucher'));
@@ -84,7 +86,7 @@ class VoucherController extends Controller
      */
     public function peserta()
     {
-        $peserta = Peserta::all();
+        $peserta = Peserta::all()->where('status', 'FINALIS');
         return view("admin.laporan.laporankandidat", compact('peserta'));
     }
 
@@ -141,7 +143,7 @@ class VoucherController extends Controller
     public function useVoucher(Request $request)
     {
         try {
-            $expiredTime = strtotime('2023-11-19 07:00:00');
+            $expiredTime = strtotime('2023-12-1 10:00:00');
             $now = time();
             if ($now > $expiredTime) {
                 throw new \Exception('Vote telah ditutup');
@@ -153,7 +155,7 @@ class VoucherController extends Controller
 
             $kode_voucher = $request->kode_voucher;
             $id_peserta = $request->id_peserta;
-            $voucher = Voucher::all()->where('kode_voucher', '=', $kode_voucher)->where('is_used', '=', 0)->first();
+            $voucher = Voucher::all()->where('kode_voucher', '=', $kode_voucher)->where('is_used', '=', 0)->where('periode', '=', 'FINAL')->first();
 
             if (!$voucher) {
                 throw new \Exception('Voucher not found.');
@@ -167,10 +169,7 @@ class VoucherController extends Controller
             $voucher->used_to = $id_peserta;
 
             $peserta = Peserta::find($id_peserta);
-
-            if ($periode == "SEMIFINAL") {
-                $peserta->point_semifinal = $point + $peserta->point_semifinal;
-            } else if ($periode == "FINAL") {
+            if ($periode == "FINAL") {
                 $peserta->point_final = $point + $peserta->point_final;
             }
 
