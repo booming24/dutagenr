@@ -116,7 +116,7 @@
 
                                         <button type="button" class="btn btn-secondary"
                                             data-bs-dismiss="modal">Close</button>
-                                        <a href="https://wa.me/6282268775852" target="_blank"
+                                        <a href="https://wa.me/6283185845613" target="_blank"
                                             class="btn btn-primary">Konfirmasi</a>
 
                                     </div>
