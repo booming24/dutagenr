@@ -2,7 +2,7 @@
     <div id="peserta">
         <button type="button" class="btn btn-primary mb-2 mt-4" style="width: 120px; margin-left: 320px;"
             data-bs-toggle="modal" data-bs-target="#modal">
-            <i class="bi bi-plus"></i> Voucher
+            <i class="bi bi-plus"></i> Peserta
         </button>
         <!-- Modal -->
         <div class="modal modal-lg fade" id="modal" tabindex="-1" aria-labelledby="exampleModalLabel"

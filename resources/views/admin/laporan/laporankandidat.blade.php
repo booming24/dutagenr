@@ -1,5 +1,5 @@
     @include('layouts.navbar')
-    <table border="1" class="table" style="margin-left: 0px; margin-top: 20px; width: 1000px;" id="myTable">
+    <table border="1" class="table" style="margin-left: 0px; margin-top: 20px;" id="myTable">
         <thead style="background-color: #418897 !important;">
             <tr>
                 <th>NO</th>
@@ -12,7 +12,7 @@
                 <tr>
                     <td>{{ $item->no_peserta }}</td>
                     <td>{{ $item->nama_peserta }}</td>
-                    <td>{{ $item->point_semifinal }}</td>
+                    <td>{{ $item->point_final }}</td>
                 </tr>
             @endforeach
         </tbody>

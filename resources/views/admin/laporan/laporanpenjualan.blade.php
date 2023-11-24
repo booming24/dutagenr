@@ -58,7 +58,7 @@
     </div>
 
 
-    <table border="1" class="table" style="margin-left: 0px; margin-top: 20px; width: 1000px;" id="myTable">
+    <table border="1" class="table" style="margin-left: 0px; margin-top: 20px;" id="myTable">
         <thead style="background-color: #418897 !important;">
             <tr>
                 <th>Kode Voucher</th>
@@ -76,8 +76,8 @@
                     <td>{{ $item->kode_voucher }}</td>
                     <td>{{ $item->nominal }}</td>
                     <td>{{ $item->periode }}</td>
-                    <td>{{ $item->created_at }}</td>
-                    <td>{{ $item->updated_at }}</td>
+                    <td>{{ $item->created_at_wib }}</td>
+                    <td>{{ $item->updated_at_wib }}</td>
                     <td>
                         @if ($item->is_used == 1)
                             <h5 style="color: red">Terpakai</h5>
