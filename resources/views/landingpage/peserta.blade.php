@@ -142,7 +142,7 @@
 
                                         </ol>
                                         <li>
-                                            Melakukan konfirmasi ke WA GenRe Sumsel (082268775852) dengan mengirimkan bukti
+                                            Melakukan konfirmasi ke WA GenRe Sumsel (083185845613) dengan mengirimkan bukti
                                             pembayaran;
 
                                         </li>
