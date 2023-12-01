@@ -39,18 +39,22 @@ class VoucherController extends Controller
         $data['voucher_terjual'] = Voucher::all()->where('is_used', 1)->where('periode', 'FINAL')->sum('nominal');
         $data['voucher_tersedia'] = Voucher::all()->where('is_used', 0)->where('periode', 'FINAL')->sum('nominal');
         $data['point_putra'] = Peserta::where('kategori', '=', 'PUTRA')
+            ->where('status', 'FINALIS')
             ->orderBy('point_final', 'desc')
             ->pluck('point_final')
             ->toArray();
         $data['point_putri'] = Peserta::where('kategori', '=', 'PUTRI')
+            ->where('status', 'FINALIS')
             ->orderBy('point_final', 'desc')
             ->pluck('point_final')
             ->toArray();
         $data['label_putra'] = Peserta::where('kategori', '=', 'PUTRA')
+            ->where('status', 'FINALIS')
             ->orderBy('point_final', 'desc')
             ->pluck('nama_peserta')
             ->toArray();
         $data['label_putri'] = Peserta::where('kategori', '=', 'PUTRI')
+            ->where('status', 'FINALIS')
             ->orderBy('point_final', 'desc')
             ->pluck('nama_peserta')
             ->toArray();
