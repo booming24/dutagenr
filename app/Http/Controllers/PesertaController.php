@@ -63,7 +63,7 @@ class PesertaController extends Controller
             ->limit(3) // Mengambil 10 record pertama
             ->get();
 
-        $expiredTime = strtotime('2023-12-1 10:00:00');
+        $expiredTime = strtotime('2023-12-2 10:00:00');
         $now = time();
 
         return view("landingpage.voting", compact('putra', 'putri', 'point_putri', 'point_putra', 'label_putri', 'label_putra', 'top_three_putra', 'top_three_putri', 'expiredTime', 'now'));
@@ -86,7 +86,7 @@ class PesertaController extends Controller
             ->orderBy('no_peserta', 'asc')
             ->get();
 
-        $expiredTime = strtotime('2023-12-1 10:00:00');
+        $expiredTime = strtotime('2023-12-2 10:00:00');
         $now = time();
         return view("landingpage.peserta", compact('data', 'expiredTime', 'now'));
     }
@@ -107,7 +107,7 @@ class PesertaController extends Controller
             ->orderBy('no_peserta', 'asc')
             ->get();
 
-        $expiredTime = strtotime('2023-12-1 10:00:00');
+        $expiredTime = strtotime('2023-12-2 10:00:00');
         $now = time();
         return view("landingpage.peserta", compact('data', 'expiredTime', 'now'));
     }
